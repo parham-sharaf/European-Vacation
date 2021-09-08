@@ -1,2 +1,33 @@
 # European-Vacation
 CS 1D Project 1 European Vacation
+
+## Requirments
+
+These are a series of modules/tools required for the project to properly run. 
+
+- Python >= 3.8, <3.11
+- Poetry 1.1.8
+- SQL 
+- MySQL 8.0.26
+- QT 6
+
+### Recommendation
+
+The following platforms are suggestions to facilitate working with program and coding in general. These are not required for the project to build/compile, but to simply improve visualization of data structure, tracking work flow, or/and help with systematic coding. 
+
+- [PyCharm](https://www.jetbrains.com/pycharm)
+- [DataGrip](https://www.jetbrains.com/datagrip)
+- [Git Karaken](https://www.gitkraken.com/ "Git Kraken")
+
+PyCharm is the recommended IDE for coding any python related projects. Since Poetry is used as the python packet manager, PyCharm provides different tools that can be used to improve coding along with Poetry CLI. DataGrip is used for SQL codes. The IDE enables programmers to concurrently use multiple different data management systems, such as Oracle RDBMS, MySQL, PostgreSQL, and etc. in a templated project. Git Karaken enables programers to visualize git tracking, commits, and branches.
+
+## Setup
+
+```bash
+git clone https://github.com/parham-sharaf/European-Vacation.git
+cd European-Vacation
+git checkout main
+```
+## Usage
+
+This program reads data and stores it in a data structure of choice. The program must has the ability to hold the names of at least 30 European cities (the initial data contains 11 cities) and their corresponding traditional food items (up to six per city). Also, program will be used to allow prospective European travelers to plan their summer vacation. It provides the ability to modify information related to the traditional food items (such as adding new food items, changing a price of a food item, or deleting a food item).    
