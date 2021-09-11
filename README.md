@@ -9,7 +9,7 @@ These are a series of modules/tools required for the project to properly run.
 - Poetry 1.1.8
 - SQL 
 - MySQL 8.0.26
-- QT 6
+- Qt 6
 
 ### Recommendation
 
