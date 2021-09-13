@@ -17,7 +17,7 @@ The following platforms are suggestions to facilitate working with program and c
 
 - [PyCharm](https://www.jetbrains.com/pycharm)
 - [DataGrip](https://www.jetbrains.com/datagrip)
-- [Git Karaken](https://www.gitkraken.com/ "Git Kraken")
+- [Git Kraken](https://www.gitkraken.com/ "Git Kraken")
 
 PyCharm is the recommended IDE for coding any python related projects. Since Poetry is used as the python packet manager, PyCharm provides different tools that can be used to improve coding along with Poetry CLI. DataGrip is used for SQL codes. The IDE enables programmers to concurrently use multiple different data management systems, such as Oracle RDBMS, MySQL, PostgreSQL, and etc. in a templated project. Git Karaken enables programers to visualize git tracking, commits, and branches.
 
