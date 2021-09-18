@@ -5,21 +5,22 @@ CS 1D Project 1 European Vacation
 
 These are a series of modules/tools required for the project to properly run. 
 
-- Python >= 3.8, <3.11
-- Poetry 1.1.8
+- C++ 17
+- CMake
 - SQL 
-- MySQL 8.0.26
+- SQLite
 - Qt 6
 
 ### Recommendation
 
 The following platforms are suggestions to facilitate working with program and coding in general. These are not required for the project to build/compile, but to simply improve visualization of data structure, tracking work flow, or/and help with systematic coding. 
 
-- [PyCharm](https://www.jetbrains.com/pycharm)
+- [Clion](https://www.jetbrains.com/clion/)
 - [DataGrip](https://www.jetbrains.com/datagrip)
 - [Git Kraken](https://www.gitkraken.com/ "Git Kraken")
+- [Qt 6](https://www.qt.io/product/qt6)
 
-PyCharm is the recommended IDE for coding any python related projects. Since Poetry is used as the python packet manager, PyCharm provides different tools that can be used to improve coding along with Poetry CLI. DataGrip is used for SQL codes. The IDE enables programmers to concurrently use multiple different data management systems, such as Oracle RDBMS, MySQL, PostgreSQL, and etc. in a templated project. Git Karaken enables programers to visualize git tracking, commits, and branches.
+Clion is the recommended IDE for coding any c++ related projects. Since CMake is used as the c++ packet manager, CLion provides different tools that can be used to improve coding along with Cmake CLI. DataGrip is used for SQL codes. The IDE enables programmers to concurrently use multiple different data management systems, such as Oracle RDBMS, MySQL, PostgreSQL, and etc. in a templated project. Git Karaken enables programers to visualize git tracking, commits, and branches.
 
 ## Setup
 
