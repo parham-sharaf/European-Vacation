@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/main.cpp
+iostream
+-
+sqlite3.h
+-
+fstream
+-
+spdlog/spdlog.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/spdlog/spdlog.h
+
