@@ -1,4 +1,3 @@
-
 CREATE TABLE city
 (
     city_name VARCHAR(20) PRIMARY KEY NOT NULL

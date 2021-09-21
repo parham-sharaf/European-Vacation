@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/European_Vacation.dir/main.cpp.o -o European_Vacation  -lsqlite3 
