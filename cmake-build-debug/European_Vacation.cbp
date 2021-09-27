@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/City.cpp">
+			<Option target="European_Vacation"/>
+		</Unit>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/City.h">
+			<Option target="European_Vacation"/>
+		</Unit>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCities.cpp">
+			<Option target="European_Vacation"/>
+		</Unit>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCities.h">
+			<Option target="European_Vacation"/>
+		</Unit>
 		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/main.cpp">
 			<Option target="European_Vacation"/>
 		</Unit>

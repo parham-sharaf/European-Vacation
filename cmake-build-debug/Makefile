@@ -129,6 +129,54 @@ European_Vacation/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/build
 .PHONY : European_Vacation/fast
 
+City.o: City.cpp.o
+.PHONY : City.o
+
+# target to build an object file
+City.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.o
+.PHONY : City.cpp.o
+
+City.i: City.cpp.i
+.PHONY : City.i
+
+# target to preprocess a source file
+City.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.i
+.PHONY : City.cpp.i
+
+City.s: City.cpp.s
+.PHONY : City.s
+
+# target to generate assembly for a file
+City.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.s
+.PHONY : City.cpp.s
+
+ManageCities.o: ManageCities.cpp.o
+.PHONY : ManageCities.o
+
+# target to build an object file
+ManageCities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.o
+.PHONY : ManageCities.cpp.o
+
+ManageCities.i: ManageCities.cpp.i
+.PHONY : ManageCities.i
+
+# target to preprocess a source file
+ManageCities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.i
+.PHONY : ManageCities.cpp.i
+
+ManageCities.s: ManageCities.cpp.s
+.PHONY : ManageCities.s
+
+# target to generate assembly for a file
+ManageCities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.s
+.PHONY : ManageCities.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... European_Vacation"
+	@echo "... City.o"
+	@echo "... City.i"
+	@echo "... City.s"
+	@echo "... ManageCities.o"
+	@echo "... ManageCities.i"
+	@echo "... ManageCities.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

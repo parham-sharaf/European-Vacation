@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/European_Vacation.dir/City.cpp.o"
+  "CMakeFiles/European_Vacation.dir/ManageCities.cpp.o"
   "CMakeFiles/European_Vacation.dir/main.cpp.o"
   "European_Vacation"
   "European_Vacation.pdb"

@@ -81,12 +81,12 @@ clean: CMakeFiles/European_Vacation.dir/clean
 CMakeFiles/European_Vacation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target European_Vacation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4 "Built target European_Vacation"
 .PHONY : CMakeFiles/European_Vacation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/European_Vacation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/European_Vacation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/European_Vacation.dir/rule

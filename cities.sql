@@ -154,6 +154,11 @@ INSERT INTO food VALUES('Pretzels', 4.00, 'Berlin');
 INSERT INTO food VALUES('Apfelstrudel', 6.25, 'Berlin');
 INSERT INTO food VALUES('Berliner Pfannkuche', 8.23, 'Berlin');
 INSERT INTO food VALUES('Schnitzel', 9.79, 'Berlin');
+-- Brussels
+INSERT INTO food VALUES('Waterzooi', 6.45, 'Brussels');
+INSERT INTO food VALUES('Luikse Siroop', 4.98, 'Brussels');
+INSERT INTO food VALUES('Mosselen-friet', 4.45, 'Brussels');
+INSERT INTO food VALUES('Speculoos', 2.79, 'Brussels');
 -- Budapest
 INSERT INTO food VALUES('Goulash', 8.43, 'Budapest');
 INSERT INTO food VALUES('Stuffed cabbage', 6.99, 'Budapest');
@@ -193,6 +198,9 @@ INSERT INTO food VALUES('Scaloppine', 12.99, 'Rome');
 INSERT INTO food VALUES('Rigatoni con la Pajata', 8.79, 'Rome');
 INSERT INTO food VALUES('Carciofi alla giudia', 15.99, 'Rome');
 
-SELECT * FROM city;
-SELECT * FROM distance;
-SELECT * FROM food;
+SELECT DISTINCT city_name
+FROM food
+ORDER BY city_name;
+
+SELECT city_name
+FROM city;

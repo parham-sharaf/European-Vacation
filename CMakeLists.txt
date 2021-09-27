@@ -4,7 +4,11 @@ project(European_Vacation)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(European_Vacation
-        main.cpp)
+        main.cpp
+        ManageCities.cpp
+        ManageCities.h
+        City.h
+        City.cpp)
 
 
 include_directories(/usr/include)
