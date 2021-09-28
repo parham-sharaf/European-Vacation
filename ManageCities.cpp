@@ -16,11 +16,11 @@ ManageCities::ManageCities() {
                                 "FROM food \n"
                                 "ORDER BY city_name;");
 
-    sqlite3_close(db);
+//    sqlite3_close(db);
 }
 
 
-void ManageCities::AddCity() {
+void ManageCities::ReadData() {
     for (auto& group: cityList) {
         for (auto& cityName: group) {
             City *newCity = new City;
@@ -40,17 +40,34 @@ void ManageCities::AddCity() {
             }
         }
     }
-//    int counter = 0;
-//    for (int i = 0; i < euroCities.size(); i++) {
-//        for (int j = 0; j < foodList.at(counter).size(); j++) {
-//            TradFood thisTradFood;
-//            thisTradFood.foodName = foodList.at(j).at(0),
-//            thisTradFood.cost = std::stof(foodList.at(j).at(1));
-//            euroCities.at(i)->tradFoodList.push_back(thisTradFood);
-//            euroCities.at(i)->distance = 0;
-//        }
-//        counter++;
-//    }
+}
+
+void ManageCities::AddCity(const string& name) {
+
+    if (travelPlan.empty()) {
+        spdlog::trace("Travel plan is empty. Adding the first city...");
+        for (auto &city: euroCities) {
+            if (city->name == name) {
+                city->distance = 0;
+                travelPlan.push(city);
+                break;
+            }
+        }
+    }
+    else {
+//        spdlog::trace("Travel plan is not empty. Currently at the top: {0}", travelPlan.top());
+        string sql = "SELECT * FROM distance WHERE starting_city IS '" + travelPlan.top()->name + "' AND ending_city IS '" + name + "';";
+
+        distanceList = select_stmt(sql.c_str());
+        for (auto &city: euroCities) {
+            cout << distanceList.at(0).at(2) << endl;
+            if (city->name == name) {
+                city->distance = std::stoi(distanceList.at(0).at(2));
+                travelPlan.push(city);
+                break;
+            }
+        }
+    }
 }
 
 int ManageCities::select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names)
@@ -76,7 +93,7 @@ Records ManageCities::select_stmt(const char* stmt) const
         std::cerr << "Error in select statement " << stmt << "[" << errmsg << "]\n";
     }
     else {
-        std::cerr << foodList.size() << " foodList returned.\n";
+        std::cerr << thisRecord.size() << " results returned.\n";
     }
 
     return thisRecord;

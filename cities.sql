@@ -202,5 +202,4 @@ SELECT DISTINCT city_name
 FROM food
 ORDER BY city_name;
 
-SELECT city_name
-FROM city;
+SELECT * FROM distance WHERE starting_city IS 'London' AND ending_city IS 'Amsterdam';
