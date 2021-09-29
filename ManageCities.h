@@ -16,17 +16,20 @@ class ManageCities
 public:
     ManageCities();
     void ReadData();
-    void AddCity(const string& name);
-    void EraseCity(const string& name);
+    void AddCity(const string& name, deque<City*>& planner);
+    void EraseCity(const string& name, deque<City*>& planner);
+    void ShortestPath(const string& startingPoint);
+    deque<City*>& GetTravelPlan();
 
-
-    //private:
-    static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);
-    static Records select_stmt(const char* stmt) ;
-    static void sql_stmt(const char* stmt);
     Records cityList;
     Records distanceList;
     Records foodList;
+private:
+    static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);
+    static Records select_stmt(const char* stmt) ;
+    static void sql_stmt(const char* stmt);
+
     vector<City*> euroCities;
     deque<City*> travelPlan;
+
 };
