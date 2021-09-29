@@ -25,21 +25,34 @@ int main(int argc, char** argv)
 //        cout << endl;
 //    }
     myCities.AddCity("London");
-    spdlog::trace("Added London");
-    spdlog::debug("Name: {0}", myCities.travelPlan.top()->name);
-    for (auto& food: myCities.travelPlan.top()->tradFoodList) {
-        spdlog::debug("Foods: {0}, {1:.2f}", food.foodName, food.cost);
-    }
-    spdlog::debug("Distance: {0}", myCities.travelPlan.top()->distance);
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
-
     myCities.AddCity("Amsterdam");
-    spdlog::trace("Added Amsterdam");
-    spdlog::debug("Name: {0}", myCities.travelPlan.top()->name);
-    for (auto& food: myCities.travelPlan.top()->tradFoodList) {
-        spdlog::debug("Foods: {0}, {1:.2f}", food.foodName, food.cost);
-    }
-    spdlog::debug("Distance: {0}", myCities.travelPlan.top()->distance);
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+    myCities.AddCity("Lisbon");
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+    myCities.AddCity("Madrid");
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+    myCities.AddCity("Paris");
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+    myCities.EraseCity("London");
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+    myCities.AddCity("Budapest");
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+//    myCities.AddCity("Paris");
+//    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+//    cout << endl;
+    std::sort(myCities.travelPlan.begin(), myCities.travelPlan.end(), [](City* a, City* b) {
+        return a->distance < b->distance;
+    });
+    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
 
 }
 
