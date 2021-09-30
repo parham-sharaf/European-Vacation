@@ -32,21 +32,11 @@ int main(int argc, char** argv)
     myCities.AddCity("Paris", myCities.GetTravelPlan());
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
-    myCities.EraseCity("London", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
     myCities.AddCity("Budapest", myCities.GetTravelPlan());
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
-//    myCities.AddCity("Paris");
-//    for (auto & city: myCities.travelPlan) cout << city->name << "[" << city->distance << "]" << " --> ";
-//    cout << endl;
-    std::sort(myCities.GetTravelPlan().begin(), myCities.GetTravelPlan().end(), [](City* a, City* b) {
-        return a->distance < b->distance;
-    });
+    myCities.ShortestPath("Amsterdam");
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
-
-//    myCities.ShortestPath("Melbourne", myCities.travelPlan);
 }
 

@@ -88,7 +88,7 @@ void ManageCities::AddCity(const string& name, deque<City*>& planner) {
         newCity = find_if(euroCities.begin(), euroCities.end(), [name](City* target) -> bool {
             return (target->name == name);
         });
-
+        (*newCity)->distance = 0;
     }
     else {
 //        spdlog::trace("Travel plan is not empty. Currently at the top: {0}", travelPlan.top());
@@ -102,7 +102,6 @@ void ManageCities::AddCity(const string& name, deque<City*>& planner) {
         (*newCity)->distance = std::stoi(distanceList.at(0).at(2));
     }
     planner.push_back(*newCity);
-
 }
 
 void ManageCities::EraseCity(const string &name, deque<City*>& planner) {
@@ -130,22 +129,50 @@ deque<City*>& ManageCities::GetTravelPlan() {
     return travelPlan;
 }
 
+void ManageCities::ShortestPath(const string& startingPoint) {
+    deque<City *> newPlanner = travelPlan;
+    string sql;
 
-//void ManageCities::ShortestPath(const string& startingPoint) {
-//    deque<City *> newPlanner = travelPlan;
-//    string sql;
-//    travelPlan.clear();
-//    AddCity(startingPoint, travelPlan);
-//    EraseCity(startingPoint, newPlanner);
-//
-//    for (auto city = newPlanner.begin() + 1; city != newPlanner.end(); city++) {
-//        sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + travelPlan.back()->name + "' ORDER BY kilometers;";
-//        distanceList = select_stmt(sql.c_str());
-//
-//        for (int i = 0; i < distanceList.size(); i++) {
-//            if (distanceList.at(i).at(0) == (*city)->name)
+    travelPlan.clear();
+    AddCity(startingPoint, travelPlan);
+    EraseCity(startingPoint, newPlanner);
+
+    sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + travelPlan.back()->name + "' ORDER BY kilometers;";
+    distanceList = select_stmt(sql.c_str());
+
+    for (auto & group: distanceList) {
+        for (auto city = newPlanner.begin(); city != newPlanner.end(); city++) {
+            cout << "group at 0:" << group.at(0) << endl;
+            cout << "city name: " << (*city)->name << endl;
+            cout << endl;
+
+            if (group.at(0) == (*city)->name) {
+                cout << "got a match" << endl << endl;
+                AddCity((*city)->name, travelPlan);
+                EraseCity((*city)->name, newPlanner);
+                sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" +
+                      travelPlan.back()->name + "' ORDER BY kilometers;";
+                distanceList = select_stmt(sql.c_str());
+            }
+        }
+
+//        }
+//        cout << group.at(0) << endl;
+//        AddCity((*newCity)->name, travelPlan);
+//        EraseCity((*newCity)->name, newPlanner);
+//        break;
+    }
+
+
+//    for (auto city = newPlanner.begin(); city != newPlanner.end(); city++) {
+//        if ((*city)->name == group.at(0)) {
+//                AddCity(group.at(0), travelPlan);
+//                EraseCity(group.at(0), newPlanner);
+//            cout << (*city)->name << endl;
+//            sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + (*city)->name + "' ORDER BY kilometers;";
+//            distanceList = select_stmt(sql.c_str());
 //        }
 //    }
-//}
+}
 
 
