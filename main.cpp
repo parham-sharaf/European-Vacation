@@ -35,8 +35,11 @@ int main(int argc, char** argv)
     myCities.AddCity("Budapest", myCities.GetTravelPlan());
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
-    myCities.ShortestPath("Amsterdam");
+    spdlog::debug("total distance before efficient sort: {0}", myCities.GetTotalDistance(myCities.GetTravelPlan()));
+    myCities.ShortestPath("London");
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
+    spdlog::debug("total distance after efficient sort: {0}", myCities.GetTotalDistance(myCities.GetTravelPlan()));
+
 }
 

@@ -202,4 +202,4 @@ SELECT DISTINCT city_name
 FROM food
 ORDER BY city_name;
 
-SELECT ending_city,kilometers from distance WHERE starting_city IS 'Amsterdam' ORDER BY kilometers;
+SELECT ending_city,kilometers from distance WHERE starting_city IS 'Budapest' ORDER BY kilometers;

@@ -20,6 +20,7 @@ public:
     void EraseCity(const string& name, deque<City*>& planner);
     void ShortestPath(const string& startingPoint);
     deque<City*>& GetTravelPlan();
+    int GetTotalDistance(const deque<City*>& planner) const;
 
     Records cityList;
     Records distanceList;
