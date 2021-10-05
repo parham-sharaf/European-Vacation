@@ -117,72 +117,157 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named European_Vacation
+# Target rules for targets named European-Vacation
 
 # Build rule for target.
-European_Vacation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 European_Vacation
-.PHONY : European_Vacation
+European-Vacation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 European-Vacation
+.PHONY : European-Vacation
 
 # fast build rule for target.
-European_Vacation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/build
-.PHONY : European_Vacation/fast
+European-Vacation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/build
+.PHONY : European-Vacation/fast
 
-City.o: City.cpp.o
-.PHONY : City.o
+#=============================================================================
+# Target rules for targets named European-Vacation_autogen
 
-# target to build an object file
-City.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.o
-.PHONY : City.cpp.o
+# Build rule for target.
+European-Vacation_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 European-Vacation_autogen
+.PHONY : European-Vacation_autogen
 
-City.i: City.cpp.i
-.PHONY : City.i
+# fast build rule for target.
+European-Vacation_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation_autogen.dir/build.make CMakeFiles/European-Vacation_autogen.dir/build
+.PHONY : European-Vacation_autogen/fast
 
-# target to preprocess a source file
-City.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.i
-.PHONY : City.cpp.i
-
-City.s: City.cpp.s
-.PHONY : City.s
-
-# target to generate assembly for a file
-City.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/City.cpp.s
-.PHONY : City.cpp.s
-
-ManageCities.o: ManageCities.cpp.o
-.PHONY : ManageCities.o
+European-Vacation_autogen/mocs_compilation.o: European-Vacation_autogen/mocs_compilation.cpp.o
+.PHONY : European-Vacation_autogen/mocs_compilation.o
 
 # target to build an object file
-ManageCities.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.o
-.PHONY : ManageCities.cpp.o
+European-Vacation_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.o
+.PHONY : European-Vacation_autogen/mocs_compilation.cpp.o
 
-ManageCities.i: ManageCities.cpp.i
-.PHONY : ManageCities.i
+European-Vacation_autogen/mocs_compilation.i: European-Vacation_autogen/mocs_compilation.cpp.i
+.PHONY : European-Vacation_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-ManageCities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.i
-.PHONY : ManageCities.cpp.i
+European-Vacation_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.i
+.PHONY : European-Vacation_autogen/mocs_compilation.cpp.i
 
-ManageCities.s: ManageCities.cpp.s
-.PHONY : ManageCities.s
+European-Vacation_autogen/mocs_compilation.s: European-Vacation_autogen/mocs_compilation.cpp.s
+.PHONY : European-Vacation_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-ManageCities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/ManageCities.cpp.s
-.PHONY : ManageCities.cpp.s
+European-Vacation_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.s
+.PHONY : European-Vacation_autogen/mocs_compilation.cpp.s
+
+ManageCity/City/City.o: ManageCity/City/City.cpp.o
+.PHONY : ManageCity/City/City.o
+
+# target to build an object file
+ManageCity/City/City.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o
+.PHONY : ManageCity/City/City.cpp.o
+
+ManageCity/City/City.i: ManageCity/City/City.cpp.i
+.PHONY : ManageCity/City/City.i
+
+# target to preprocess a source file
+ManageCity/City/City.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.i
+.PHONY : ManageCity/City/City.cpp.i
+
+ManageCity/City/City.s: ManageCity/City/City.cpp.s
+.PHONY : ManageCity/City/City.s
+
+# target to generate assembly for a file
+ManageCity/City/City.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.s
+.PHONY : ManageCity/City/City.cpp.s
+
+ManageCity/ManageCities.o: ManageCity/ManageCities.cpp.o
+.PHONY : ManageCity/ManageCities.o
+
+# target to build an object file
+ManageCity/ManageCities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o
+.PHONY : ManageCity/ManageCities.cpp.o
+
+ManageCity/ManageCities.i: ManageCity/ManageCities.cpp.i
+.PHONY : ManageCity/ManageCities.i
+
+# target to preprocess a source file
+ManageCity/ManageCities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.i
+.PHONY : ManageCity/ManageCities.cpp.i
+
+ManageCity/ManageCities.s: ManageCity/ManageCities.cpp.s
+.PHONY : ManageCity/ManageCities.s
+
+# target to generate assembly for a file
+ManageCity/ManageCities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.s
+.PHONY : ManageCity/ManageCities.cpp.s
+
+UI/account/account.o: UI/account/account.cpp.o
+.PHONY : UI/account/account.o
+
+# target to build an object file
+UI/account/account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o
+.PHONY : UI/account/account.cpp.o
+
+UI/account/account.i: UI/account/account.cpp.i
+.PHONY : UI/account/account.i
+
+# target to preprocess a source file
+UI/account/account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i
+.PHONY : UI/account/account.cpp.i
+
+UI/account/account.s: UI/account/account.cpp.s
+.PHONY : UI/account/account.s
+
+# target to generate assembly for a file
+UI/account/account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.s
+.PHONY : UI/account/account.cpp.s
+
+UI/login/login.o: UI/login/login.cpp.o
+.PHONY : UI/login/login.o
+
+# target to build an object file
+UI/login/login.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
+.PHONY : UI/login/login.cpp.o
+
+UI/login/login.i: UI/login/login.cpp.i
+.PHONY : UI/login/login.i
+
+# target to preprocess a source file
+UI/login/login.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/login/login.cpp.i
+.PHONY : UI/login/login.cpp.i
+
+UI/login/login.s: UI/login/login.cpp.s
+.PHONY : UI/login/login.s
+
+# target to generate assembly for a file
+UI/login/login.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s
+.PHONY : UI/login/login.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -190,7 +275,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -198,8 +283,32 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European_Vacation.dir/build.make CMakeFiles/European_Vacation.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+mainwindow.o: mainwindow.cpp.o
+.PHONY : mainwindow.o
+
+# target to build an object file
+mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
+
+mainwindow.i: mainwindow.cpp.i
+.PHONY : mainwindow.i
+
+# target to preprocess a source file
+mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
+
+mainwindow.s: mainwindow.cpp.s
+.PHONY : mainwindow.s
+
+# target to generate assembly for a file
+mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
 
 # Help Target
 help:
@@ -209,16 +318,29 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... European_Vacation"
-	@echo "... City.o"
-	@echo "... City.i"
-	@echo "... City.s"
-	@echo "... ManageCities.o"
-	@echo "... ManageCities.i"
-	@echo "... ManageCities.s"
+	@echo "... European-Vacation_autogen"
+	@echo "... European-Vacation"
+	@echo "... European-Vacation_autogen/mocs_compilation.o"
+	@echo "... European-Vacation_autogen/mocs_compilation.i"
+	@echo "... European-Vacation_autogen/mocs_compilation.s"
+	@echo "... ManageCity/City/City.o"
+	@echo "... ManageCity/City/City.i"
+	@echo "... ManageCity/City/City.s"
+	@echo "... ManageCity/ManageCities.o"
+	@echo "... ManageCity/ManageCities.i"
+	@echo "... ManageCity/ManageCities.s"
+	@echo "... UI/account/account.o"
+	@echo "... UI/account/account.i"
+	@echo "... UI/account/account.s"
+	@echo "... UI/login/login.o"
+	@echo "... UI/login/login.i"
+	@echo "... UI/login/login.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
 .PHONY : help
 
 
