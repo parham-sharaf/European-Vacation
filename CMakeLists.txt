@@ -33,7 +33,7 @@ set(PROJECT_SOURCES
         City.cpp
         City.h
         login.h login.cpp login.ui
-        newaccount.h newaccount.cpp newaccount.ui
+        account.h account.cpp account.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

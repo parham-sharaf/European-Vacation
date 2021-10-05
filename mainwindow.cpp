@@ -11,7 +11,7 @@
 #include <QLineEdit>
 //#include <QtGui>
 #include "login.h"
-#include "newaccount.h"
+#include "account.h"
 
 using namespace std;
 
@@ -168,10 +168,10 @@ void MainWindow::on_actionLogin_triggered()
 }
 
 
-void MainWindow::on_actionCreate_triggered()
+void MainWindow::on_actionCreate_New_Account_triggered()
 {
-    newAccount newAcc;
-    newAcc.setModal(true);
-    newAcc.exec();
+    account acc;
+    acc.setModal(true);
+    acc.exec();
 }
 

@@ -43,7 +43,7 @@ int ManageCities::select_callback(void *p_data, int num_fields, char **p_fields,
 
 ManageCities::ManageCities() {
     // change for user
-    const char* path = "C:/Users/4ktra/OneDrive/Desktop/CS 1D Homework/CS 1D Project 1/Database/European-Vacation/DB/cities-table.sqlite";
+    const char* path = "C:/Users/4ktra/OneDrive/Desktop/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/cities-table.sqlite";
     if (sqlite3_open(path, &db) != SQLITE_OK) {
         std::cerr << "Could not open database.\n";
         return;

@@ -28,7 +28,7 @@ private slots:
 
     void on_actionLogin_triggered();
 
-    void on_actionCreate_triggered();
+    void on_actionCreate_New_Account_triggered();
 
 private:
     Ui::MainWindow *ui;

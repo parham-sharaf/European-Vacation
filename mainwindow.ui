@@ -115,14 +115,14 @@
      <height>25</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuLogin">
+   <widget class="QMenu" name="menuAccount">
     <property name="title">
      <string>Account</string>
     </property>
     <addaction name="actionLogin"/>
-    <addaction name="actionCreate"/>
+    <addaction name="actionCreate_New_Account"/>
    </widget>
-   <addaction name="menuLogin"/>
+   <addaction name="menuAccount"/>
   </widget>
   <action name="actionCircle">
    <property name="text">
@@ -169,7 +169,7 @@
     <string>Login</string>
    </property>
   </action>
-  <action name="actionCreate">
+  <action name="actionCreate_New_Account">
    <property name="text">
     <string>Create New Account</string>
    </property>
