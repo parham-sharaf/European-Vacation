@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "ManageCities.h"
-#include "City.h"
-#include <QSqlDriver>
+#include "ManageCity/ManageCities.h"
+#include "ManageCity/City/City.h"
 #include <iostream>
 #include <iomanip>
 #include <QList>
@@ -10,8 +9,8 @@
 #include <QString>
 #include <QLineEdit>
 //#include <QtGui>
-#include "login.h"
-#include "account.h"
+#include "UI/login/login.h"
+#include "UI/account/account.h"
 
 using namespace std;
 
@@ -111,22 +110,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //    myCities.ShortestPath("Melbourne", myCities.travelPlan);
-
-    mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/Hiep/European-Vacation/DB/cities-table.sqlite");
-
-    mydb.open();
-
-    QSqlQueryModel * modal = new QSqlQueryModel();
-
-    QSqlQuery* qry = new QSqlQuery(mydb);
-
-    qry->prepare("select city_name, food_name, cost from food");
-
-    qry->exec();
-    modal->setQuery(*qry);
-    ui->tableView->setModel(modal);
-
 }
 
 MainWindow::~MainWindow()

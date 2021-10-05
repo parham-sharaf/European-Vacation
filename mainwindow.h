@@ -3,12 +3,9 @@
 
 #include <QMainWindow>
 #include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
 #include <QDebug>
 #include <QFileInfo>
-#include <QSqlQueryModel>
-#include <QSql>
-#include "ManageCities.h"
+#include "ManageCity/ManageCities.h"
 #include <QTreeWidgetItem>
 
 QT_BEGIN_NAMESPACE
@@ -32,7 +29,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase mydb;
     void printPlan(ManageCities toAdd);
 
     QList<QTreeWidgetItem *> citiesTree;
