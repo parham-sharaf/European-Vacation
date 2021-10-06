@@ -133,15 +133,16 @@ vector<City*>& ManageCities::GetEuroCities() {
     return euroCities;
 }
 
-void ManageCities::ShortestPath(const string& startingPoint) {
+void ManageCities::ShortestPath() {
     deque<City *> newPlanner = travelPlan;
     string sql;
 
     travelPlan.clear();
-    AddCity(startingPoint, travelPlan);
-    EraseCity(startingPoint, newPlanner);
+    AddCity(startingCity, travelPlan);
+    EraseCity(startingCity, newPlanner);
 
-    sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + travelPlan.back()->name + "' ORDER BY kilometers;";
+    sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '"
+            + travelPlan.back()->name + "' ORDER BY kilometers;";
     distanceList = select_stmt(sql.c_str());
 
     auto group = distanceList.begin();
@@ -169,4 +170,8 @@ int ManageCities::GetTotalDistance(const deque<City*>& planner) const{
         sum += city->distance;
     }
     return sum;
+}
+
+void ManageCities::setStartingCity(const string& initial) {
+    this->startingCity = initial;
 }

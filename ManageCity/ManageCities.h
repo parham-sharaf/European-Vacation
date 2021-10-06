@@ -19,15 +19,19 @@ public:
     void ReadData();
     void AddCity(const string& name, deque<City*>& planner);
     void EraseCity(const string& name, deque<City*>& planner);
-    void ShortestPath(const string& startingPoint);
+    void ShortestPath();
     deque<City*>& GetTravelPlan();
     vector<City*>& GetEuroCities();
     int GetTotalDistance(const deque<City*>& planner) const;
+    void setStartingCity(const string& initial);
+
+
+private:
 
     Records cityList;
     Records distanceList;
     Records foodList;
-private:
+
     static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);
     static Records select_stmt(const char* stmt) ;
     static void sql_stmt(const char* stmt);
@@ -35,4 +39,5 @@ private:
     vector<City*> euroCities;
     deque<City*> travelPlan;
 
+    string startingCity;
 };

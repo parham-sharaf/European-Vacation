@@ -13,73 +13,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a45756c-3d5a-49c9-b4b3-d7977d2fecc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/067d70eb-f2e8-4301-85da-e4bef6fb1ef9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/European_Vacation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/European-Vacation.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ManageCity/City/City.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ManageCity/City/City.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ManageCity/ManageCities.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ManageCity/ManageCities.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite/cities.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite/sqlite3/shell.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite/sqlite3/sqlite3.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite/sqlite3/sqlite3.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQLite/sqlite3/sqlite3ext.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shell/read_DB.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/account.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/account.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/account.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/newaccount.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/newaccount.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/account/newaccount.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/login/login.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/login/login.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/login/login.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/City.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/ManageCities.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European_Vacation.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European_Vacation" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European_Vacation.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManageCity/ManageCities.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/ManageCities.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManageCity/ManageCities.h" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/ManageCities.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/login/login.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/login/login.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/login/login.h" beforeDir="false" afterPath="$PROJECT_DIR$/UI/login/login.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

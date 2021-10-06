@@ -25,123 +25,98 @@ MainWindow::MainWindow(QWidget *parent)
     ui->citiesTreeWidget->setColumnCount(3);
     //ui->citiesTreeWidget->setHeaderHidden(true);
 
-    //spdlog::set_level(spdlog::level::trace);
-    ManageCities myCities;
-    for (auto& record: myCities.distanceList) {
-        for (auto &r: record)
-            cout << r << endl;
-        cout << endl;
-    }
-
     myCities.ReadData();
-
-    myCities.AddCity("London", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    myCities.AddCity("Amsterdam", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    myCities.AddCity("Lisbon", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    myCities.AddCity("Madrid", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    myCities.AddCity("Paris", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    myCities.AddCity("Budapest", myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    //spdlog::debug("total distance before efficient sort: {0}", myCities.GetTotalDistance(myCities.GetTravelPlan()));
-    myCities.ShortestPath("London");
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
-    //spdlog::debug("total distance after efficient sort: {0}", myCities.GetTotalDistance(myCities.GetTravelPlan()));
 
     // testing buying 5 stroopwaffles from amsterdam
     myCities.GetEuroCities().at(0)->tradFoodList.at(0).purchase(5);
     cout << "TESTING: " << myCities.GetEuroCities().at(0)->tradFoodList.at(0).amountBought << " SPENT: " << fixed <<
-            setprecision(2) << myCities.GetEuroCities().at(0)->tradFoodList.at(0).amountSpent;
+         setprecision(2) << myCities.GetEuroCities().at(0)->tradFoodList.at(0).amountSpent;
 
     // INPUTTING ITEMS INTO TREE WIDGET
-    for (int i = 0; i < myCities.GetEuroCities().size(); i++)
+    for (auto & city : myCities.GetEuroCities())
     {
-        QTreeWidgetItem* cities = new QTreeWidgetItem;
-        cities->setText(0, QString::fromStdString(myCities.GetEuroCities().at(i)->name));
+        auto* cities = new QTreeWidgetItem;
+        cities->setText(0, QString::fromStdString(city->name));
         int z = 0;
-        for (int j = 0; j < myCities.foodList.size(); j++)
+        for (auto & foodItem: city->tradFoodList)
         {
-            if (myCities.GetEuroCities().at(i)->name == myCities.foodList.at(j).at(2))
-            {
-                QTreeWidgetItem* food = new QTreeWidgetItem;
-                QLineEdit* food_costLineEdit = new QLineEdit;
-                QLineEdit* quantity_foodLineEdit = new QLineEdit;
+            auto* food = new QTreeWidgetItem;
+            auto* food_costLineEdit = new QLineEdit;
+            auto* quantity_foodLineEdit = new QLineEdit;
 
-                food->setText(0, QString::fromStdString(myCities.GetEuroCities().at(i)->tradFoodList.at(z).foodName));
-                food_costLineEdit->setText(QString::number(myCities.GetEuroCities().at(i)->tradFoodList.at(z).cost, 'f', 2));
-                food_costLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
+            food->setText(0, QString::fromStdString(foodItem.foodName));
+            food_costLineEdit->setText(QString::number(foodItem.cost, 'f', 2));
+            food_costLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
 
-                //check for admin perms here
-                food_costLineEdit->setDisabled(true);
-                food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
+            //check for admin perms here
+            food_costLineEdit->setDisabled(true);
+            food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
 
-                quantity_foodLineEdit->setText(QString::number(0));
-                quantity_foodLineEdit->setDisabled(true);
-                quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
+            quantity_foodLineEdit->setText(QString::number(0));
+            quantity_foodLineEdit->setDisabled(true);
+            quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
 
-                cities->addChild(food);
-                ui->citiesTreeWidget->setItemWidget(food, 1, food_costLineEdit);
-                ui->citiesTreeWidget->setItemWidget(food, 2, quantity_foodLineEdit);
-                z++;
-            }
+            cities->addChild(food);
+            ui->citiesTreeWidget->setItemWidget(food, 1, food_costLineEdit);
+            ui->citiesTreeWidget->setItemWidget(food, 2, quantity_foodLineEdit);
+            cout << "\nTESTING in 3 FOR LOOP: " << &food << endl;                //ui->citiesTreeWidget->itemWidget(food, 2)->setDisabled(false);
+
+            z++;
         }
-        cities->setCheckState(0, Qt::Unchecked);
+        cities->setData(0, Qt::CheckStateRole, Qt::Unchecked);
+        cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
+        //cities->setCheckState(0, Qt::Unchecked);
         citiesTree.append(cities);
     }
 
     ui->citiesTreeWidget->insertTopLevelItems(0, citiesTree);
+    //connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(updateChecks(QTreeWidgetItem*,int)));
+
     ui->citiesTreeWidget->setColumnWidth(0, 193);
     ui->citiesTreeWidget->setColumnWidth(1, 50);
     ui->citiesTreeWidget->setColumnWidth(2, 80);
+    connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+    connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
+    connect(ui->submitPlan, &QPushButton::released, this, &MainWindow::on_submitPlan_clicked);
 
-    // UI for customizing trip
-
-
-
-    //    myCities.ShortestPath("Melbourne", myCities.travelPlan);
 }
 
 MainWindow::~MainWindow()
 {
-
     delete ui;
 }
 
-void MainWindow::printPlan(ManageCities(toAdd))
+
+void MainWindow::recursiveChecks(QTreeWidgetItem* parent)
 {
-    for (auto & city: toAdd.GetTravelPlan())
+    Qt::CheckState checkState = parent->checkState(0);
+    for(int i = 0; i < parent->childCount(); ++i)
     {
-        cout << city->name << "[" << city->distance << "]" << " --> ";
-//        QTreeWidgetItem *cities = new QTreeWidgetItem;
-//        cities->setText(0, QString::fromStdString(city->name));
-//        citiesTree.append(cities);
-////        cout << "TESTING: " << (cities->text(0).toStdString());
-//        auto itr = std::find_if(citiesTree.begin(), citiesTree.end(), [](QTreeWidgetItem* someclass) { return someclass->text(0).toStdString() == "Lisbon"; });
-//        if(itr != citiesTree.end()) {
-//            (*itr)->text(0) = "NEW";
-//            citiesTree.removeLast();
-//        }
-////        if (iterator != citiesTree.end())
+        parent->child(i)->setCheckState(0, checkState);
+        recursiveChecks(parent->child(i));
     }
 }
 
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::itemChanged(QTreeWidgetItem* item, int col)
 {
 
 }
 
+void MainWindow::setPlan(QTreeWidgetItem* item, int col)
+{
+    if (myCities.GetTravelPlan().empty())
+        myCities.setStartingCity(item->text(0).toStdString());
+    myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
+    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+}
+
+void MainWindow::on_submitPlan_clicked()
+{
+    myCities.ShortestPath();
+    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+    cout << endl;
+}
 
 void MainWindow::on_actionLogin_triggered()
 {
