@@ -15,12 +15,32 @@
     <list default="true" id="7a45756c-3d5a-49c9-b4b3-d7977d2fecc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/067d70eb-f2e8-4301-85da-e4bef6fb1ef9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/cities-table.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/DB/cities-table.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManageCity/City/City.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/City/City.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManageCity/City/City.h" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/City/City.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ManageCity/ManageCities.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/ManageCities.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ManageCity/ManageCities.h" beforeDir="false" afterPath="$PROJECT_DIR$/ManageCity/ManageCities.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/login/login.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/login/login.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/login/login.h" beforeDir="false" afterPath="$PROJECT_DIR$/UI/login/login.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLite/cities.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLite/cities.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/mainwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation.dir/mainwindow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/European-Vacation_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European-Vacation" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/European-Vacation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/include/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/European-Vacation_autogen/include/ui_mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
@@ -61,7 +81,8 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../2021 Summer/CS 1C/Mobius" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="SQLite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
@@ -73,12 +94,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.European-Vacation">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="European-Vacation_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="European-Vacation" TARGET_NAME="European-Vacation_autogen" CONFIG_NAME="Debug">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="European-Vacation_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="European-Vacation" TARGET_NAME="European-Vacation_autogen" CONFIG_NAME="Debug">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -114,6 +135,7 @@
       <workItem from="1633410700739" duration="1943000" />
       <workItem from="1633412667385" duration="558000" />
       <workItem from="1633455220797" duration="3457000" />
+      <workItem from="1633497839410" duration="5247000" />
     </task>
     <servers />
   </component>

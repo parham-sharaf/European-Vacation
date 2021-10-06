@@ -63,11 +63,10 @@ ManageCities::ManageCities() {
 
 void ManageCities::ReadData() {
     for (auto& group: cityList) {
-        for (auto& cityName: group) {
-            City *newCity = new City;
-            newCity->name = cityName;
-            euroCities.push_back(newCity);
-        }
+        City *newCity = new City;
+        newCity->name = group.at(0);
+        newCity->setCoordinate(std::stoi(group.at(1)), std::stoi(group.at(2)));
+        euroCities.push_back(newCity);
     }
 
     for (auto & city: euroCities) {
@@ -111,6 +110,7 @@ void ManageCities::EraseCity(const string &name, deque<City*>& planner) {
     else if (planner.front()->name == name) {
         planner.erase(planner.begin());
         planner.at(0)->distance = 0;
+        setStartingCity(planner.at(0)->name);
     }
     else {
         for (auto city = planner.begin(); city != planner.end(); city++) {
@@ -141,8 +141,7 @@ void ManageCities::ShortestPath() {
     AddCity(startingCity, travelPlan);
     EraseCity(startingCity, newPlanner);
 
-    sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '"
-            + travelPlan.back()->name + "' ORDER BY kilometers;";
+    sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + travelPlan.back()->name + "' ORDER BY kilometers;";
     distanceList = select_stmt(sql.c_str());
 
     auto group = distanceList.begin();
@@ -161,7 +160,7 @@ void ManageCities::ShortestPath() {
         }
         group++;
     }
-    AddCity(newPlanner.back()->name, travelPlan);
+    if (!newPlanner.empty()) AddCity(newPlanner.back()->name, travelPlan);
 }
 
 int ManageCities::GetTotalDistance(const deque<City*>& planner) const{
@@ -175,3 +174,9 @@ int ManageCities::GetTotalDistance(const deque<City*>& planner) const{
 void ManageCities::setStartingCity(const string& initial) {
     this->startingCity = initial;
 }
+
+void ManageCities::paintEvent(QPaintEvent *event) {
+
+
+}
+

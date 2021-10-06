@@ -8,6 +8,7 @@
 #include <QtCore>
 #include <QString>
 #include <QLineEdit>
+#include <QPainter>
 //#include <QtGui>
 #include "UI/login/login.h"
 #include "UI/account/account.h"
@@ -19,8 +20,49 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    pix.load("./UI/Europe_countries_map_en_2.png");
+
+
+//    int w = ui->map->width();
+//    int h = ui->map->height();
+//
+//    ui->map->setPixmap(pix.scaled(500,500,Qt::KeepAspectRatio));
 
     // setting up tree widget
+
+    QRadioButton *buttonAmsterdam = new QRadioButton("", this);
+    buttonAmsterdam->move(440, 640);
+
+    QRadioButton *buttonBerlin = new QRadioButton("", this);
+    buttonBerlin->move(605, 650);
+
+    QRadioButton *buttonBrussel = new QRadioButton("", this);
+    buttonBrussel->move(430, 685);
+
+    QRadioButton *buttonBudapest = new QRadioButton("", this);
+    buttonBudapest->move(730, 800);
+
+    QRadioButton *buttonHamburg = new QRadioButton("", this);
+    buttonHamburg->move(540, 610);
+
+    QRadioButton *buttonLisbon = new QRadioButton("", this);
+    buttonLisbon->move(50, 980);
+
+    QRadioButton *buttonLondon = new QRadioButton("", this);
+    buttonLondon->move(350, 648);
+
+    QRadioButton *buttonMadrid = new QRadioButton("", this);
+    buttonMadrid->move(200, 950);
+
+    QRadioButton *buttonParis = new QRadioButton("", this);
+    buttonParis->move(390, 735);
+
+    QRadioButton *buttonPrague = new QRadioButton("", this);
+    buttonPrague->move(625, 720);
+
+    QRadioButton *buttonRome = new QRadioButton("", this);
+    buttonRome->move(550, 950);
+
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)" << "Quantity to buy");
     ui->citiesTreeWidget->setColumnCount(3);
     //ui->citiesTreeWidget->setHeaderHidden(true);
@@ -29,15 +71,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     // testing buying 5 stroopwaffles from amsterdam
     myCities.GetEuroCities().at(0)->tradFoodList.at(0).purchase(5);
-    cout << "TESTING: " << myCities.GetEuroCities().at(0)->tradFoodList.at(0).amountBought << " SPENT: " << fixed <<
-         setprecision(2) << myCities.GetEuroCities().at(0)->tradFoodList.at(0).amountSpent;
 
     // INPUTTING ITEMS INTO TREE WIDGET
     for (auto & city : myCities.GetEuroCities())
     {
         auto* cities = new QTreeWidgetItem;
         cities->setText(0, QString::fromStdString(city->name));
-        int z = 0;
         for (auto & foodItem: city->tradFoodList)
         {
             auto* food = new QTreeWidgetItem;
@@ -59,9 +98,6 @@ MainWindow::MainWindow(QWidget *parent)
             cities->addChild(food);
             ui->citiesTreeWidget->setItemWidget(food, 1, food_costLineEdit);
             ui->citiesTreeWidget->setItemWidget(food, 2, quantity_foodLineEdit);
-            cout << "\nTESTING in 3 FOR LOOP: " << &food << endl;                //ui->citiesTreeWidget->itemWidget(food, 2)->setDisabled(false);
-
-            z++;
         }
         cities->setData(0, Qt::CheckStateRole, Qt::Unchecked);
         cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
@@ -77,7 +113,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->citiesTreeWidget->setColumnWidth(2, 80);
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
-    connect(ui->submitPlan, &QPushButton::released, this, &MainWindow::on_submitPlan_clicked);
+    connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
 
 }
 
@@ -85,7 +121,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 
 void MainWindow::recursiveChecks(QTreeWidgetItem* parent)
 {
@@ -104,18 +139,28 @@ void MainWindow::itemChanged(QTreeWidgetItem* item, int col)
 
 void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 {
-    if (myCities.GetTravelPlan().empty())
-        myCities.setStartingCity(item->text(0).toStdString());
-    myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-    cout << endl;
+    if (item->checkState(0) == Qt::Checked) {
+        if (myCities.GetTravelPlan().empty())
+            myCities.setStartingCity(item->text(0).toStdString());
+        myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
+        for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+            cout << endl;
+    }
+    else if (item->checkState(0) != Qt::Checked) {
+        myCities.EraseCity(item->text(0).toStdString(), myCities.GetTravelPlan());
+        cout << "Removed: " << item->text(0).toStdString() << endl;
+        for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+        cout << endl;
+    }
 }
 
 void MainWindow::on_submitPlan_clicked()
 {
+
     myCities.ShortestPath();
     for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
     cout << endl;
+    cout << "Total Distance travelled: " << myCities.GetTotalDistance(myCities.GetTravelPlan()) << endl;
 }
 
 void MainWindow::on_actionLogin_triggered()
@@ -131,5 +176,24 @@ void MainWindow::on_actionCreate_New_Account_triggered()
     account acc;
     acc.setModal(true);
     acc.exec();
+}
+
+void MainWindow::paintEvent(QPaintEvent *e) {
+    QWidget::paintEvent(e);
+    QPainter painter(&pix);
+    ui->map->setPixmap(pix);
+    ui->map->show();
+    QPen paintPen(Qt::red);
+    paintPen.setWidth(3);
+    painter.setPen(paintPen);
+
+    if (myCities.GetTravelPlan().size() > 1) {
+        for (int i = 0; i < myCities.GetTravelPlan().size() - 1; i++) {
+            painter.drawLine(myCities.GetTravelPlan().at(i)->getCoordinate(),
+                             myCities.GetTravelPlan().at(
+                                     i + 1)->getCoordinate());
+        }
+    }
+    update();
 }
 

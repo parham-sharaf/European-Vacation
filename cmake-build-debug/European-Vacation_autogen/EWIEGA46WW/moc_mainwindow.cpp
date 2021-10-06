@@ -62,7 +62,7 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    2,   44,    2, 0x0a,    0 /* Public */,
        4,    2,   49,    2, 0x0a,    3 /* Public */,
-       5,    0,   54,    2, 0x08,    6 /* Private */,
+       5,    0,   54,    2, 0x0a,    6 /* Public */,
        6,    0,   55,    2, 0x08,    7 /* Private */,
        7,    0,   56,    2, 0x08,    8 /* Private */,
 

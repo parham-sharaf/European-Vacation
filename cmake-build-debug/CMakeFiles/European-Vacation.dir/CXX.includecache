@@ -11,6 +11,8 @@ vector
 -
 string
 -
+QPoint
+-
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
 iostream
@@ -27,6 +29,10 @@ algorithm
 -
 City/City.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
+QWidget
+-
+QPainter
+-
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
 QDialog
@@ -65,6 +71,8 @@ QString
 -
 QLineEdit
 -
+QPainter
+-
 UI/login/login.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
 UI/account/account.h
@@ -87,6 +95,10 @@ QTreeWidget
 -
 QTreeWidgetItem
 -
+QRadioButton
+-
+QPainter
+-
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer
 qdeadlinetimer.h
@@ -107,6 +119,10 @@ qlist.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QObject
 qobject.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject.h
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtCore/QPoint
+qpoint.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpoint.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QRect
 qrect.h
@@ -2312,6 +2328,10 @@ QtCore/qstring.h
 qaction.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaction.h
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPainter
+qpainter.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpainter.h
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QTransform
 qtransform.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h
@@ -2524,6 +2544,36 @@ QtGui/qtguiglobal.h
 QtGui/qwindowdefs.h
 -
 QtCore/qrect.h
+-
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpainter.h
+QtGui/qtguiglobal.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qrect.h
+-
+QtCore/qpoint.h
+-
+QtCore/qscopedpointer.h
+-
+QtGui/qpixmap.h
+-
+QtGui/qimage.h
+-
+QtGui/qtextoption.h
+-
+QtGui/qpolygon.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qtransform.h
+-
+QtGui/qfontinfo.h
+-
+QtGui/qfontmetrics.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpalette.h
@@ -2826,13 +2876,13 @@ qmenubar.h
 qpushbutton.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QRadioButton
+qradiobutton.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qradiobutton.h
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QStatusBar
 qstatusbar.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstatusbar.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTableView
-qtableview.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtableview.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget
 qtreewidget.h
@@ -3034,6 +3084,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qabstractbutton.h
 -
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qradiobutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
+-
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -3110,12 +3166,6 @@ QtCore/qabstractitemmodel.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtableview.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractitemview.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtabwidget.h
@@ -3214,8 +3264,6 @@ QtWidgets/QMenuBar
 QtWidgets/QPushButton
 -
 QtWidgets/QStatusBar
--
-QtWidgets/QTableView
 -
 QtWidgets/QTreeWidget
 -

@@ -1,19 +1,21 @@
 CREATE TABLE city
 (
-    city_name VARCHAR(20) PRIMARY KEY NOT NULL
+    city_name VARCHAR(20) PRIMARY KEY NOT NULL,
+    x_coordinate int,
+    y_coordinate int
 );
 
-INSERT INTO city VALUES('Amsterdam');
-INSERT INTO city VALUES('Berlin');
-INSERT INTO city VALUES('Brussels');
-INSERT INTO city VALUES('Budapest');
-INSERT INTO city VALUES('Hamburg');
-INSERT INTO city VALUES('Lisbon');
-INSERT INTO city VALUES('London');
-INSERT INTO city VALUES('Madrid');
-INSERT INTO city VALUES('Paris');
-INSERT INTO city VALUES('Prague');
-INSERT INTO city VALUES('Rome');
+INSERT INTO city VALUES('Amsterdam', 440, 640);
+INSERT INTO city VALUES('Berlin', 605, 650);
+INSERT INTO city VALUES('Brussels', 430, 685);
+INSERT INTO city VALUES('Budapest', 730, 800);
+INSERT INTO city VALUES('Hamburg', 540, 610);
+INSERT INTO city VALUES('Lisbon', 50, 980);
+INSERT INTO city VALUES('London', 350, 648);
+INSERT INTO city VALUES('Madrid', 200, 950);
+INSERT INTO city VALUES('Paris', 390, 735);
+INSERT INTO city VALUES('Prague', 625, 720);
+INSERT INTO city VALUES('Rome', 550, 950);
 
 CREATE TABLE distance
 (
@@ -197,9 +199,3 @@ INSERT INTO food VALUES('Bruschetta', 4.85, 'Rome');
 INSERT INTO food VALUES('Scaloppine', 12.99, 'Rome');
 INSERT INTO food VALUES('Rigatoni con la Pajata', 8.79, 'Rome');
 INSERT INTO food VALUES('Carciofi alla giudia', 15.99, 'Rome');
-
-SELECT DISTINCT city_name
-FROM food
-ORDER BY city_name;
-
-SELECT ending_city,kilometers from distance WHERE starting_city IS 'Budapest' ORDER BY kilometers;

@@ -7,12 +7,15 @@
 #include <algorithm>
 //#include "spdlog/spdlog.h"
 #include "City/City.h"
+#include <QWidget>
+#include <QPainter>
+
 using namespace std;
 
 using Record = std::vector<std::string>;
 using Records = std::vector<Record>;
 
-class ManageCities
+class ManageCities : public QWidget
 {
 public:
     ManageCities();
@@ -24,7 +27,7 @@ public:
     vector<City*>& GetEuroCities();
     int GetTotalDistance(const deque<City*>& planner) const;
     void setStartingCity(const string& initial);
-
+    void paintEvent(QPaintEvent *event) override;
 
 private:
 
