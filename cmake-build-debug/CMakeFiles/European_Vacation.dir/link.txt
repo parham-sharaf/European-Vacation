@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/European_Vacation.dir/main.cpp.o CMakeFiles/European_Vacation.dir/ManageCities.cpp.o CMakeFiles/European_Vacation.dir/City.cpp.o -o European_Vacation  -lsqlite3 
