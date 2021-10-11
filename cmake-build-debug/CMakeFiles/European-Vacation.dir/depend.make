@@ -860,7 +860,6 @@ CMakeFiles/European-Vacation.dir/main.cpp.o: \
 CMakeFiles/European-Vacation.dir/mainwindow.cpp.o: \
  ../ManageCity/City/City.h \
  ../ManageCity/ManageCities.h \
- ../UI/account/account.h \
  ../UI/login/login.h \
  ../mainwindow.cpp \
  ../mainwindow.h \

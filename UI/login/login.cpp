@@ -5,8 +5,8 @@
 sqlite3 *usersDB;
 
 login::login(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::login)
+        QDialog(parent),
+        ui(new Ui::login)
 {
     const char* path = "./DB/user-info.sqlite";
     if (sqlite3_open(path, &usersDB) != SQLITE_OK) {
@@ -15,6 +15,8 @@ login::login(QWidget *parent) :
     }
 
     ui->setupUi(this);
+    this->setWindowTitle("Log In");
+
     usernameList = select_stmt("SELECT * FROM users;");
 }
 
@@ -66,7 +68,7 @@ void login::on_loginButton_clicked()
     QString username = ui->username->text();
     QString password = ui->password->text();
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setWindowTitle("Account Information");
 
     for (auto& group: usernameList) {
@@ -76,17 +78,26 @@ void login::on_loginButton_clicked()
             break;
         }
     }
+
     if (isLoginCorrect) {
-        msgBox.setText("Account Connected");
-        msgBox.setInformativeText("Click OK to continue");
-        msgBox.setStyleSheet("QLabel{min-width:200 px; font-size: 12px;} QPushButton{ width:72px; font-size: 12px; }");
+        QAbstractButton *close = msgBox.addButton(tr("OK"), QMessageBox::AcceptRole);
+
+        msgBox.setText("<center>Account Connected</center>");
+        msgBox.setInformativeText("<center>Click OK to continue</center>");
+        msgBox.setIcon(QMessageBox::Information);
+        msgBox.setStyleSheet("QLabel{font-size: 12px;} QPushButton{width:72px; font-size: 12px;}");
         msgBox.exec();
+
+        if (msgBox.clickedButton() == close) {
+            QDialog::reject();
+            std::cerr << "Login Dialog Closed\n";
+        }
     }
     else {
-        msgBox.setText("Account Not Found");
-        msgBox.setInformativeText("Please try again");
-        msgBox.setStyleSheet("QLabel{min-width:200 px; font-size: 12px;} QPushButton{ width:72px; font-size: 12px; }");
+        msgBox.setText("<center>Account Not Found</center>");
+        msgBox.setInformativeText("<center>Please try again</center>");
+        msgBox.setIcon(QMessageBox::Critical);
+        msgBox.setStyleSheet("QLabel{font-size: 12px;} QPushButton{width:72px; font-size: 12px;}");
         msgBox.exec();
     }
 }
-

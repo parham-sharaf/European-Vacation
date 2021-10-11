@@ -29,6 +29,7 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *e);
+
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
     void setPlan(QTreeWidgetItem*, int);
@@ -40,7 +41,6 @@ private slots:
 
     void on_actionLogin_triggered();
 
-    void on_actionCreate_New_Account_triggered();
 private:
     Ui::MainWindow *ui;
     QPixmap pix;

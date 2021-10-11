@@ -11,15 +11,16 @@
 #include <QPainter>
 //#include <QtGui>
 #include "UI/login/login.h"
-#include "UI/account/account.h"
 
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+        : QMainWindow(parent)
+        , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("European Vacation Application");
+
     pix.load("./UI/Europe_countries_map_en_2.png");
 
 
@@ -144,7 +145,7 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
             myCities.setStartingCity(item->text(0).toStdString());
         myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
         for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
-            cout << endl;
+        cout << endl;
     }
     else if (item->checkState(0) != Qt::Checked) {
         myCities.EraseCity(item->text(0).toStdString(), myCities.GetTravelPlan());
@@ -170,14 +171,6 @@ void MainWindow::on_actionLogin_triggered()
     log.exec();
 }
 
-
-void MainWindow::on_actionCreate_New_Account_triggered()
-{
-    account acc;
-    acc.setModal(true);
-    acc.exec();
-}
-
 void MainWindow::paintEvent(QPaintEvent *e) {
     QWidget::paintEvent(e);
     QPainter painter(&pix);
@@ -196,4 +189,3 @@ void MainWindow::paintEvent(QPaintEvent *e) {
     }
     update();
 }
-

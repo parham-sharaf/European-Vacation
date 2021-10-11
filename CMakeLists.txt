@@ -26,7 +26,7 @@ add_executable(European-Vacation
         ManageCity/City/City.h
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         UI/account/account.h UI/account/account.cpp UI/account/account.ui
-#        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui
+        #        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui
         )
 
 include_directories(/usr/include)

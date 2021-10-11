@@ -152,7 +152,6 @@ public:
 
         menubar->addAction(menuAccount->menuAction());
         menuAccount->addAction(actionLogin);
-        menuAccount->addAction(actionCreate_New_Account);
 
         retranslateUi(MainWindow);
 

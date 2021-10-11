@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
-#include <sqlite3.h>
+#include "sqlite3.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -11,7 +11,7 @@ using namespace std;
 namespace Ui {
     using Record = std::vector<std::string>;
     using Records = std::vector<Record>;
-class login;
+    class login;
 }
 
 class login : public QDialog
@@ -23,7 +23,7 @@ public:
     ~login();
 
 private slots:
-    void on_loginButton_clicked();
+            void on_loginButton_clicked();
 
 private:
     static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);

@@ -114,7 +114,6 @@
      <string>Account</string>
     </property>
     <addaction name="actionLogin"/>
-    <addaction name="actionCreate_New_Account"/>
    </widget>
    <addaction name="menuAccount"/>
   </widget>
