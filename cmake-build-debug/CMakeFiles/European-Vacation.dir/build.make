@@ -105,9 +105,22 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/mainwindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.cpp" -o CMakeFiles/European-Vacation.dir/mainwindow.cpp.s
 
+CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
+CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o: ../DB/Database/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp"
+
+CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp" > CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.i
+
+CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp" -o CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.s
+
 CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o: ../ManageCity/ManageCities.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.cpp"
 
 CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.i: cmake_force
@@ -120,7 +133,7 @@ CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.s: cmake_force
 
 CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o: ../ManageCity/City/City.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.cpp"
 
 CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.i: cmake_force
@@ -131,9 +144,22 @@ CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.cpp" -o CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.s
 
+CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
+CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o: ../Admin/Admin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp"
+
+CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp" > CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.i
+
+CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp" -o CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.s
+
 CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o: ../UI/login/login.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp"
 
 CMakeFiles/European-Vacation.dir/UI/login/login.cpp.i: cmake_force
@@ -146,7 +172,7 @@ CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s: cmake_force
 
 CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o: ../UI/account/account.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.cpp"
 
 CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i: cmake_force
@@ -162,8 +188,10 @@ European__Vacation_OBJECTS = \
 "CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/European-Vacation.dir/main.cpp.o" \
 "CMakeFiles/European-Vacation.dir/mainwindow.cpp.o" \
+"CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o" \
 "CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o" \
 "CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o" \
+"CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o" \
 "CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o" \
 "CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o"
 
@@ -173,8 +201,10 @@ European__Vacation_EXTERNAL_OBJECTS =
 European-Vacation: CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/main.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
+European-Vacation: CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o
+European-Vacation: CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/build.make
@@ -184,7 +214,7 @@ European-Vacation: /home/parham/Qt/6.1.2/gcc_64/lib/libQt6Core.so.6.1.2
 European-Vacation: /usr/lib/x86_64-linux-gnu/libGLX.so
 European-Vacation: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 European-Vacation: CMakeFiles/European-Vacation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable European-Vacation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable European-Vacation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/European-Vacation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

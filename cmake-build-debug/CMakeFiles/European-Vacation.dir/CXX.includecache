@@ -6,12 +6,34 @@
 
 #IncludeRegexTransform: 
 
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp
+Database.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
+iostream
+-
+sqlite3.h
+-
+vector
+-
+string
+-
+
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
 vector
 -
 string
 -
 QPoint
+-
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.cpp
+ManageCities.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
+City/City.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
+iterator
 -
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
@@ -29,10 +51,8 @@ algorithm
 -
 City/City.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
-QWidget
--
-QPainter
--
+../DB/Database/Database.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
 QDialog

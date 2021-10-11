@@ -142,6 +142,54 @@ European-Vacation_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation_autogen.dir/build.make CMakeFiles/European-Vacation_autogen.dir/build
 .PHONY : European-Vacation_autogen/fast
 
+Admin/Admin.o: Admin/Admin.cpp.o
+.PHONY : Admin/Admin.o
+
+# target to build an object file
+Admin/Admin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o
+.PHONY : Admin/Admin.cpp.o
+
+Admin/Admin.i: Admin/Admin.cpp.i
+.PHONY : Admin/Admin.i
+
+# target to preprocess a source file
+Admin/Admin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.i
+.PHONY : Admin/Admin.cpp.i
+
+Admin/Admin.s: Admin/Admin.cpp.s
+.PHONY : Admin/Admin.s
+
+# target to generate assembly for a file
+Admin/Admin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.s
+.PHONY : Admin/Admin.cpp.s
+
+DB/Database/Database.o: DB/Database/Database.cpp.o
+.PHONY : DB/Database/Database.o
+
+# target to build an object file
+DB/Database/Database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o
+.PHONY : DB/Database/Database.cpp.o
+
+DB/Database/Database.i: DB/Database/Database.cpp.i
+.PHONY : DB/Database/Database.i
+
+# target to preprocess a source file
+DB/Database/Database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.i
+.PHONY : DB/Database/Database.cpp.i
+
+DB/Database/Database.s: DB/Database/Database.cpp.s
+.PHONY : DB/Database/Database.s
+
+# target to generate assembly for a file
+DB/Database/Database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.s
+.PHONY : DB/Database/Database.cpp.s
+
 European-Vacation_autogen/mocs_compilation.o: European-Vacation_autogen/mocs_compilation.cpp.o
 .PHONY : European-Vacation_autogen/mocs_compilation.o
 
@@ -320,6 +368,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... European-Vacation_autogen"
 	@echo "... European-Vacation"
+	@echo "... Admin/Admin.o"
+	@echo "... Admin/Admin.i"
+	@echo "... Admin/Admin.s"
+	@echo "... DB/Database/Database.o"
+	@echo "... DB/Database/Database.i"
+	@echo "... DB/Database/Database.s"
 	@echo "... European-Vacation_autogen/mocs_compilation.o"
 	@echo "... European-Vacation_autogen/mocs_compilation.i"
 	@echo "... European-Vacation_autogen/mocs_compilation.s"

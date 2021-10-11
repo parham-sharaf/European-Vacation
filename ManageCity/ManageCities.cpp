@@ -1,53 +1,9 @@
 #include "ManageCities.h"
 #include "City/City.h"
 #include <iterator>
-sqlite3 *db;
 
-//int (*select_callback)(void *NotUsed, int argc, char **argv, char **azColName)
-Records ManageCities::select_stmt(const char* stmt)
-{
-    Records thisRecord;
-    char *errmsg;
-    int ret = sqlite3_exec(db, stmt, select_callback, &thisRecord, &errmsg);
-    if (ret != SQLITE_OK) {
-        std::cerr << "Error in select statement " << stmt << "[" << errmsg << "]\n";
-    }
-    else {
-        std::cerr << thisRecord.size() << " results returned.\n";
-    }
 
-    return thisRecord;
-}
-
-void ManageCities::sql_stmt(const char* stmt)
-{
-    char *errmsg;
-    int ret = sqlite3_exec(db, stmt, nullptr, nullptr, &errmsg);
-    if (ret != SQLITE_OK) {
-        std::cerr << "Error in select statement " << stmt << "[" << errmsg << "]\n";
-    }
-}
-
-int ManageCities::select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names)
-{
-    auto* records = static_cast<Records*>(p_data);
-    try {
-        records->emplace_back(p_fields, p_fields + num_fields);
-    }
-    catch (...) {
-        // abort select on failure, don't let exception propogate thru sqlite3 call-stack
-        return 1;
-    }
-    return 0;
-}
-
-ManageCities::ManageCities() {
-    // change for user
-    const char* path = "./DB/cities-table.sqlite";
-    if (sqlite3_open(path, &db) != SQLITE_OK) {
-        std::cerr << "Could not open database.\n";
-        return;
-    }
+ManageCities::ManageCities(): Database("./DB/cities-table.sqlite") {
 
     distanceList = select_stmt("SELECT ending_city,kilometers from distance"
                                " WHERE starting_city IS 'London' ORDER BY kilometers;");
@@ -57,8 +13,6 @@ ManageCities::ManageCities() {
     foodList = select_stmt("SELECT *\n"
                                 "FROM food \n"
                                 "ORDER BY city_name;");
-
-//    sqlite3_close(db);
 }
 
 void ManageCities::ReadData() {
@@ -173,10 +127,5 @@ int ManageCities::GetTotalDistance(const deque<City*>& planner) const{
 
 void ManageCities::setStartingCity(const string& initial) {
     this->startingCity = initial;
-}
-
-void ManageCities::paintEvent(QPaintEvent *event) {
-
-
 }
 

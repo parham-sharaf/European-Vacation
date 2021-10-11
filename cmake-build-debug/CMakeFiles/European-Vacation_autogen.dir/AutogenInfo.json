@@ -177,6 +177,18 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h",
+			"MU",
+			"72WKXQNCCO/moc_Admin.cpp",
+			null
+		],
+		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h",
+			"MU",
+			"I3U4ME3YGK/moc_Database.cpp",
+			null
+		],
+		[
 			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h",
 			"MU",
 			"WWV7MBZRL5/moc_City.cpp",
@@ -257,6 +269,16 @@
 	"SETTINGS_FILE" : "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles/European-Vacation_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.cpp",
 			"MU",

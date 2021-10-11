@@ -24,10 +24,11 @@ MainWindow::MainWindow(QWidget *parent)
     pix.load("./UI/Europe_countries_map_en_2.png");
 
 
-//    int w = ui->map->width();
-//    int h = ui->map->height();
-//
-//    ui->map->setPixmap(pix.scaled(500,500,Qt::KeepAspectRatio));
+    int w = ui->map->width();
+    int h = ui->map->height();
+
+    ui->map->setPixmap(pix.scaled(w, h,Qt::KeepAspectRatio));
+    ui->map->setScaledContents(true);
 
     // setting up tree widget
 

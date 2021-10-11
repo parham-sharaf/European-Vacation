@@ -14,16 +14,14 @@ set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
 set(TS_FILES European-Vacation_en_US.ts)
 
 add_executable(European-Vacation
-        #        sqlite3/sqlite3.h
-        #        sqlite3/sqlite3.c
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        ManageCity/ManageCities.h
-        ManageCity/ManageCities.cpp
-        ManageCity/City/City.cpp
-        ManageCity/City/City.h
+        DB/Database/Database.h DB/Database/Database.cpp
+        ManageCity/ManageCities.h ManageCity/ManageCities.cpp
+        ManageCity/City/City.h ManageCity/City/City.cpp
+        Admin/Admin.h Admin/Admin.cpp
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         UI/account/account.h UI/account/account.cpp UI/account/account.ui
         #        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui

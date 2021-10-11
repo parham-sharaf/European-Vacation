@@ -1,5 +1,6 @@
 /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/mainwindow.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/moc_predefs.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/DB/Database/Database.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/City/City.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/ManageCities.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug \
@@ -131,7 +132,6 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QRadioButton \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QWidget \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractbutton.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemview.h \
