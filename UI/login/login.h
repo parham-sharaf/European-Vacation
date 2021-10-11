@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
-#include "SQLite/sqlite3/sqlite3.h"
+#include "sqlite3.h"
 #include <string>
 #include <iostream>
 #include <vector>

@@ -8,7 +8,7 @@ login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
 {
-    const char* path = "C:/Users/4ktra/OneDrive/Desktop/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/user-info.sqlite";
+    const char* path = "./DB/user-info.sqlite";
     if (sqlite3_open(path, &usersDB) != SQLITE_OK) {
         std::cerr << "Could not open database.\n";
         return;

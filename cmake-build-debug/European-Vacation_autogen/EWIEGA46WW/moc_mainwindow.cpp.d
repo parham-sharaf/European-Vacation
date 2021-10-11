@@ -4,6 +4,7 @@
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/ManageCities.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QFileInfo \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QPoint \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstractitemmodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qalgorithms.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanystringview.h \
@@ -92,6 +93,7 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariant.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversiontagging.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPainter \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbitmap.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbrush.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolor.h \
@@ -103,13 +105,18 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimage.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qkeysequence.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpainter.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpalette.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpen.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixelformat.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixmap.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpolygon.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qregion.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgb.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgba64.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextcursor.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextformat.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextoption.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtgui-config.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtguiglobal.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h \
@@ -119,15 +126,22 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qsqldatabase.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qtsql-config.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qtsqlglobal.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QRadioButton \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QWidget \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractbutton.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractslider.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qframe.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qradiobutton.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qslider.h \

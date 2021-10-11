@@ -3,7 +3,7 @@
 #include <deque>
 #include <vector>
 #include <string>
-#include "SQLite/sqlite3/sqlite3.h"
+#include "sqlite3.h"
 #include <algorithm>
 //#include "spdlog/spdlog.h"
 #include "City/City.h"

@@ -21,7 +21,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QWidget>
 
@@ -43,11 +42,11 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTreeWidget *citiesTreeWidget;
-    QTreeWidget *planTreeWidget;
-    QTableView *tableView;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
-    QPushButton *pushButton;
+    QPushButton *submitPlan;
+    QTreeWidget *planTreeWidget;
+    QLabel *map;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -99,7 +98,28 @@ public:
         citiesTreeWidget->setSizePolicy(sizePolicy1);
         citiesTreeWidget->setMinimumSize(QSize(355, 260));
 
-        gridLayout->addWidget(citiesTreeWidget, 1, 1, 1, 1);
+        gridLayout->addWidget(citiesTreeWidget, 3, 1, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy2);
+        label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label);
+
+        submitPlan = new QPushButton(centralwidget);
+        submitPlan->setObjectName(QString::fromUtf8("submitPlan"));
+
+        horizontalLayout_2->addWidget(submitPlan);
+
+
+        gridLayout->addLayout(horizontalLayout_2, 2, 1, 1, 1);
 
         planTreeWidget = new QTreeWidget(centralwidget);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
@@ -109,41 +129,17 @@ public:
         sizePolicy1.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
         planTreeWidget->setSizePolicy(sizePolicy1);
 
-        gridLayout->addWidget(planTreeWidget, 2, 1, 1, 1);
+        gridLayout->addWidget(planTreeWidget, 4, 1, 1, 1);
 
-        tableView = new QTableView(centralwidget);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(tableView->sizePolicy().hasHeightForWidth());
-        tableView->setSizePolicy(sizePolicy2);
-        tableView->setMaximumSize(QSize(1677215, 16777215));
+        map = new QLabel(centralwidget);
+        map->setObjectName(QString::fromUtf8("map"));
 
-        gridLayout->addWidget(tableView, 0, 0, 3, 1);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy3);
-        label->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_2->addWidget(label);
-
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        horizontalLayout_2->addWidget(pushButton);
-
-
-        gridLayout->addLayout(horizontalLayout_2, 0, 1, 1, 1);
+        gridLayout->addWidget(map, 1, 0, 4, 1);
 
         MainWindow->setCentralWidget(centralwidget);
+        map->raise();
+        citiesTreeWidget->raise();
+        planTreeWidget->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -156,7 +152,6 @@ public:
 
         menubar->addAction(menuAccount->menuAction());
         menuAccount->addAction(actionLogin);
-        menuAccount->addAction(actionCreate_New_Account);
 
         retranslateUi(MainWindow);
 
@@ -177,7 +172,8 @@ public:
         actionLogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Please mark which cities to travel to!", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
+        submitPlan->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
+        map->setText(QString());
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 
