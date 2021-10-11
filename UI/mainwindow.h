@@ -3,15 +3,15 @@
 
 #include <QMainWindow>
 #include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
 #include <QDebug>
 #include <QFileInfo>
-#include <QSqlQueryModel>
-#include <QSql>
 #include <QLineEdit>
-#include "ManageCities.h"
+#include "ManageCity/ManageCities.h"
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
+#include <QRadioButton>
+#include <QPainter>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,7 +19,7 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+Q_OBJECT
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -27,19 +27,29 @@ public:
 
     int toggle = 0;
 
+protected:
+    void paintEvent(QPaintEvent *e);
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
+    void setPlan(QTreeWidgetItem*, int);
+    void on_submitPlan_clicked();
+
 signals:
 
 private slots:
-    void on_pushButton_clicked();
 
+    void on_actionLogin_triggered();
+
+    void on_actionCreate_New_Account_triggered();
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase mydb;
-    void printPlan(ManageCities toAdd);
+    QPixmap pix;
+
     void updateChecks(QTreeWidgetItem* item, int column);
     void recursiveChecks(QTreeWidgetItem* parent);
+    ManageCities myCities;
+
+
 
     QList<QTreeWidgetItem *> citiesTree;
 //    QTreeWidgetItem *cities = new QTreeWidgetItem;

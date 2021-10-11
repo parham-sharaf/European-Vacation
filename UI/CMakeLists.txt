@@ -22,38 +22,41 @@ if (SQLITE3_FOUND)
 endif (SQLITE3_FOUND)
 
 set(PROJECT_SOURCES
-        sqlite3.h
-        sqlite3.c
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        ManageCities.h
-        ManageCities.cpp
-        City.cpp
-        City.h
-)
+    SQLite/sqlite3/sqlite3.h
+    SQLite/sqlite3/sqlite3.c
+    main.cpp
+            mainwindow.cpp
+            mainwindow.h
+            mainwindow.ui
+            ManageCity/ManageCities.h
+            ManageCity/ManageCities.cpp
+            ManageCity/City/City.cpp
+            ManageCity/City/City.h
+            UI/login/login.h UI/login/login.cpp UI/login/login.ui
+            UI/account/account.h UI/account/account.cpp UI/account/account.ui
+    #        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui
+        )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(EuropeanVacation
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-    )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET EuropeanVacation APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
+            MANUAL_FINALIZATION
+            ${PROJECT_SOURCES}
+            )
+    # Define target properties for Android with Qt 6 as:
+    #    set_property(TARGET EuropeanVacation APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+    #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
+    # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
         add_library(EuropeanVacation SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+                ${PROJECT_SOURCES}
+                )
+        # Define properties for Android with Qt 5 after find_package() calls as:
+        #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(EuropeanVacation
-            ${PROJECT_SOURCES}
-        )
+                ${PROJECT_SOURCES}
+                )
     endif()
 endif()
 
