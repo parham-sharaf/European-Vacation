@@ -1,9 +1,18 @@
 #include <string>
 #include "../DB/Database/Database.h"
+#include "../ManageCity/ManageCities.h"
 
-class Admin: public Database
+using namespace std;
+class Admin: ManageCities
 {
 public:
-    AddNewCity(const string& cityName);
+    void AddNewCity(const string& cityName);
+    void RemoveCity(const string& cityName);
+
+private:
+    Database adminDatabase{"./DB/new-cities-table.sqlite"};
+    Records newCityList;
+    Records newDistanceList;
+    Records newFoodList;
 
 };

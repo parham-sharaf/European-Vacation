@@ -11,6 +11,7 @@
 #include <QPainter>
 //#include <QtGui>
 #include "UI/login/login.h"
+#include "Admin/Admin.h"
 
 using namespace std;
 
@@ -24,10 +25,10 @@ MainWindow::MainWindow(QWidget *parent)
     pix.load("./UI/Europe_countries_map_en_2.png");
 
 
-    int w = ui->map->width();
-    int h = ui->map->height();
+//    int w = ui->map->width();
+//    int h = ui->map->height();
 
-    ui->map->setPixmap(pix.scaled(w, h,Qt::KeepAspectRatio));
+    ui->map->setPixmap(pix.scaled(200, 200,Qt::KeepAspectRatio));
     ui->map->setScaledContents(true);
 
     // setting up tree widget
@@ -116,6 +117,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
 
+    Admin newAdmin;
+    newAdmin.AddNewCity("Vienna");
+//    newAdmin.RemoveCity("Vienna");
 }
 
 MainWindow::~MainWindow()

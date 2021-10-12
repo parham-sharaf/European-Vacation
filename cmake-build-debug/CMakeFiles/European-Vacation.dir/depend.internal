@@ -3,6 +3,35 @@
 
 CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QPoint
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_bootstrap.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbasicatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerfwd.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qflags.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qgenericatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobal.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobalstatic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlogging.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmutex.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnamespace.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnumeric.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpoint.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qprocessordetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsysinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsystemdetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtcore-config.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtmetamacros.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtypeinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversiontagging.h
 CMakeFiles/European-Vacation.dir/DB/Database/Database.cpp.o
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
@@ -411,6 +440,7 @@ CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h
  European-Vacation_autogen/include/ui_account.h
 CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QList
@@ -758,6 +788,7 @@ CMakeFiles/European-Vacation.dir/main.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h
 CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h

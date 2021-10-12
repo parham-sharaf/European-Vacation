@@ -6,11 +6,11 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include "../../DB/Database/Database.h"
 using namespace std;
 
 namespace Ui {
-    using Record = std::vector<std::string>;
-    using Records = std::vector<Record>;
+
     class login;
 }
 
@@ -26,10 +26,9 @@ private slots:
             void on_loginButton_clicked();
 
 private:
-    static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);
-    static Ui::Records select_stmt(const char* stmt) ;
-    static void sql_stmt(const char* stmt);
-    Ui::Records usernameList;
+
+    Database usersDatabase{"./DB/user-info.sqlite"};
+    Records usernameList;
     Ui::login *ui;
 };
 

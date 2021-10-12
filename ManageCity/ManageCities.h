@@ -10,10 +10,9 @@
 
 using namespace std;
 
-using Record = std::vector<std::string>;
-using Records = std::vector<Record>;
 
-class ManageCities: public Database
+
+class ManageCities
 {
 public:
     ManageCities();
@@ -26,14 +25,13 @@ public:
     int GetTotalDistance(const deque<City*>& planner) const;
     void setStartingCity(const string& initial);
 
+protected:
+    Database cityDatabase{"./DB/cities-table.sqlite"};
+    vector<City*> euroCities;
 private:
-
     Records cityList;
     Records distanceList;
     Records foodList;
-
-    vector<City*> euroCities;
     deque<City*> travelPlan;
-
     string startingCity;
 };

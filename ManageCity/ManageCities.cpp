@@ -1,21 +1,22 @@
 #include "ManageCities.h"
 #include "City/City.h"
 #include <iterator>
+static sqlite3 *db;
 
-
-ManageCities::ManageCities(): Database("./DB/cities-table.sqlite") {
-
-    distanceList = select_stmt("SELECT ending_city,kilometers from distance"
-                               " WHERE starting_city IS 'London' ORDER BY kilometers;");
-    cityList = select_stmt("SELECT *\n"
-                           "FROM city;");
-
-    foodList = select_stmt("SELECT *\n"
-                                "FROM food \n"
-                                "ORDER BY city_name;");
+ManageCities::ManageCities() {
+//    sqlite3_close(db);
 }
 
 void ManageCities::ReadData() {
+    distanceList = cityDatabase.select_stmt("SELECT ending_city,kilometers from distance"
+                                            " WHERE starting_city IS 'London' ORDER BY kilometers;");
+    cityList = cityDatabase.select_stmt("SELECT *\n"
+                                        "FROM city;");
+
+    foodList = cityDatabase.select_stmt("SELECT *\n"
+                                        "FROM food \n"
+                                        "ORDER BY city_name;");
+
     for (auto& group: cityList) {
         City *newCity = new City;
         newCity->name = group.at(0);
@@ -48,12 +49,13 @@ void ManageCities::AddCity(const string& name, deque<City*>& planner) {
         string sql = "SELECT * FROM distance WHERE starting_city IS '" +
                 planner.back()->name + "' AND ending_city IS '" + name + "';";
 
-        distanceList = select_stmt(sql.c_str());
+        distanceList = cityDatabase.select_stmt(sql.c_str());
         newCity = find_if(euroCities.begin(), euroCities.end(), [name](City* target) -> bool {
             return (target->name == name);
         });
         (*newCity)->distance = std::stoi(distanceList.at(0).at(2));
     }
+
     planner.push_back(*newCity);
 }
 
@@ -71,7 +73,7 @@ void ManageCities::EraseCity(const string &name, deque<City*>& planner) {
             if ((*city)->name == name) {
                 string sql = "SELECT * FROM distance WHERE starting_city IS '" +
                         (*(city - 1))->name + "' AND ending_city IS '" + (*(city + 1))->name + "';";
-                distanceList = select_stmt(sql.c_str());
+                distanceList = cityDatabase.select_stmt(sql.c_str());
                 (*(city + 1))->distance = std::stoi(distanceList.at(0).at(2));
                 planner.erase(city);
             }
@@ -96,7 +98,7 @@ void ManageCities::ShortestPath() {
     EraseCity(startingCity, newPlanner);
 
     sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + travelPlan.back()->name + "' ORDER BY kilometers;";
-    distanceList = select_stmt(sql.c_str());
+    distanceList = cityDatabase.select_stmt(sql.c_str());
 
     auto group = distanceList.begin();
     while (group != distanceList.end()) {
@@ -106,7 +108,7 @@ void ManageCities::ShortestPath() {
                 EraseCity(city->name, newPlanner);
                 sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" +
                       travelPlan.back()->name + "' ORDER BY kilometers;";
-                distanceList = select_stmt(sql.c_str());
+                distanceList = cityDatabase.select_stmt(sql.c_str());
                 group = distanceList.begin();
                 continue;
             }

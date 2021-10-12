@@ -1,5 +1,6 @@
 #include "Database.h"
 
+
 Database::Database(const char* path)
 {
     if (sqlite3_open(path, &db) != SQLITE_OK) {
@@ -7,7 +8,6 @@ Database::Database(const char* path)
         return;
     }
 }
-
 
 void Database::sql_stmt(const char* stmt)
 {
@@ -40,7 +40,7 @@ int Database::select_callback(void *p_data, int num_fields, char **p_fields, cha
         records->emplace_back(p_fields, p_fields + num_fields);
     }
     catch (...) {
-        // abort select on failure, don't let exception propogate thru sqlite3 call-stack
+        // abort select on failure, don't let exception propagate thru sqlite3 call-stack
         return 1;
     }
     return 0;

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/SQLite/cities.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/SQLite/new-cities.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/SQLite/users.sql" dialect="GenericSQL" />
   </component>
 </project>

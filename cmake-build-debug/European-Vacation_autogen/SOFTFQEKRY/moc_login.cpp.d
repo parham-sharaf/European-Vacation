@@ -1,5 +1,6 @@
 /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp: /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/login/login.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/moc_predefs.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/DB/Database/Database.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qalgorithms.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanystringview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydata.h \

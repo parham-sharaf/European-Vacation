@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.cpp
-Database.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
+string
+-
+../DB/Database/Database.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
+../ManageCity/ManageCities.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
 iostream
@@ -26,14 +30,6 @@ vector
 string
 -
 QPoint
--
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.cpp
-ManageCities.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
-City/City.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
-iterator
 -
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
@@ -54,10 +50,6 @@ City/City.h
 ../DB/Database/Database.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
-QDialog
--
-
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
 QDialog
 -
@@ -69,50 +61,8 @@ iostream
 -
 vector
 -
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp
-memory
--
-../../../mainwindow.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/FW4OAYE3LE/moc_account.cpp
-memory
--
-../../../UI/account/account.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
-memory
--
-../../../UI/login/login.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/mocs_compilation.cpp
-FW4OAYE3LE/moc_account.cpp
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/FW4OAYE3LE/moc_account.cpp
-SOFTFQEKRY/moc_login.cpp
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
-EWIEGA46WW/moc_mainwindow.cpp
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/main.cpp
-mainwindow.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
-QApplication
--
+../../DB/Database/Database.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.cpp
 mainwindow.h
@@ -139,6 +89,8 @@ QPainter
 -
 UI/login/login.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
+Admin/Admin.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 QMainWindow
