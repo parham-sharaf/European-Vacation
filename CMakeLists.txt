@@ -24,6 +24,7 @@ add_executable(European-Vacation
         Admin/Admin.h Admin/Admin.cpp
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         UI/account/account.h UI/account/account.cpp UI/account/account.ui
+        UI/Map/map.h UI/Map/map.cpp
         #        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui
         )
 

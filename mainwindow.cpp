@@ -1,17 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "ManageCity/ManageCities.h"
-#include "ManageCity/City/City.h"
-#include <iostream>
-#include <iomanip>
-#include <QList>
-#include <QtCore>
-#include <QString>
-#include <QLineEdit>
-#include <QPainter>
-//#include <QtGui>
-#include "UI/login/login.h"
-#include "Admin/Admin.h"
+
 
 using namespace std;
 
@@ -21,50 +10,74 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("European Vacation Application");
-
     pix.load("./UI/Europe_countries_map_en_2.png");
 
 
-//    int w = ui->map->width();
-//    int h = ui->map->height();
+    scene = new QGraphicsScene(this);
+    ui->graphicsView->setScene(scene);
+    scene->addPixmap(pix);
+//    myMap = new Map();
+//    scene->addItem(myMap);
 
-    ui->map->setPixmap(pix.scaled(200, 200,Qt::KeepAspectRatio));
-    ui->map->setScaledContents(true);
+    Map *AmsterdamLoc = new Map("Amsterdam");
+    AmsterdamLoc->setDotCoord(435, 625);
+    scene->addItem(AmsterdamLoc);
+    euroMap.push_back(AmsterdamLoc);
+
+    Map *BerlinLoc = new Map("Berlin");
+    BerlinLoc->setDotCoord(600, 620);
+    scene->addItem(BerlinLoc);
+    euroMap.push_back(BerlinLoc);
+
+    Map *BrusselsLoc = new Map("Brussels");
+    BrusselsLoc->setDotCoord(420, 660);
+    scene->addItem(BrusselsLoc);
+    euroMap.push_back(BrusselsLoc);
+
+    Map *BudapestLoc = new Map("Budapest");
+    BudapestLoc->setDotCoord(720, 780);
+    scene->addItem(BudapestLoc);
+    euroMap.push_back(BudapestLoc);
+
+    Map *HamburgLoc = new Map("Hamburg");
+    HamburgLoc->setDotCoord(535, 590);
+    scene->addItem(HamburgLoc);
+    euroMap.push_back(HamburgLoc);
+
+    Map *LisbonLoc = new Map("Lisbon");
+    LisbonLoc->setDotCoord(40, 955);
+    scene->addItem(LisbonLoc);
+    euroMap.push_back(LisbonLoc);
+
+    Map *LondonLoc = new Map("London");
+    LondonLoc->setDotCoord(340, 630);
+    scene->addItem(LondonLoc);
+    euroMap.push_back(LondonLoc);
+
+    Map *MadridLoc = new Map("Madrid");
+    MadridLoc->setDotCoord(185, 960);
+    scene->addItem(MadridLoc);
+    euroMap.push_back(MadridLoc);
+
+    Map *ParisLoc = new Map("Paris");
+    ParisLoc->setDotCoord(385, 715);
+    scene->addItem(ParisLoc);
+    euroMap.push_back(ParisLoc);
+
+    Map *PragueLoc = new Map("Prague");
+    PragueLoc->setDotCoord(620, 700);
+    scene->addItem(PragueLoc);
+    euroMap.push_back(PragueLoc);
+
+    Map *RomeLoc = new Map("Rome");
+    RomeLoc->setDotCoord(565, 950);
+    scene->addItem(RomeLoc);
+    euroMap.push_back(RomeLoc);
+
+    Admin newAdmin;
+    newAdmin.AddNewCity("Vienna");
 
     // setting up tree widget
-
-    QRadioButton *buttonAmsterdam = new QRadioButton("", this);
-    buttonAmsterdam->move(440, 640);
-
-    QRadioButton *buttonBerlin = new QRadioButton("", this);
-    buttonBerlin->move(605, 650);
-
-    QRadioButton *buttonBrussel = new QRadioButton("", this);
-    buttonBrussel->move(430, 685);
-
-    QRadioButton *buttonBudapest = new QRadioButton("", this);
-    buttonBudapest->move(730, 800);
-
-    QRadioButton *buttonHamburg = new QRadioButton("", this);
-    buttonHamburg->move(540, 610);
-
-    QRadioButton *buttonLisbon = new QRadioButton("", this);
-    buttonLisbon->move(50, 980);
-
-    QRadioButton *buttonLondon = new QRadioButton("", this);
-    buttonLondon->move(350, 648);
-
-    QRadioButton *buttonMadrid = new QRadioButton("", this);
-    buttonMadrid->move(200, 950);
-
-    QRadioButton *buttonParis = new QRadioButton("", this);
-    buttonParis->move(390, 735);
-
-    QRadioButton *buttonPrague = new QRadioButton("", this);
-    buttonPrague->move(625, 720);
-
-    QRadioButton *buttonRome = new QRadioButton("", this);
-    buttonRome->move(550, 950);
 
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)");
     ui->citiesTreeWidget->setColumnCount(2);
@@ -117,8 +130,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
 
-    Admin newAdmin;
-    newAdmin.AddNewCity("Vienna");
+
+//    newAdmin.RemoveCity("Vienna");
+//    myCities.ReadData();
+//    newAdmin.RemoveCity("Vienna");
 //    newAdmin.RemoveCity("Vienna");
 }
 
@@ -150,6 +165,10 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
         myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
         for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
         cout << endl;
+        for (auto & dot: euroMap) {
+            if (dot->GetLocation() == item->text(0).toStdString())
+                dot->setIsSelected(true);
+        }
     }
     else if (item->checkState(0) != Qt::Checked) {
         myCities.EraseCity(item->text(0).toStdString(), myCities.GetTravelPlan());
@@ -213,21 +232,22 @@ void MainWindow::on_actionLogin_triggered()
     log.exec();
 }
 
-void MainWindow::paintEvent(QPaintEvent *e) {
-    QWidget::paintEvent(e);
-    QPainter painter(&pix);
-    ui->map->setPixmap(pix);
-    ui->map->show();
-    QPen paintPen(Qt::red);
-    paintPen.setWidth(3);
-    painter.setPen(paintPen);
+//void MainWindow::paintEvent(QPaintEvent *e) {
+//    QWidget::paintEvent(e);
+//
+//    QPainter painter(&pix);
+//
+////    ui->map->setPixmap(pix);
+////    ui->map->show();
+////    QPen paintPen(Qt::darkCyan, 3, Qt::DashDotDotLine);
+////    painter.setPen(paintPen);
+//
+//    if (myCities.GetTravelPlan().size() > 1) {
+//        for (int i = 0; i < myCities.GetTravelPlan().size() - 1; i++) {
+//            painter.drawLine(myCities.GetTravelPlan().at(i)->getCoordinate(),
+//                             myCities.GetTravelPlan().at(
+//                                     i + 1)->getCoordinate());
+//        }
+//    }
+//}
 
-    if (myCities.GetTravelPlan().size() > 1) {
-        for (int i = 0; i < myCities.GetTravelPlan().size() - 1; i++) {
-            painter.drawLine(myCities.GetTravelPlan().at(i)->getCoordinate(),
-                             myCities.GetTravelPlan().at(
-                                     i + 1)->getCoordinate());
-        }
-    }
-    update();
-}

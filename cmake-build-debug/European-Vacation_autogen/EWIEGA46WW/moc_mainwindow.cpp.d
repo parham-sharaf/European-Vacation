@@ -1,148 +1,366 @@
 /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/mainwindow.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/moc_predefs.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/Admin/Admin.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/DB/Database/Database.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/City/City.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/ManageCities.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/Map/map.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/login/login.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QEvent \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QFileInfo \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QList \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QMargins \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QObject \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QPoint \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QRect \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QScopedPointer \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSize \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSizeF \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QString \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QStringList \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QtCore \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QtCoreDepends \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstractanimation.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstracteventdispatcher.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qalgorithms.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanimationgroup.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanystringview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydata.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydataops.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydatapointer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qassociativeiterable.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_cxx11.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbasicatomic.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbasictimer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbitarray.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbuffer.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearray.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayalgorithms.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearraylist.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearraymatcher.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcache.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcalendar.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborarray.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborcommon.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcbormap.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborstream.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborstreamreader.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborstreamwriter.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcborvalue.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qchar.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcollator.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcommandlineoption.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcommandlineparser.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompare.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompilerdetection.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconcatenatetablesproxymodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerfwd.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerinfo.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainertools_impl.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontiguouscache.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcoreapplication.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcoreevent.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcryptographichash.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdatastream.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdatetime.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdeadlinetimer.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdebug.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdir.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdiriterator.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qeasingcurve.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qelapsedtimer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qendian.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qeventloop.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qexception.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfactoryinterface.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfile.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfiledevice.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfileinfo.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfileselector.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfilesystemwatcher.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qflags.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfloat16.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfuture.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfuture_impl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfutureinterface.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfuturesynchronizer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qfuturewatcher.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qgenericatomic.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobal.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobalstatic.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhash.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qidentityproxymodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevice.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevicebase.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qitemselectionmodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterable.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterator.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjnienvironment.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjniobject.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjsonarray.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjsondocument.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjsonobject.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qjsonvalue.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlibrary.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlibraryinfo.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qline.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlist.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlocale.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlockfile.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlogging.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qloggingcategory.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmap.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmargins.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmath.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetaobject.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetatype.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmimedata.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmimedatabase.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmimetype.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmutex.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnamespace.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnumeric.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject_impl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectcleanuphandler.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qoperatingsystemversion.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpair.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qparallelanimationgroup.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpauseanimation.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qplugin.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpluginloader.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpoint.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpointer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qprocess.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpromise.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qproperty.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpropertyanimation.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpropertyprivate.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qqueue.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrandom.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qreadwritelock.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrect.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrefcount.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qregularexpression.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qresource.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qresultstore.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrunnable.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsavefile.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qscopedpointer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qscopedvaluerollback.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qscopeguard.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsemaphore.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsequentialiterable.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qset.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsettings.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedmemory.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsignalmapper.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsimd.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsize.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsocketnotifier.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstack.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstandardpaths.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstorageinfo.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstring.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringalgorithms.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringbuilder.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringconverter.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringlist.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringlistmodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringliteral.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringmatcher.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringtokenizer.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsysinfo.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsystemdetection.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsystemsemaphore.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtaggedpointer.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtcore-config.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtcoreversion.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtemporarydir.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtemporaryfile.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtextboundaryfinder.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtextstream.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qthread.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qthreadpool.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qthreadstorage.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtimeline.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtimer.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtimezone.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtmetamacros.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtranslator.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtransposeproxymodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtypeinfo.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qurl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qurlquery.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/quuid.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariant.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariantanimation.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvector.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversionnumber.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversiontagging.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qwaitcondition.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qwineventnotifier.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qxmlstream.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPaintDevice \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPaintDeviceWindow \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPainter \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPixmap \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QSurfaceFormat \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QTransform \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QWindow \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QtGui \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QtGuiDepends \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qabstractfileiconprovider.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaccessible.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaccessiblebridge.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaccessibleobject.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaccessibleplugin.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaction.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qactiongroup.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbackingstore.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbitmap.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbrush.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qclipboard.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolor.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolorspace.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolortransform.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcursor.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qdesktopservices.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qdrag.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qevent.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qeventpoint.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfilesystemmodel.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfont.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontdatabase.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontinfo.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontmetrics.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qgenericmatrix.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qgenericplugin.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qgenericpluginfactory.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qglyphrun.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qguiapplication.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qicon.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qiconengine.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qiconengineplugin.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimage.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimageiohandler.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimagereader.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimagewriter.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qinputdevice.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qinputmethod.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qkeysequence.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qmatrix4x4.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qmovie.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qoffscreensurface.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qoffscreensurface_platform.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopengl.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopenglcontext.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopenglcontext_platform.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopenglext.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopenglextrafunctions.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qopenglfunctions.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpagedpaintdevice.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpagelayout.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpageranges.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpagesize.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevicewindow.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintengine.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpainter.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpainterpath.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpalette.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpdfwriter.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpen.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpicture.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixelformat.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixmap.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixmapcache.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpointingdevice.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpolygon.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qquaternion.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrasterwindow.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrawfont.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qregion.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgb.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgba64.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qscreen.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qsessionmanager.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qshortcut.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qstandarditemmodel.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qstatictext.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qstylehints.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qsurface.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qsurfaceformat.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qsyntaxhighlighter.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextcursor.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextdocument.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextdocumentfragment.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextdocumentwriter.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextformat.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextlayout.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextlist.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextobject.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextoption.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtexttable.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtgui-config.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtguiversion.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qundogroup.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qundostack.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvalidator.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvector2d.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvector3d.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvector4d.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvectornd.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindow.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtSql/QSqlDatabase \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qsqldatabase.h \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qtsql-config.h \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtSql/qtsqlglobal.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDialog \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsItem \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsScene \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsView \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QRadioButton \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractbutton.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractslider.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qframe.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
-  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qradiobutton.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qslider.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstyle.h \
@@ -155,6 +373,7 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h \
+  /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/assert.h \
   /usr/include/c++/9/algorithm \
@@ -280,6 +499,7 @@
   /usr/include/c++/9/ext/type_traits.h \
   /usr/include/c++/9/filesystem \
   /usr/include/c++/9/functional \
+  /usr/include/c++/9/future \
   /usr/include/c++/9/initializer_list \
   /usr/include/c++/9/iomanip \
   /usr/include/c++/9/ios \
@@ -292,6 +512,7 @@
   /usr/include/c++/9/locale \
   /usr/include/c++/9/map \
   /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
   /usr/include/c++/9/new \
   /usr/include/c++/9/numeric \
   /usr/include/c++/9/optional \
@@ -300,6 +521,7 @@
   /usr/include/c++/9/pstl/glue_algorithm_defs.h \
   /usr/include/c++/9/pstl/glue_memory_defs.h \
   /usr/include/c++/9/pstl/glue_numeric_defs.h \
+  /usr/include/c++/9/random \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/string \
@@ -327,6 +549,7 @@
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/features.h \
+  /usr/include/inttypes.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/limits.h \
@@ -421,5 +644,68 @@
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/immintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/smmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/xtestintrin.h

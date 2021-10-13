@@ -35,6 +35,15 @@ void ManageCities::ReadData() {
             }
         }
     }
+
+//    for (auto & city : euroCities) {
+//        cout << "city name: " << city->name << endl;
+//        cout << "distance: " << city->distance << endl;
+//        for (auto & group: city->tradFoodList) {
+//            cout << "food name " << group.foodName << "\tfood cost " << group.cost << endl;
+//        }
+//        cout << endl << endl;
+//    }
 }
 
 void ManageCities::AddCity(const string& name, deque<City*>& planner) {
@@ -46,14 +55,14 @@ void ManageCities::AddCity(const string& name, deque<City*>& planner) {
         (*newCity)->distance = 0;
     }
     else {
-        string sql = "SELECT * FROM distance WHERE starting_city IS '" +
+        string sql = "SELECT kilometers FROM distance WHERE starting_city IS '" +
                 planner.back()->name + "' AND ending_city IS '" + name + "';";
 
         distanceList = cityDatabase.select_stmt(sql.c_str());
         newCity = find_if(euroCities.begin(), euroCities.end(), [name](City* target) -> bool {
             return (target->name == name);
         });
-        (*newCity)->distance = std::stoi(distanceList.at(0).at(2));
+        (*newCity)->distance = std::stoi(distanceList.at(0).at(0));
     }
 
     planner.push_back(*newCity);

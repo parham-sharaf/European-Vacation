@@ -262,6 +262,30 @@ ManageCity/ManageCities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.s
 .PHONY : ManageCity/ManageCities.cpp.s
 
+UI/Map/map.o: UI/Map/map.cpp.o
+.PHONY : UI/Map/map.o
+
+# target to build an object file
+UI/Map/map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o
+.PHONY : UI/Map/map.cpp.o
+
+UI/Map/map.i: UI/Map/map.cpp.i
+.PHONY : UI/Map/map.i
+
+# target to preprocess a source file
+UI/Map/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i
+.PHONY : UI/Map/map.cpp.i
+
+UI/Map/map.s: UI/Map/map.cpp.s
+.PHONY : UI/Map/map.s
+
+# target to generate assembly for a file
+UI/Map/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s
+.PHONY : UI/Map/map.cpp.s
+
 UI/account/account.o: UI/account/account.cpp.o
 .PHONY : UI/account/account.o
 
@@ -383,6 +407,9 @@ help:
 	@echo "... ManageCity/ManageCities.o"
 	@echo "... ManageCity/ManageCities.i"
 	@echo "... ManageCity/ManageCities.s"
+	@echo "... UI/Map/map.o"
+	@echo "... UI/Map/map.i"
+	@echo "... UI/Map/map.s"
 	@echo "... UI/account/account.o"
 	@echo "... UI/account/account.i"
 	@echo "... UI/account/account.s"

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -21,7 +22,9 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -40,13 +43,18 @@ public:
     QAction *actionLogin;
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
+    QGridLayout *gridLayout_2;
+    QTabWidget *tabWidget;
+    QWidget *tab_9;
     QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout;
     QTreeWidget *citiesTreeWidget;
+    QTreeWidget *planTreeWidget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QPushButton *submitPlan;
-    QTreeWidget *planTreeWidget;
-    QLabel *map;
+    QWidget *tab_10;
+    QGraphicsView *graphicsView;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -55,7 +63,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(930, 636);
+        MainWindow->resize(1214, 724);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -84,9 +92,17 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setEnabled(true);
-        gridLayout = new QGridLayout(centralwidget);
+        gridLayout_2 = new QGridLayout(centralwidget);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        tab_9 = new QWidget();
+        tab_9->setObjectName(QString::fromUtf8("tab_9"));
+        gridLayout = new QGridLayout(tab_9);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        citiesTreeWidget = new QTreeWidget(centralwidget);
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        citiesTreeWidget = new QTreeWidget(tab_9);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
         citiesTreeWidget->setHeaderItem(__qtreewidgetitem);
@@ -98,11 +114,24 @@ public:
         citiesTreeWidget->setSizePolicy(sizePolicy1);
         citiesTreeWidget->setMinimumSize(QSize(355, 260));
 
-        gridLayout->addWidget(citiesTreeWidget, 3, 1, 1, 1);
+        verticalLayout->addWidget(citiesTreeWidget);
+
+        planTreeWidget = new QTreeWidget(tab_9);
+        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
+        __qtreewidgetitem1->setText(0, QString::fromUtf8("1"));
+        planTreeWidget->setHeaderItem(__qtreewidgetitem1);
+        planTreeWidget->setObjectName(QString::fromUtf8("planTreeWidget"));
+        sizePolicy1.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
+        planTreeWidget->setSizePolicy(sizePolicy1);
+
+        verticalLayout->addWidget(planTreeWidget);
+
+
+        gridLayout->addLayout(verticalLayout, 1, 0, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label = new QLabel(centralwidget);
+        label = new QLabel(tab_9);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
@@ -113,39 +142,33 @@ public:
 
         horizontalLayout_2->addWidget(label);
 
-        submitPlan = new QPushButton(centralwidget);
+        submitPlan = new QPushButton(tab_9);
         submitPlan->setObjectName(QString::fromUtf8("submitPlan"));
 
         horizontalLayout_2->addWidget(submitPlan);
 
 
-        gridLayout->addLayout(horizontalLayout_2, 2, 1, 1, 1);
+        gridLayout->addLayout(horizontalLayout_2, 0, 0, 1, 1);
 
-        planTreeWidget = new QTreeWidget(centralwidget);
-        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
-        __qtreewidgetitem1->setText(0, QString::fromUtf8("1"));
-        planTreeWidget->setHeaderItem(__qtreewidgetitem1);
-        planTreeWidget->setObjectName(QString::fromUtf8("planTreeWidget"));
-        sizePolicy1.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
-        planTreeWidget->setSizePolicy(sizePolicy1);
+        tabWidget->addTab(tab_9, QString());
+        tab_10 = new QWidget();
+        tab_10->setObjectName(QString::fromUtf8("tab_10"));
+        tabWidget->addTab(tab_10, QString());
 
-        gridLayout->addWidget(planTreeWidget, 4, 1, 1, 1);
+        gridLayout_2->addWidget(tabWidget, 0, 1, 1, 1);
 
-        map = new QLabel(centralwidget);
-        map->setObjectName(QString::fromUtf8("map"));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
 
-        gridLayout->addWidget(map, 1, 0, 4, 1);
+        gridLayout_2->addWidget(graphicsView, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
-        map->raise();
-        citiesTreeWidget->raise();
-        planTreeWidget->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 22));
+        menubar->setGeometry(QRect(0, 0, 1214, 22));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -154,6 +177,9 @@ public:
         menuAccount->addAction(actionLogin);
 
         retranslateUi(MainWindow);
+
+        tabWidget->setCurrentIndex(0);
+
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -173,7 +199,8 @@ public:
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Please mark which cities to travel to!", nullptr));
         submitPlan->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
-        map->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab_9), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_10), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 

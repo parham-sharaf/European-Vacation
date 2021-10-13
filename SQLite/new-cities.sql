@@ -6,8 +6,8 @@ CREATE TABLE new_city
     y_coordinate int
 );
 
-INSERT INTO city VALUES('Stockholm', 0, 0);
-INSERT INTO city VALUES('Vienna', 0, 0);
+INSERT INTO new_city VALUES('Stockholm', 0, 0);
+INSERT INTO new_city VALUES('Vienna', 0, 0);
 
 
 CREATE TABLE new_distance
@@ -20,28 +20,28 @@ CREATE TABLE new_distance
     FOREIGN KEY(ending_city) REFERENCES city(city_name) ON DELETE CASCADE
 );
 
--- INSERT INTO new_city VALUES ('Amsterdam', 'Stockholm', 1435);
--- INSERT INTO new_city VALUES ('Amsterdam', 'Vienna', 1147);
--- INSERT INTO new_city VALUES ('Berlin', 'Stockholm', 1084);
--- INSERT INTO new_city VALUES ('Berlin', 'Vienna', 640);
--- INSERT INTO new_city VALUES ('Brussels', 'Stockholm', 1564);
--- INSERT INTO new_city VALUES ('Brussels', 'Vienna', 1104);
--- INSERT INTO new_city VALUES ('Budapest', 'Stockholm', 1951);
--- INSERT INTO new_city VALUES ('Budapest', 'Vienna', 243);
--- INSERT INTO new_city VALUES ('Hamburg', 'Stockholm', 1079);
--- INSERT INTO new_city VALUES ('Hamburg', 'Vienna', 930);
--- INSERT INTO new_city VALUES ('Lisbon', 'Stockholm', 3610);
--- INSERT INTO new_city VALUES ('Lisbon', 'Vienna', 2867);
--- INSERT INTO new_city VALUES ('London', 'Stockholm', 1902);
--- INSERT INTO new_city VALUES ('London', 'Vienna', 1461);
--- INSERT INTO new_city VALUES ('Madrid', 'Stockholm', 3141);
--- INSERT INTO new_city VALUES ('Madrid', 'Vienna', 2401);
--- INSERT INTO new_city VALUES ('Paris', 'Stockholm', 1885);
--- INSERT INTO new_city VALUES ('Paris', 'Vienna', 1236);
--- INSERT INTO new_city VALUES ('Prague', 'Stockholm', 1428);
--- INSERT INTO new_city VALUES ('Prague', 'Vienna', 331);
--- INSERT INTO new_city VALUES ('Rome', 'Stockholm', 2546);
--- INSERT INTO new_city VALUES ('Rome', 'Vienna', 1120);
+INSERT INTO new_distance VALUES ('Amsterdam', 'Stockholm', 1435);
+INSERT INTO new_distance VALUES ('Amsterdam', 'Vienna', 1147);
+INSERT INTO new_distance VALUES ('Berlin', 'Stockholm', 1084);
+INSERT INTO new_distance VALUES ('Berlin', 'Vienna', 640);
+INSERT INTO new_distance VALUES ('Brussels', 'Stockholm', 1564);
+INSERT INTO new_distance VALUES ('Brussels', 'Vienna', 1104);
+INSERT INTO new_distance VALUES ('Budapest', 'Stockholm', 1951);
+INSERT INTO new_distance VALUES ('Budapest', 'Vienna', 243);
+INSERT INTO new_distance VALUES ('Hamburg', 'Stockholm', 1079);
+INSERT INTO new_distance VALUES ('Hamburg', 'Vienna', 930);
+INSERT INTO new_distance VALUES ('Lisbon', 'Stockholm', 3610);
+INSERT INTO new_distance VALUES ('Lisbon', 'Vienna', 2867);
+INSERT INTO new_distance VALUES ('London', 'Stockholm', 1902);
+INSERT INTO new_distance VALUES ('London', 'Vienna', 1461);
+INSERT INTO new_distance VALUES ('Madrid', 'Stockholm', 3141);
+INSERT INTO new_distance VALUES ('Madrid', 'Vienna', 2401);
+INSERT INTO new_distance VALUES ('Paris', 'Stockholm', 1885);
+INSERT INTO new_distance VALUES ('Paris', 'Vienna', 1236);
+INSERT INTO new_distance VALUES ('Prague', 'Stockholm', 1428);
+INSERT INTO new_distance VALUES ('Prague', 'Vienna', 331);
+INSERT INTO new_distance VALUES ('Rome', 'Stockholm', 2546);
+INSERT INTO new_distance VALUES ('Rome', 'Vienna', 1120);
 INSERT INTO new_distance VALUES ('Stockholm', 'Amsterdam', 1435);
 INSERT INTO new_distance VALUES ('Stockholm', 'Berlin', 1084);
 INSERT INTO new_distance VALUES ('Stockholm', 'Brussels', 1564);

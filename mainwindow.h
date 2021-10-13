@@ -1,16 +1,31 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
 #include <QMainWindow>
-#include <QtSql/QSqlDatabase>
+#include <QtGui>
+#include <QtCore>
 #include <QDebug>
 #include <QFileInfo>
 #include <QLineEdit>
-#include "ManageCity/ManageCities.h"
+#include <QList>
+#include <QString>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
-#include <QRadioButton>
 #include <QPainter>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QPixmap>
+
+#include "ManageCity/ManageCities.h"
+#include "ManageCity/ManageCities.h"
+#include "ManageCity/City/City.h"
+#include "UI/login/login.h"
+#include "Admin/Admin.h"
+#include "UI/Map/map.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -25,10 +40,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    int toggle = 0;
+    using QMainWindow::QMainWindow;
 
 protected:
-    void paintEvent(QPaintEvent *e);
 
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
@@ -44,15 +58,11 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QPixmap pix;
-
-    void updateChecks(QTreeWidgetItem* item, int column);
-    void recursiveChecks(QTreeWidgetItem* parent);
+    QGraphicsScene *scene;
     ManageCities myCities;
+    vector<Map*> euroMap;
 
-
-
+    void recursiveChecks(QTreeWidgetItem* parent);
     QList<QTreeWidgetItem *> citiesTree;
-//    QTreeWidgetItem *cities = new QTreeWidgetItem;
-
 };
 #endif // MAINWINDOW_H
