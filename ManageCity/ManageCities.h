@@ -11,7 +11,6 @@
 using namespace std;
 
 
-
 class ManageCities
 {
 public:
@@ -24,6 +23,7 @@ public:
     vector<City*>& GetEuroCities();
     int GetTotalDistance(const deque<City*>& planner) const;
     void setStartingCity(const string& initial);
+    Records& GetDistancesFromBerlin();
 
 protected:
     Database cityDatabase{"./DB/cities-table.sqlite"};
@@ -32,6 +32,7 @@ private:
     Records cityList;
     Records distanceList;
     Records foodList;
+    Records distancesFromBerlin;
     deque<City*> travelPlan;
     string startingCity;
 };

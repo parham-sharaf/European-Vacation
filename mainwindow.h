@@ -39,13 +39,13 @@ Q_OBJECT
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-    using QMainWindow::QMainWindow;
+    double totalSpentOnTrip = 0;
 
 protected:
 
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
+    void updateSpent();
     void setPlan(QTreeWidgetItem*, int);
     void on_submitPlan_clicked();
 
@@ -54,13 +54,16 @@ signals:
 private slots:
 
     void on_actionLogin_triggered();
+    void on_updatepurchases_pushButton_clicked();
 
 private:
+    void updateChecks(QTreeWidgetItem* item, int column);
     Ui::MainWindow *ui;
     QPixmap pix;
     QGraphicsScene *scene;
     ManageCities myCities;
     vector<Map*> euroMap;
+    bool repurchase = false;
 
     void recursiveChecks(QTreeWidgetItem* parent);
     QList<QTreeWidgetItem *> citiesTree;

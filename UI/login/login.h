@@ -16,20 +16,23 @@ namespace Ui {
 
 class login : public QDialog
 {
-    Q_OBJECT
+Q_OBJECT
 
 public:
     explicit login(QWidget *parent = nullptr);
     ~login();
 
+    bool GetCred();
+
 private slots:
-            void on_loginButton_clicked();
+    void on_loginButton_clicked();
 
 private:
 
     Database usersDatabase{"./DB/user-info.sqlite"};
     Records usernameList;
     Ui::login *ui;
+    bool isAdmin;
 };
 
 #endif // LOGIN_H

@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp
+Admin.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
+../ManageCity/ManageCities.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
+
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
 string
 -
@@ -50,10 +56,6 @@ City/City.h
 ../DB/Database/Database.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.cpp
-map.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.h
-
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.h
 QPainter
 -
@@ -94,6 +96,16 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_moddedlineedit.cpp
+memory
+-
+../../../moddedlineedit.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/FW4OAYE3LE/moc_account.cpp
 memory
 -
@@ -121,6 +133,8 @@ SOFTFQEKRY/moc_login.cpp
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
 EWIEGA46WW/moc_mainwindow.cpp
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp
+EWIEGA46WW/moc_moddedlineedit.cpp
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_moddedlineedit.cpp
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/main.cpp
 mainwindow.h
@@ -133,6 +147,8 @@ mainwindow.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 ./ui_mainwindow.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ui_mainwindow.h
+moddedlineedit.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 iostream
@@ -181,6 +197,12 @@ Admin/Admin.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
 UI/Map/map.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.h
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
+QLineEdit
+-
+iomanip
+-
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer
 qdeadlinetimer.h
@@ -3878,10 +3900,6 @@ qgraphicsview.h
 qgridlayout.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHBoxLayout
-qboxlayout.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qboxlayout.h
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHeaderView
 qheaderview.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
@@ -4335,11 +4353,11 @@ QtWidgets/QGraphicsView
 -
 QtWidgets/QGridLayout
 -
-QtWidgets/QHBoxLayout
--
 QtWidgets/QHeaderView
 -
 QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
 -
 QtWidgets/QMainWindow
 -

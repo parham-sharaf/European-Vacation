@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o"
   "CMakeFiles/European-Vacation.dir/main.cpp.o"
   "CMakeFiles/European-Vacation.dir/mainwindow.cpp.o"
+  "CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
   "European-Vacation"
   "European-Vacation.pdb"
 )

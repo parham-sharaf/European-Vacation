@@ -1,7 +1,6 @@
 #include "ManageCities.h"
 #include "City/City.h"
 #include <iterator>
-static sqlite3 *db;
 
 ManageCities::ManageCities() {
 //    sqlite3_close(db);
@@ -16,6 +15,9 @@ void ManageCities::ReadData() {
     foodList = cityDatabase.select_stmt("SELECT *\n"
                                         "FROM food \n"
                                         "ORDER BY city_name;");
+
+    distancesFromBerlin = cityDatabase.select_stmt("SELECT ending_city,kilometers from distance"
+                                      " WHERE starting_city IS 'Berlin' ORDER BY kilometers;");
 
     for (auto& group: cityList) {
         City *newCity = new City;
@@ -64,7 +66,6 @@ void ManageCities::AddCity(const string& name, deque<City*>& planner) {
         });
         (*newCity)->distance = std::stoi(distanceList.at(0).at(0));
     }
-
     planner.push_back(*newCity);
 }
 
@@ -96,6 +97,10 @@ deque<City*>& ManageCities::GetTravelPlan(){
 
 vector<City*>& ManageCities::GetEuroCities() {
     return euroCities;
+}
+
+Records& ManageCities::GetDistancesFromBerlin() {
+    return distancesFromBerlin;
 }
 
 void ManageCities::ShortestPath() {
@@ -139,4 +144,3 @@ int ManageCities::GetTotalDistance(const deque<City*>& planner) const{
 void ManageCities::setStartingCity(const string& initial) {
     this->startingCity = initial;
 }
-

@@ -2,3 +2,4 @@
 #include "FW4OAYE3LE/moc_account.cpp"
 #include "SOFTFQEKRY/moc_login.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_moddedlineedit.cpp"

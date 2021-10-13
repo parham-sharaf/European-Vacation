@@ -223,6 +223,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h",
+			"MU",
+			"EWIEGA46WW/moc_moddedlineedit.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -317,6 +323,11 @@
 		],
 		[
 			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.cpp",
 			"MU",
 			null
 		]

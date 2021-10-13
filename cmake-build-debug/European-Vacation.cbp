@@ -173,6 +173,12 @@
 		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.ui">
 			<Option target="European-Vacation"/>
 		</Unit>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.cpp">
+			<Option target="European-Vacation"/>
+		</Unit>
+		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h">
+			<Option target="European-Vacation"/>
+		</Unit>
 		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

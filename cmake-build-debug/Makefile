@@ -382,6 +382,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+moddedlineedit.o: moddedlineedit.cpp.o
+.PHONY : moddedlineedit.o
+
+# target to build an object file
+moddedlineedit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o
+.PHONY : moddedlineedit.cpp.o
+
+moddedlineedit.i: moddedlineedit.cpp.i
+.PHONY : moddedlineedit.i
+
+# target to preprocess a source file
+moddedlineedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.i
+.PHONY : moddedlineedit.cpp.i
+
+moddedlineedit.s: moddedlineedit.cpp.s
+.PHONY : moddedlineedit.s
+
+# target to generate assembly for a file
+moddedlineedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.s
+.PHONY : moddedlineedit.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -422,6 +446,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... moddedlineedit.o"
+	@echo "... moddedlineedit.i"
+	@echo "... moddedlineedit.s"
 .PHONY : help
 
 

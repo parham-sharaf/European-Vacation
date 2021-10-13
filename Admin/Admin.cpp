@@ -38,3 +38,40 @@ void Admin::RemoveCity(const string& cityName) {
     sql = "DELETE FROM food WHERE city_name IS '" + cityName + "';";
     cityDatabase.select_stmt(sql.c_str());
 }
+
+void Admin::ChangePrice(const string& cityName, const string& cityFood,
+                        double cost) {
+    for (auto & city: euroCities) {
+        if (city->name == cityName) {
+            for (auto & food: city->tradFoodList) {
+                if (food.foodName == cityFood) {
+                    food.cost = cost;
+                }
+            }
+        }
+    }
+}
+
+void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
+                           double cost) {
+    for (auto & city: euroCities) {
+        if (city->name == cityName) {
+            TradFood thisTradFood;
+            thisTradFood.foodName = cityFood;
+            thisTradFood.cost = cost;
+            city->tradFoodList.push_back(thisTradFood);
+        }
+    }
+}
+
+//void Admin::RemoveTrad(const string &cityName, const string &cityFood) {
+//    for (auto & city: euroCities) {
+//        if (city->name == cityName) {
+//            for (auto & food: city->tradFoodList) {
+//                if (food.foodName == cityFood) {
+//                    city->tradFoodList.erase(food)
+//                }
+//            }
+//        }
+//    }
+//}

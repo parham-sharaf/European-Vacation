@@ -12,6 +12,7 @@ login::login(QWidget *parent) :
     this->setWindowTitle("Log In");
 
     usernameList = usersDatabase.select_stmt("SELECT * FROM users;");
+    isAdmin = false;
 }
 
 login::~login()
@@ -38,7 +39,7 @@ void login::on_loginButton_clicked()
 
     if (isLoginCorrect) {
         QAbstractButton *close = msgBox.addButton(tr("OK"), QMessageBox::AcceptRole);
-
+        isAdmin = true;
         msgBox.setText("<center>Account Connected</center>");
         msgBox.setInformativeText("<center>Click OK to continue</center>");
         msgBox.setIcon(QMessageBox::Information);
@@ -51,10 +52,15 @@ void login::on_loginButton_clicked()
         }
     }
     else {
+        isAdmin = false;
         msgBox.setText("<center>Account Not Found</center>");
         msgBox.setInformativeText("<center>Please try again</center>");
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setStyleSheet("QLabel{font-size: 12px;} QPushButton{width:72px; font-size: 12px;}");
         msgBox.exec();
     }
+}
+
+bool login::GetCred() {
+    return isAdmin;
 }

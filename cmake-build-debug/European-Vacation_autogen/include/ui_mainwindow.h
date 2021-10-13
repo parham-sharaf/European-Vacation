@@ -14,9 +14,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -43,17 +43,21 @@ public:
     QAction *actionLogin;
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
-    QGridLayout *gridLayout_2;
-    QTabWidget *tabWidget;
-    QWidget *tab_9;
     QGridLayout *gridLayout;
+    QTabWidget *tabWidget;
+    QWidget *traveller;
     QVBoxLayout *verticalLayout;
-    QTreeWidget *citiesTreeWidget;
-    QTreeWidget *planTreeWidget;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label;
     QPushButton *submitPlan;
-    QWidget *tab_10;
+    QTreeWidget *citiesTreeWidget;
+    QGridLayout *gridLayout_3;
+    QGridLayout *gridLayout_4;
+    QLabel *label_2;
+    QLineEdit *totalDistanceTraveled_LineEdit;
+    QLineEdit *totalspent_LineEdit;
+    QLabel *label_3;
+    QPushButton *updatepurchases_pushButton;
+    QTreeWidget *planTreeWidget;
+    QWidget *admin;
     QGraphicsView *graphicsView;
     QStatusBar *statusbar;
     QMenuBar *menubar;
@@ -63,7 +67,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1214, 724);
+        MainWindow->resize(930, 636);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -92,75 +96,100 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setEnabled(true);
-        gridLayout_2 = new QGridLayout(centralwidget);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tab_9 = new QWidget();
-        tab_9->setObjectName(QString::fromUtf8("tab_9"));
-        gridLayout = new QGridLayout(tab_9);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalLayout = new QVBoxLayout();
+        traveller = new QWidget();
+        traveller->setObjectName(QString::fromUtf8("traveller"));
+        verticalLayout = new QVBoxLayout(traveller);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        citiesTreeWidget = new QTreeWidget(tab_9);
+        submitPlan = new QPushButton(traveller);
+        submitPlan->setObjectName(QString::fromUtf8("submitPlan"));
+
+        verticalLayout->addWidget(submitPlan);
+
+        citiesTreeWidget = new QTreeWidget(traveller);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
         citiesTreeWidget->setHeaderItem(__qtreewidgetitem);
         citiesTreeWidget->setObjectName(QString::fromUtf8("citiesTreeWidget"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(citiesTreeWidget->sizePolicy().hasHeightForWidth());
         citiesTreeWidget->setSizePolicy(sizePolicy1);
-        citiesTreeWidget->setMinimumSize(QSize(355, 260));
+        citiesTreeWidget->setMinimumSize(QSize(400, 0));
 
         verticalLayout->addWidget(citiesTreeWidget);
 
-        planTreeWidget = new QTreeWidget(tab_9);
-        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
-        __qtreewidgetitem1->setText(0, QString::fromUtf8("1"));
-        planTreeWidget->setHeaderItem(__qtreewidgetitem1);
-        planTreeWidget->setObjectName(QString::fromUtf8("planTreeWidget"));
-        sizePolicy1.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
-        planTreeWidget->setSizePolicy(sizePolicy1);
+        gridLayout_3 = new QGridLayout();
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        gridLayout_4 = new QGridLayout();
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        label_2 = new QLabel(traveller);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy);
 
-        verticalLayout->addWidget(planTreeWidget);
+        gridLayout_4->addWidget(label_2, 1, 0, 1, 1);
 
-
-        gridLayout->addLayout(verticalLayout, 1, 0, 1, 1);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label = new QLabel(tab_9);
-        label->setObjectName(QString::fromUtf8("label"));
+        totalDistanceTraveled_LineEdit = new QLineEdit(traveller);
+        totalDistanceTraveled_LineEdit->setObjectName(QString::fromUtf8("totalDistanceTraveled_LineEdit"));
         QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy2);
-        label->setAlignment(Qt::AlignCenter);
+        sizePolicy2.setHeightForWidth(totalDistanceTraveled_LineEdit->sizePolicy().hasHeightForWidth());
+        totalDistanceTraveled_LineEdit->setSizePolicy(sizePolicy2);
 
-        horizontalLayout_2->addWidget(label);
+        gridLayout_4->addWidget(totalDistanceTraveled_LineEdit, 0, 1, 1, 1);
 
-        submitPlan = new QPushButton(tab_9);
-        submitPlan->setObjectName(QString::fromUtf8("submitPlan"));
+        totalspent_LineEdit = new QLineEdit(traveller);
+        totalspent_LineEdit->setObjectName(QString::fromUtf8("totalspent_LineEdit"));
+        sizePolicy2.setHeightForWidth(totalspent_LineEdit->sizePolicy().hasHeightForWidth());
+        totalspent_LineEdit->setSizePolicy(sizePolicy2);
+        totalspent_LineEdit->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(submitPlan);
+        gridLayout_4->addWidget(totalspent_LineEdit, 1, 1, 1, 1);
+
+        label_3 = new QLabel(traveller);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout_4->addWidget(label_3, 0, 0, 1, 1);
 
 
-        gridLayout->addLayout(horizontalLayout_2, 0, 0, 1, 1);
+        gridLayout_3->addLayout(gridLayout_4, 0, 2, 1, 1);
 
-        tabWidget->addTab(tab_9, QString());
-        tab_10 = new QWidget();
-        tab_10->setObjectName(QString::fromUtf8("tab_10"));
-        tabWidget->addTab(tab_10, QString());
+        updatepurchases_pushButton = new QPushButton(traveller);
+        updatepurchases_pushButton->setObjectName(QString::fromUtf8("updatepurchases_pushButton"));
 
-        gridLayout_2->addWidget(tabWidget, 0, 1, 1, 1);
+        gridLayout_3->addWidget(updatepurchases_pushButton, 0, 0, 1, 1);
+
+
+        verticalLayout->addLayout(gridLayout_3);
+
+        planTreeWidget = new QTreeWidget(traveller);
+        planTreeWidget->headerItem()->setText(0, QString());
+        planTreeWidget->setObjectName(QString::fromUtf8("planTreeWidget"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
+        planTreeWidget->setSizePolicy(sizePolicy3);
+
+        verticalLayout->addWidget(planTreeWidget);
+
+        tabWidget->addTab(traveller, QString());
+        admin = new QWidget();
+        admin->setObjectName(QString::fromUtf8("admin"));
+        tabWidget->addTab(admin, QString());
+
+        gridLayout->addWidget(tabWidget, 4, 1, 1, 1);
 
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
 
-        gridLayout_2->addWidget(graphicsView, 0, 0, 1, 1);
+        gridLayout->addWidget(graphicsView, 4, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -168,17 +197,18 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1214, 22));
+        menubar->setGeometry(QRect(0, 0, 930, 22));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
 
         menubar->addAction(menuAccount->menuAction());
         menuAccount->addAction(actionLogin);
+        menuAccount->addAction(actionCreate_New_Account);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -197,10 +227,13 @@ public:
         actionPolygon->setText(QCoreApplication::translate("MainWindow", "Polygon", nullptr));
         actionLogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Please mark which cities to travel to!", nullptr));
         submitPlan->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_9), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_10), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Total Spent (USD)", nullptr));
+        totalspent_LineEdit->setText(QString());
+        label_3->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
+        updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveller", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Admin", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 
