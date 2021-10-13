@@ -64,9 +64,8 @@ MainWindow::MainWindow(QWidget *parent)
     QRadioButton *buttonRome = new QRadioButton("", this);
     buttonRome->move(550, 950);
 
-    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)" << "Distance to Berlin (km)");
-    ui->citiesTreeWidget->setColumnCount(3);
-    //ui->citiesTreeWidget->setHeaderHidden(true);
+    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
+    ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
 
     myCities.ReadData();
 
@@ -104,8 +103,6 @@ MainWindow::MainWindow(QWidget *parent)
         }
         cities->setData(0, Qt::CheckStateRole, Qt::Unchecked);
         cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
-        //cities->setCheckState(0, Qt::Unchecked);
-        citiesTree.append(cities);
         ui->citiesTreeWidget->insertTopLevelItem(0, cities);
 
         for (int i = 0; i < myCities.GetDistancesFromBerlin().size(); i++)
@@ -115,6 +112,7 @@ MainWindow::MainWindow(QWidget *parent)
                 QLineEdit* distFromBerlin = new QLineEdit();
                 distFromBerlin->setText(QString::fromStdString(myCities.GetDistancesFromBerlin().at(i).at(1)));
                 distFromBerlin->setAlignment(Qt::AlignHCenter);
+                distFromBerlin->setReadOnly(true);
 
                 ui->citiesTreeWidget->setItemWidget(cities, 2, distFromBerlin);
             }
@@ -180,8 +178,9 @@ void MainWindow::on_submitPlan_clicked()
     ui->totalspent_LineEdit->setText("0.00");
     ui->updatepurchases_pushButton->setDisabled(false);
 
-    ui->planTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)" << "Quantity");
+    ui->planTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Quantity to Buy");
     ui->planTreeWidget->setColumnCount(3);
+    ui->planTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
 
     for (auto & city: myCities.GetTravelPlan())
     {
@@ -217,9 +216,9 @@ void MainWindow::on_submitPlan_clicked()
             connect(quantity_foodLineEdit, SIGNAL(textChanged(const QString &)), quantity_foodLineEdit, SLOT(updateAccessibleName()));
         }
     }
-    ui->planTreeWidget->setColumnWidth(0, 215);
+    ui->planTreeWidget->setColumnWidth(0, 193);
     ui->planTreeWidget->setColumnWidth(1, 50);
-    ui->planTreeWidget->setColumnWidth(2, 30);
+    ui->planTreeWidget->setColumnWidth(2, 100);
 
     connect(ui->updatepurchases_pushButton, SIGNAL(clicked()), this, SLOT(updateSpent()));
 }
