@@ -34,6 +34,8 @@ set(PROJECT_SOURCES
             ManageCity/City/City.h
             UI/login/login.h UI/login/login.cpp UI/login/login.ui
             UI/account/account.h UI/account/account.cpp UI/account/account.ui
+            moddedLineEdit.h
+            moddedlineedit.cpp
     #        UI/account/newaccount.h UI/account/newaccount.cpp UI/account/newaccount.ui
         )
 

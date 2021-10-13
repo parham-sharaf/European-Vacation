@@ -25,12 +25,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    int toggle = 0;
+    double totalSpentOnTrip = 0;
 
 protected:
     void paintEvent(QPaintEvent *e);
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
+    void updateSpent();
     void setPlan(QTreeWidgetItem*, int);
     void on_submitPlan_clicked();
 
@@ -41,6 +42,8 @@ private slots:
     void on_actionLogin_triggered();
 
     void on_actionCreate_New_Account_triggered();
+    void on_updatepurchases_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QPixmap pix;
@@ -48,6 +51,7 @@ private:
     void updateChecks(QTreeWidgetItem* item, int column);
     void recursiveChecks(QTreeWidgetItem* parent);
     ManageCities myCities;
+    bool repurchase = false;
 
 
 
