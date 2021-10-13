@@ -58,6 +58,9 @@ ManageCities::ManageCities() {
                                 "FROM food \n"
                                 "ORDER BY city_name;");
 
+    distancesFromBerlin = select_stmt("SELECT ending_city,kilometers from distance"
+                                      " WHERE starting_city IS 'Berlin' ORDER BY kilometers;");
+
 //    sqlite3_close(db);
 }
 
@@ -131,6 +134,10 @@ deque<City*>& ManageCities::GetTravelPlan(){
 
 vector<City*>& ManageCities::GetEuroCities() {
     return euroCities;
+}
+
+Records& ManageCities::GetDistancesFromBerlin() {
+    return distancesFromBerlin;
 }
 
 void ManageCities::ShortestPath() {

@@ -25,6 +25,7 @@ public:
     void ShortestPath();
     deque<City*>& GetTravelPlan();
     vector<City*>& GetEuroCities();
+    Records& GetDistancesFromBerlin();
     int GetTotalDistance(const deque<City*>& planner) const;
     void setStartingCity(const string& initial);
     void paintEvent(QPaintEvent *event) override;
@@ -33,6 +34,7 @@ private:
 
     Records cityList;
     Records distanceList;
+    Records distancesFromBerlin;
     Records foodList;
 
     static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names);

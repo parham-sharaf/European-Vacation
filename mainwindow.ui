@@ -27,14 +27,14 @@
     <item row="3" column="1">
      <widget class="QTreeWidget" name="citiesTreeWidget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
       <property name="minimumSize">
        <size>
-        <width>355</width>
+        <width>400</width>
         <height>0</height>
        </size>
       </property>
@@ -66,7 +66,7 @@
       </property>
       <column>
        <property name="text">
-        <string notr="true">1</string>
+        <string> </string>
        </property>
       </column>
      </widget>
@@ -119,6 +119,12 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>

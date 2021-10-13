@@ -64,8 +64,8 @@ MainWindow::MainWindow(QWidget *parent)
     QRadioButton *buttonRome = new QRadioButton("", this);
     buttonRome->move(550, 950);
 
-    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)");
-    ui->citiesTreeWidget->setColumnCount(2);
+    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)" << "Distance to Berlin (km)");
+    ui->citiesTreeWidget->setColumnCount(3);
     //ui->citiesTreeWidget->setHeaderHidden(true);
 
     myCities.ReadData();
@@ -76,6 +76,7 @@ MainWindow::MainWindow(QWidget *parent)
     // INPUTTING ITEMS INTO TREE WIDGET
     ui->updatepurchases_pushButton->setDisabled(true);
     ui->totalDistanceTraveled_LineEdit->setReadOnly(true);
+    ui->totalDistanceTraveled_LineEdit->setAlignment(Qt::AlignHCenter);
     ui->totalspent_LineEdit->setReadOnly(true);
 
     for (auto & city : myCities.GetEuroCities())
@@ -86,7 +87,6 @@ MainWindow::MainWindow(QWidget *parent)
         {
             auto* food = new QTreeWidgetItem;
             auto* food_costLineEdit = new QLineEdit;
-            auto* quantity_foodLineEdit = new QLineEdit;
 
             food->setText(0, QString::fromStdString(foodItem.foodName));
             food_costLineEdit->setText(QString::number(foodItem.cost, 'f', 2));
@@ -95,18 +95,10 @@ MainWindow::MainWindow(QWidget *parent)
             //check for admin perms here
             food_costLineEdit->setDisabled(true);
             food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
-
-            quantity_foodLineEdit->setText(QString::number(0));
-            quantity_foodLineEdit->setDisabled(true);
-            quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
+            food_costLineEdit->setAlignment(Qt::AlignHCenter);
 
             cities->addChild(food);
 
-//            QTreeWidgetItem* cost = new QTreeWidgetItem();
-//            QTreeWidgetItem* quantity = new QTreeWidgetItem();
-
-//            food->addChild(cost);
-//            food->addChild(quantity);
             ui->citiesTreeWidget->setItemWidget(food, 1, food_costLineEdit);
 
         }
@@ -114,14 +106,24 @@ MainWindow::MainWindow(QWidget *parent)
         cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
         //cities->setCheckState(0, Qt::Unchecked);
         citiesTree.append(cities);
+        ui->citiesTreeWidget->insertTopLevelItem(0, cities);
 
+        for (int i = 0; i < myCities.GetDistancesFromBerlin().size(); i++)
+        {
+            if (myCities.GetDistancesFromBerlin().at(i).at(0) == cities->text(0).toStdString())
+            {
+                QLineEdit* distFromBerlin = new QLineEdit();
+                distFromBerlin->setText(QString::fromStdString(myCities.GetDistancesFromBerlin().at(i).at(1)));
+                distFromBerlin->setAlignment(Qt::AlignHCenter);
+
+                ui->citiesTreeWidget->setItemWidget(cities, 2, distFromBerlin);
+            }
+        }
     }
 
-    ui->citiesTreeWidget->insertTopLevelItems(0, citiesTree);
-    //connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(updateChecks(QTreeWidgetItem*,int)));
-
-    ui->citiesTreeWidget->setColumnWidth(0, 250);
+    ui->citiesTreeWidget->setColumnWidth(0, 193);
     ui->citiesTreeWidget->setColumnWidth(1, 50);
+    ui->citiesTreeWidget->setColumnWidth(2, 100);
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
@@ -174,6 +176,8 @@ void MainWindow::on_submitPlan_clicked()
     ui->totalDistanceTraveled_LineEdit->setText(QString::number(myCities.GetTotalDistance(myCities.GetTravelPlan())));
 
     // setting up Tree Widget
+    ui->planTreeWidget->clear();
+    ui->totalspent_LineEdit->setText("0.00");
     ui->updatepurchases_pushButton->setDisabled(false);
 
     ui->planTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)" << "Quantity");
@@ -198,9 +202,11 @@ void MainWindow::on_submitPlan_clicked()
             //check for admin perms here
             food_costLineEdit->setDisabled(true);
             food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
+            food_costLineEdit->setAlignment(Qt::AlignHCenter);
 
             quantity_foodLineEdit->setText(QString::number(0));
             quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
+            quantity_foodLineEdit->setAlignment(Qt::AlignHCenter);
 
             newCity->addChild(food);
             ui->planTreeWidget->setItemWidget(food, 1, food_costLineEdit);
@@ -281,6 +287,8 @@ void MainWindow::updateSpent()
             QLineEdit* spentAtCity_lineedit = new QLineEdit();
             spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
             spentAtCity_lineedit->setReadOnly(true);
+            spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
+
             spentAtCity->setText(0, "Amount Spent (USD)");
             it.operator*()->parent()->addChild(spentAtCity);
             ui->planTreeWidget->setItemWidget(spentAtCity, 1, spentAtCity_lineedit);
@@ -293,5 +301,6 @@ void MainWindow::updateSpent()
 
     repurchase = true;
     ui->totalspent_LineEdit->setText(QString::number(totalSpentOnTrip, 'f', 2));
+    ui->totalspent_LineEdit->setAlignment(Qt::AlignHCenter);
 }
 
