@@ -182,11 +182,14 @@ void MainWindow::on_submitPlan_clicked()
     ui->planTreeWidget->setColumnCount(3);
     ui->planTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
 
+    int orderInTrip = 1;
     for (auto & city: myCities.GetTravelPlan())
     {
         QTreeWidgetItem* newCity = new QTreeWidgetItem();
-        newCity->setText(0, QString::fromStdString(city->name));
+        newCity->setText(0, QString::number(orderInTrip) + ". " + QString::fromStdString(city->name));
+        ++orderInTrip;
         ui->planTreeWidget->addTopLevelItem(newCity);
+
         for (auto & foodItem: city->tradFoodList)
         {
             auto* food = new QTreeWidgetItem;
