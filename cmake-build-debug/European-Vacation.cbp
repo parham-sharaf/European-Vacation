@@ -140,15 +140,6 @@
 		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.h">
 			<Option target="European-Vacation"/>
 		</Unit>
-		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.cpp">
-			<Option target="European-Vacation"/>
-		</Unit>
-		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h">
-			<Option target="European-Vacation"/>
-		</Unit>
-		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.ui">
-			<Option target="European-Vacation"/>
-		</Unit>
 		<Unit filename="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp">
 			<Option target="European-Vacation"/>
 		</Unit>

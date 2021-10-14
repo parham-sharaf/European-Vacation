@@ -1,6 +1,4 @@
 #include "Admin.h"
-#include "../ManageCity/ManageCities.h"
-
 
 void Admin::AddNewCity(const string& cityName) {
     string sql;
@@ -64,14 +62,14 @@ void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
     }
 }
 
-//void Admin::RemoveTrad(const string &cityName, const string &cityFood) {
-//    for (auto & city: euroCities) {
-//        if (city->name == cityName) {
-//            for (auto & food: city->tradFoodList) {
-//                if (food.foodName == cityFood) {
-//                    city->tradFoodList.erase(food)
-//                }
-//            }
-//        }
-//    }
-//}
+void Admin::RemoveTradFood(const string &cityName, const string &cityFood) {
+    for (auto & city: euroCities) {
+        if (city->name == cityName) {
+            for(auto food = city->tradFoodList.begin(); food != city->tradFoodList.end(); food++) {
+                if (food->foodName == cityFood) {
+                    city->tradFoodList.erase(food);
+                }
+            }
+        }
+    }
+}

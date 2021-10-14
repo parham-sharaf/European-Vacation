@@ -10,7 +10,7 @@ public:
     void RemoveCity(const string& cityName);
     void ChangePrice(const string& cityName, const string& cityFood, double cost);
     void AddNewTradFood(const string& cityName, const string& cityFood, double cost);
-    void RemoveTradFood(const string& cityName, const string& cityFood);
+    void RemoveTradFood(const string &cityName, const string &cityFood);
 
 private:
     Database adminDatabase{"./DB/new-cities-table.sqlite"};

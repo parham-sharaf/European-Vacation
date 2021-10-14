@@ -170,22 +170,9 @@ CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp" -o CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s
 
-CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
-CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o: ../UI/account/account.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.cpp"
-
-CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.cpp" > CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i
-
-CMakeFiles/European-Vacation.dir/UI/account/account.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/UI/account/account.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.cpp" -o CMakeFiles/European-Vacation.dir/UI/account/account.cpp.s
-
 CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o: ../UI/Map/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.cpp"
 
 CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i: cmake_force
@@ -198,7 +185,7 @@ CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s: cmake_force
 
 CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o: ../moddedlineedit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.cpp"
 
 CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.i: cmake_force
@@ -219,7 +206,6 @@ European__Vacation_OBJECTS = \
 "CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o" \
 "CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o" \
 "CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o" \
-"CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o" \
 "CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o" \
 "CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
 
@@ -234,7 +220,6 @@ European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.
 European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
-European-Vacation: CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/build.make
@@ -244,7 +229,7 @@ European-Vacation: /home/parham/Qt/6.1.2/gcc_64/lib/libQt6Core.so.6.1.2
 European-Vacation: /usr/lib/x86_64-linux-gnu/libGLX.so
 European-Vacation: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 European-Vacation: CMakeFiles/European-Vacation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable European-Vacation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable European-Vacation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/European-Vacation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

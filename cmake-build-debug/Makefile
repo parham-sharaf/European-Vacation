@@ -286,30 +286,6 @@ UI/Map/map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s
 .PHONY : UI/Map/map.cpp.s
 
-UI/account/account.o: UI/account/account.cpp.o
-.PHONY : UI/account/account.o
-
-# target to build an object file
-UI/account/account.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.o
-.PHONY : UI/account/account.cpp.o
-
-UI/account/account.i: UI/account/account.cpp.i
-.PHONY : UI/account/account.i
-
-# target to preprocess a source file
-UI/account/account.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.i
-.PHONY : UI/account/account.cpp.i
-
-UI/account/account.s: UI/account/account.cpp.s
-.PHONY : UI/account/account.s
-
-# target to generate assembly for a file
-UI/account/account.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/account/account.cpp.s
-.PHONY : UI/account/account.cpp.s
-
 UI/login/login.o: UI/login/login.cpp.o
 .PHONY : UI/login/login.o
 
@@ -434,9 +410,6 @@ help:
 	@echo "... UI/Map/map.o"
 	@echo "... UI/Map/map.i"
 	@echo "... UI/Map/map.s"
-	@echo "... UI/account/account.o"
-	@echo "... UI/account/account.i"
-	@echo "... UI/account/account.s"
 	@echo "... UI/login/login.o"
 	@echo "... UI/login/login.i"
 	@echo "... UI/login/login.s"

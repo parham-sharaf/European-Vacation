@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.cpp
-Admin.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
-../ManageCity/ManageCities.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
-
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
 string
 -
@@ -64,10 +58,6 @@ QGraphicsItem
 string
 -
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
-QDialog
--
-
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
 QDialog
 -
@@ -106,16 +96,6 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/FW4OAYE3LE/moc_account.cpp
-memory
--
-../../../UI/account/account.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/account/account.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
 memory
 -
@@ -127,28 +107,12 @@ QtCore/qmetatype.h
 -
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/mocs_compilation.cpp
-FW4OAYE3LE/moc_account.cpp
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/FW4OAYE3LE/moc_account.cpp
 SOFTFQEKRY/moc_login.cpp
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
 EWIEGA46WW/moc_mainwindow.cpp
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp
 EWIEGA46WW/moc_moddedlineedit.cpp
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/cmake-build-debug/European-Vacation_autogen/EWIEGA46WW/moc_moddedlineedit.cpp
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/main.cpp
-mainwindow.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
-QApplication
--
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.cpp
-mainwindow.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
-./ui_mainwindow.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ui_mainwindow.h
-moddedlineedit.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 iostream
@@ -259,10 +223,6 @@ qstring.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QStringList
 qstringlist.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringlist.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtCore/QVariant
-qvariant.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariant.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QtCore
 QtCore/QtCoreDepends
@@ -2440,10 +2400,6 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtGui/QAction
-qaction.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtGui/qaction.h
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QPaintDevice
 qpaintdevice.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevice.h
@@ -3876,10 +3832,6 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QApplication
-qapplication.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qapplication.h
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDialog
 qdialog.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h
@@ -3896,18 +3848,6 @@ qgraphicsscene.h
 qgraphicsview.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGridLayout
-qgridlayout.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHeaderView
-qheaderview.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLabel
-qlabel.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlabel.h
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit
 qlineedit.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h
@@ -3916,26 +3856,6 @@ qlineedit.h
 qmainwindow.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenu
-qmenu.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenu.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenuBar
-qmenubar.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QPushButton
-qpushbutton.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QStatusBar
-qstatusbar.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstatusbar.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTabWidget
-qtabwidget.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtabwidget.h
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget
 qtreewidget.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtreewidget.h
@@ -3943,24 +3863,6 @@ qtreewidget.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem
 qtreewidget.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtreewidget.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QVBoxLayout
-qboxlayout.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qboxlayout.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QWidget
-qwidget.h
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractbutton.h
-QtWidgets/qtwidgetsglobal.h
--
-QtGui/qicon.h
--
-QtGui/qkeysequence.h
--
-QtWidgets/qwidget.h
--
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h
 QtWidgets/qtwidgetsglobal.h
@@ -4000,32 +3902,6 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtGui/qvalidator.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qapplication.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qcoreapplication.h
--
-QtGui/qwindowdefs.h
--
-QtCore/qpoint.h
--
-QtCore/qsize.h
--
-QtGui/qcursor.h
--
-QtGui/qguiapplication.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qboxlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qlayout.h
--
-QtWidgets/qwidget.h
--
-limits.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h
@@ -4086,62 +3962,6 @@ QtWidgets/qscrollarea.h
 QtWidgets/qgraphicsscene.h
 -
 
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qlayout.h
--
-QtWidgets/qwidget.h
--
-limits.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractitemview.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlabel.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
--
-QtGui/qpicture.h
--
-QtGui/qtextdocument.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qobject.h
--
-QtWidgets/qlayoutitem.h
--
-QtWidgets/qsizepolicy.h
--
-QtCore/qrect.h
--
-QtCore/qmargins.h
--
-limits.h
--
-QtWidgets/qboxlayout.h
--
-QtWidgets/qgridlayout.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlayoutitem.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qsizepolicy.h
--
-QtCore/qrect.h
--
-limits.h
--
-
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -4160,30 +3980,6 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtWidgets/qtabwidget.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenu.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtCore/qstring.h
--
-QtGui/qicon.h
--
-QtGui/qaction.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qmenu.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractbutton.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h
@@ -4210,12 +4006,6 @@ QtCore/qalgorithms.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractslider.h
--
-
-/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstatusbar.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstyle.h
@@ -4340,41 +4130,5 @@ QtGui/qcursor.h
 QtGui/qkeysequence.h
 -
 QtGui/qevent.h
--
-
-European-Vacation_autogen/include/ui_mainwindow.h
-QtCore/QVariant
--
-QtGui/QAction
--
-QtWidgets/QApplication
--
-QtWidgets/QGraphicsView
--
-QtWidgets/QGridLayout
--
-QtWidgets/QHeaderView
--
-QtWidgets/QLabel
--
-QtWidgets/QLineEdit
--
-QtWidgets/QMainWindow
--
-QtWidgets/QMenu
--
-QtWidgets/QMenuBar
--
-QtWidgets/QPushButton
--
-QtWidgets/QStatusBar
--
-QtWidgets/QTabWidget
--
-QtWidgets/QTreeWidget
--
-QtWidgets/QVBoxLayout
--
-QtWidgets/QWidget
 -
 
