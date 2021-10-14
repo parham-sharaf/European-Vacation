@@ -26,7 +26,7 @@ jobs:
           cd qtbase-6.1.2
           ./configure -xcb -system-sqlite -system-pcre -system-zlib -system-freetype -system-libpng -system-libjpeg -system-harfbuzz -system-libb2 -system-doubleconversion -system-libmd4c
           mkdir -p src/corelib/.rcc
-          cmake --build . --parallel
+          cmake --build .
           cmake --install .
 
       # - name: Install QT
