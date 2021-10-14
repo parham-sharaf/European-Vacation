@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+name: CI
+on:
+  push:
+    branches: [ main dev ]
+  pull_request:
+    branches: [ main dev ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Ubuntu
+        run: sudo apt update && sudo apt -y upgrade
+
+      - name: Install Requisite packages
+        run: sudo apt -y install cmake libglu1-mesa-dev freeglut3-dev mesa-common-dev libharfbuzz-dev libgl-dev libglu-dev 'libxcb*-dev' libx11-xcb-dev libxkbcommon-x11-dev libpcre2-dev libz-dev libfreetype6-dev libpng-dev libjpeg-dev libsqlite3-dev libharfbuzz-dev libb2-dev libdouble-conversion-dev libmd4c-dev
+
+      - uses: actions/checkout@v2
+
+      - name: Download QT6
+        run: |
+          cd /opt
+          wget https://github.com/qt/qtbase/archive/refs/tags/v6.1.2.tar.gz
+          tar xf v6.1.2.tar.gz
+          cd qtbase-6.1.2
+          ./configure -xcb -system-sqlite -system-pcre -system-zlib -system-freetype -system-libpng -system-libjpeg -system-harfbuzz -system-libb2 -system-doubleconversion -system-libmd4c
+          mkdir -p src/corelib/.rcc
+          cmake --build . --parallel
+          cmake --install .
+
+      # - name: Install QT
+      #   uses: WillBrennan/yaqti@2021.07.27.1
+      #   with:
+      #     version: '6.1.2'
+      #     host: 'linux'
+      #     target: 'desktop'
+      #     modules: 'qtgui qtcore qtwidgets'
+
+      - name: Build c++ project
+        # run: |
+        #   cd "$GITHUB_WORKSPACE"
+        #   cmake -DCMAKE_PREFIX_PATH="/usr/local/lib/cmake/Qt6" . -B build
+        #   cmake --build build
+        uses: nicledomaS/cmake_build_action@v1.4
+        with:
+          cmake_args: -DCMAKE_PREFIX_PATH="/usr/local/lib/cmake/Qt6"
+          create_package: OFF
+
+      - name: Create tarball
+        run: |
+          cd build
+          tar cvpaf $(git rev-parse --short HEAD).tar.gz European-Vacation
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: build/*.tar.gz

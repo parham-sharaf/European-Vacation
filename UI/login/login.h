@@ -3,11 +3,8 @@
 
 #include <QDialog>
 #include "sqlite3.h"
-#include <string>
-#include <iostream>
 #include <vector>
 #include "../../DB/Database/Database.h"
-using namespace std;
 
 namespace Ui {
 

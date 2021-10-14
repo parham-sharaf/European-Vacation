@@ -8,9 +8,6 @@
 #include "City/City.h"
 #include "../DB/Database/Database.h"
 
-using namespace std;
-
-
 class ManageCities
 {
 public:
