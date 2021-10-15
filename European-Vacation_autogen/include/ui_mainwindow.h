@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -44,11 +45,15 @@ public:
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
+    QGraphicsView *graphicsView;
     QTabWidget *tabWidget;
     QWidget *traveller;
     QVBoxLayout *verticalLayout;
     QPushButton *submitPlan;
     QPushButton *clearPlan;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QLineEdit *citiesFromLondon_LineEdit;
     QTreeWidget *citiesTreeWidget;
     QGridLayout *gridLayout_3;
     QGridLayout *gridLayout_4;
@@ -59,7 +64,6 @@ public:
     QPushButton *updatepurchases_pushButton;
     QTreeWidget *planTreeWidget;
     QWidget *admin;
-    QGraphicsView *graphicsView;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -99,6 +103,11 @@ public:
         centralwidget->setEnabled(true);
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
+
+        gridLayout->addWidget(graphicsView, 0, 0, 1, 1);
+
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         traveller = new QWidget();
@@ -118,19 +127,43 @@ public:
 
         clearPlan = new QPushButton(traveller);
         clearPlan->setObjectName(QString::fromUtf8("clearPlan"));
+        clearPlan->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
 
         verticalLayout->addWidget(clearPlan);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(traveller);
+        label->setObjectName(QString::fromUtf8("label"));
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
+
+        horizontalLayout->addWidget(label);
+
+        citiesFromLondon_LineEdit = new QLineEdit(traveller);
+        citiesFromLondon_LineEdit->setObjectName(QString::fromUtf8("citiesFromLondon_LineEdit"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(citiesFromLondon_LineEdit->sizePolicy().hasHeightForWidth());
+        citiesFromLondon_LineEdit->setSizePolicy(sizePolicy1);
+        citiesFromLondon_LineEdit->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(citiesFromLondon_LineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout);
 
         citiesTreeWidget = new QTreeWidget(traveller);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
         citiesTreeWidget->setHeaderItem(__qtreewidgetitem);
         citiesTreeWidget->setObjectName(QString::fromUtf8("citiesTreeWidget"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(citiesTreeWidget->sizePolicy().hasHeightForWidth());
-        citiesTreeWidget->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(citiesTreeWidget->sizePolicy().hasHeightForWidth());
+        citiesTreeWidget->setSizePolicy(sizePolicy2);
         citiesTreeWidget->setMinimumSize(QSize(400, 0));
         citiesTreeWidget->setAutoFillBackground(true);
         citiesTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
@@ -151,18 +184,15 @@ public:
 
         totalDistanceTraveled_LineEdit = new QLineEdit(traveller);
         totalDistanceTraveled_LineEdit->setObjectName(QString::fromUtf8("totalDistanceTraveled_LineEdit"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(totalDistanceTraveled_LineEdit->sizePolicy().hasHeightForWidth());
-        totalDistanceTraveled_LineEdit->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(totalDistanceTraveled_LineEdit->sizePolicy().hasHeightForWidth());
+        totalDistanceTraveled_LineEdit->setSizePolicy(sizePolicy1);
 
         gridLayout_4->addWidget(totalDistanceTraveled_LineEdit, 0, 1, 1, 1);
 
         totalspent_LineEdit = new QLineEdit(traveller);
         totalspent_LineEdit->setObjectName(QString::fromUtf8("totalspent_LineEdit"));
-        sizePolicy2.setHeightForWidth(totalspent_LineEdit->sizePolicy().hasHeightForWidth());
-        totalspent_LineEdit->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(totalspent_LineEdit->sizePolicy().hasHeightForWidth());
+        totalspent_LineEdit->setSizePolicy(sizePolicy1);
         totalspent_LineEdit->setAlignment(Qt::AlignCenter);
 
         gridLayout_4->addWidget(totalspent_LineEdit, 1, 1, 1, 1);
@@ -202,12 +232,7 @@ public:
         admin->setObjectName(QString::fromUtf8("admin"));
         tabWidget->addTab(admin, QString());
 
-        gridLayout->addWidget(tabWidget, 4, 1, 1, 1);
-
-        graphicsView = new QGraphicsView(centralwidget);
-        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-
-        gridLayout->addWidget(graphicsView, 4, 0, 1, 1);
+        gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -215,7 +240,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 22));
+        menubar->setGeometry(QRect(0, 0, 930, 26));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -246,6 +271,8 @@ public:
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
         submitPlan->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
         clearPlan->setText(QCoreApplication::translate("MainWindow", "Reset Plan", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "# of Cities to Travel to from London:", nullptr));
+        citiesFromLondon_LineEdit->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Total Spent (USD)", nullptr));
         totalspent_LineEdit->setText(QString());
         label_3->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));

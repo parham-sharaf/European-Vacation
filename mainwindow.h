@@ -58,6 +58,7 @@ private slots:
     void on_updatepurchases_pushButton_clicked();
     void on_submitPlan_clicked();
     void on_clearPlan_clicked();
+    void on_citiesFromLondon_LineEdit_textChanged(const QString &arg1);
 
 private:
     void recursiveChecks(QTreeWidgetItem* parent);
@@ -68,5 +69,6 @@ private:
     QList<QTreeWidgetItem *> citiesTree;
     ManageCities myCities;
     bool repurchase = false;
+    int itemsChecked = 0;
 };
 #endif // MAINWINDOW_H

@@ -3828,6 +3828,10 @@ qgraphicsview.h
 qgridlayout.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHBoxLayout
+qboxlayout.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qboxlayout.h
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHeaderView
 qheaderview.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
@@ -4280,6 +4284,8 @@ QtWidgets/QApplication
 QtWidgets/QGraphicsView
 -
 QtWidgets/QGridLayout
+-
+QtWidgets/QHBoxLayout
 -
 QtWidgets/QHeaderView
 -

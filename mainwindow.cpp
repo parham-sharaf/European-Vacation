@@ -64,8 +64,21 @@ MainWindow::MainWindow(QWidget *parent)
     scene->addItem(RomeLoc);
     Map::euroMap.push_back(RomeLoc);
 
+    Map *ViennaLoc = new Map("Vienna", 655, 755);
+    scene->addItem(ViennaLoc);
+    Map::euroMap.push_back(ViennaLoc);
+
+    Map *StockholmLoc = new Map("Stockholm", 680, 410);
+    scene->addItem(StockholmLoc);
+    Map::euroMap.push_back(StockholmLoc);
+
+    myCities.ReadData();
+
     Admin newAdmin;
-    newAdmin.AddNewCity("Vienna");
+//    newAdmin.RemoveCity("Vienna");
+//    newAdmin.AddNewTradFood("London", "Parhamburger", 6.96);
+//    newAdmin.RemoveTradFood("London", "Parhamburger");
+//    newAdmin.AddNewCity("Vienna");
 
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
     ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
@@ -73,6 +86,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     myCities.ReadData();
 
+    // Special Line Edit for # Cities from London
+    connect(ui->citiesFromLondon_LineEdit, SIGNAL(textChanged(const QString&)), this, SLOT(on_citiesFromLondon_LineEdit_textChanged(const QString&)));
 
     // INPUTTING ITEMS INTO TREE WIDGET
     ui->updatepurchases_pushButton->setDisabled(true);
@@ -83,6 +98,11 @@ MainWindow::MainWindow(QWidget *parent)
     // setting up tree widget
     for (auto & city : myCities.GetEuroCities())
     {
+        for (auto & dot: Map::euroMap)
+            if (dot->GetLocation() == city.first) {
+                dot->setAvailability(true);
+            }
+
         cities = new QTreeWidgetItem;
         cities->setText(0, QString::fromStdString(city.first));
         for (auto & foodItem: city.second->tradFoodList)
@@ -149,7 +169,18 @@ void MainWindow::recursiveChecks(QTreeWidgetItem* parent)
 
 void MainWindow::itemChanged(QTreeWidgetItem* item, int col)
 {
-
+    if (item->checkState(0) == Qt::Checked)
+        ++itemsChecked;
+    else
+        --itemsChecked;
+    if (itemsChecked > 0)
+    {
+        ui->citiesFromLondon_LineEdit->setDisabled(true);
+    }
+    else
+    {
+        ui->citiesFromLondon_LineEdit->setDisabled(false);
+    }
 }
 
 void MainWindow::setPlan(QTreeWidgetItem* item, int col)
@@ -192,10 +223,19 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 
 void MainWindow::on_submitPlan_clicked()
 {
-    myCities.setStartingCity(Map::getStartingCity());
-    myCities.ShortestPath();
-    for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
-    cout << endl;
+    if (ui->citiesFromLondon_LineEdit->isEnabled())
+    {
+        myCities.BaseCityPlan("London", ui->citiesFromLondon_LineEdit->text().toInt());
+        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
+        cout << endl;
+    }
+    else
+    {
+        myCities.setStartingCity(Map::getStartingCity());
+        myCities.ShortestPath();
+        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
+        cout << endl;
+    }
     ui->totalDistanceTraveled_LineEdit->setText(QString::number(myCities.GetTotalDistance()));
 
     // setting up Tree Widget
@@ -286,7 +326,7 @@ void MainWindow::updateSpent()
         }
         if (repurchase && test == it.operator*()->parent()->childCount() - 1)
         {
-           it.operator*()->parent()->takeChild(it.operator*()->parent()->childCount() - 1);
+            it.operator*()->parent()->takeChild(it.operator*()->parent()->childCount() - 1);
         }
         if (test == it.operator*()->parent()->childCount() && it.operator*()->parent()->childCount() > 0)
         {
@@ -318,8 +358,40 @@ void MainWindow::on_clearPlan_clicked() {
         dot->setAvailability(true);
         dot->setIsSelected(false);
     }
+
+    disconnect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+    disconnect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
+    for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+        ui->citiesTreeWidget->topLevelItem(i)->setCheckState(0, Qt::Unchecked);
+    connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+    connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
+
+    ui->citiesFromLondon_LineEdit->setDisabled(false);
+    ui->totalDistanceTraveled_LineEdit->setText("");
+    ui->totalspent_LineEdit->setText("");
+    ui->citiesFromLondon_LineEdit->setText("0");
+    ui->planTreeWidget->clear();
+    ui->updatepurchases_pushButton->setDisabled(true);
+    ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(215, 215, 215, 255), stop:1 rgba(215, 215, 215, 255));");
 //    for (int i = 0; i < cities->childCount(); i++)
 //        cities->child(i)->setCheckState(0, Qt::Unchecked);
 //    ui->citiesTreeWidget->topLevelItem(0)->parent()->child(5)->setCheckState(0, Qt::Unchecked);
 }
 
+
+
+void MainWindow::on_citiesFromLondon_LineEdit_textChanged(const QString &arg1)
+{
+    ui->citiesTreeWidget->blockSignals(true);
+    if (arg1.toStdString() != "0" && !arg1.toStdString().empty())
+    {
+        for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+            ui->citiesTreeWidget->topLevelItem(i)->setDisabled(true);
+    }
+    else
+    {
+        for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+            ui->citiesTreeWidget->topLevelItem(i)->setDisabled(false);
+    }
+    ui->citiesTreeWidget->blockSignals(false);
+}

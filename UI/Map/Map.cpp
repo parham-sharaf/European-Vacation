@@ -7,7 +7,7 @@ std::vector<Map*> euroMap;
 Map::Map(const std::string& name, int x, int y) {
     location = name;
     isSelected = false;
-    isAvailable = true;
+    isAvailable = false;
     pressed = false;
     this->x = x;
     this->y = y;
@@ -20,7 +20,7 @@ QRectF Map::boundingRect() const { return QRectF(x, y, 10, 10); }
 
 void Map::setPressed(bool isPressed) {
     pressed = isPressed;
-    isSelected = true;
+    if (pressed) isSelected = true;
     QGraphicsItem::update();
 }
 
@@ -41,15 +41,19 @@ void Map::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     std::cout << "here" << std::endl;
 
     if (isAvailable) {
+        painter->setPen(Qt::black);
         brush.setColor(Qt::green);
         if (isSelected) {
             brush.setColor(Qt::blue);
             if (pressed) {
                 startingPoint = location;
                 brush.setColor(Qt::red);
-                std::cout << location << std::endl;
             }
         }
+    }
+    else {
+        painter->setPen(Qt::transparent);
+        brush.setColor(Qt::transparent);
     }
     painter->fillRect(rec, brush);
     painter->drawRect(rec);

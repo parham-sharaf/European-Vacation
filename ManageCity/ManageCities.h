@@ -27,7 +27,7 @@ public:
 
 protected:
     Database cityDatabase{"./DB/cities-table.sqlite"};
-    map<string, City*> euroCities;
+    static map<string, City*> euroCities;
 private:
     Records cityList;
     Records distanceList;
