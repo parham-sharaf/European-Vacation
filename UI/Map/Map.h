@@ -5,7 +5,6 @@
 #include <string>
 #include <iostream>
 #include <vector>
-//#include "../../mainwindow.h"
 
 class Map: public QGraphicsItem
 {

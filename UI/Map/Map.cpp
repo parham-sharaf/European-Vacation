@@ -61,6 +61,11 @@ void Map::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 
 void Map::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     pressed = !pressed;
+    for (auto & dot: Map::euroMap) {
+        if (dot->pressed && dot->location == startingPoint) {
+            dot->setPressed(false);
+        }
+    }
     QGraphicsItem::mousePressEvent(event);
     QGraphicsItem::update();
 }

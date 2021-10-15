@@ -378,8 +378,6 @@ void MainWindow::on_clearPlan_clicked() {
 //    ui->citiesTreeWidget->topLevelItem(0)->parent()->child(5)->setCheckState(0, Qt::Unchecked);
 }
 
-
-
 void MainWindow::on_citiesFromLondon_LineEdit_textChanged(const QString &arg1)
 {
     ui->citiesTreeWidget->blockSignals(true);
