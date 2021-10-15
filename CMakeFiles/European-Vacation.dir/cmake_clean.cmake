@@ -8,10 +8,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o"
   "CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.o"
   "CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o"
+  "CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.o"
   "CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o"
   "CMakeFiles/European-Vacation.dir/main.cpp.o"
   "CMakeFiles/European-Vacation.dir/mainwindow.cpp.o"
-  "CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
   "European-Vacation"
   "European-Vacation.pdb"
 )

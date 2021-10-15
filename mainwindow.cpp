@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "moddedlineedit.h"
+#include "UI/ModdedLineEdit/moddedlineedit.h"
 
 using namespace std;
 std::vector<Map*> Map::euroMap;
@@ -85,10 +85,6 @@ MainWindow::MainWindow(QWidget *parent)
     {
         cities = new QTreeWidgetItem;
         cities->setText(0, QString::fromStdString(city.first));
-        for (auto & dot: Map::euroMap) {
-            if (dot->GetLocation() == city.first)
-                dot->setAvailability(true);
-        }
         for (auto & foodItem: city.second->tradFoodList)
         {
             auto* food = new QTreeWidgetItem;
@@ -160,11 +156,15 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 {
     if (item->checkState(0) == Qt::Checked) {
         if (myCities.GetTravelPlan().empty())
-            for (auto & dot: Map::euroMap)
+            for (auto & dot: Map::euroMap) {
                 if (dot->GetLocation() == item->text(0).toStdString()) {
                     dot->setPressed(true);
+                    cout << Map::getStartingCity() << endl;
+                    cout << dot->GetLocation() << endl;
+                    dot->QGraphicsItem::update();
                     myCities.setStartingCity(dot->GetLocation());
                 }
+            }
 
         myCities.AddCity(item->text(0).toStdString());
         for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";

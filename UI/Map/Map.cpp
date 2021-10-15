@@ -7,7 +7,7 @@ std::vector<Map*> euroMap;
 Map::Map(const std::string& name, int x, int y) {
     location = name;
     isSelected = false;
-    isAvailable = false;
+    isAvailable = true;
     pressed = false;
     this->x = x;
     this->y = y;
@@ -38,18 +38,18 @@ void Map::setAvailability(bool available) {
 void Map::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                   QWidget *widget) {
     rec = boundingRect();
+    std::cout << "here" << std::endl;
 
     if (isAvailable) {
+        brush.setColor(Qt::green);
         if (isSelected) {
+            brush.setColor(Qt::blue);
             if (pressed) {
                 startingPoint = location;
                 brush.setColor(Qt::red);
                 std::cout << location << std::endl;
-                std::cout << "here" << std::endl;
             }
-            else brush.setColor(Qt::blue);
         }
-        else brush.setColor(Qt::green);
     }
     painter->fillRect(rec, brush);
     painter->drawRect(rec);

@@ -24,7 +24,7 @@ add_executable(European-Vacation
         Admin/Admin.h Admin/Admin.cpp
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         UI/Map/Map.h UI/Map/Map.cpp
-        moddedlineedit.h moddedlineedit.cpp
+        UI/ModdedLineEdit/moddedlineedit.h UI/ModdedLineEdit/moddedlineedit.cpp
         )
 
 include_directories(/usr/include)

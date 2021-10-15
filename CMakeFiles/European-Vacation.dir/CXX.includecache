@@ -64,6 +64,12 @@ iostream
 vector
 -
 
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.h
+QLineEdit
+-
+iomanip
+-
+
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
 QDialog
 -
@@ -79,8 +85,8 @@ mainwindow.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 ./ui_mainwindow.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ui_mainwindow.h
-moddedlineedit.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
+UI/ModdedLineEdit/moddedlineedit.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
 iostream
@@ -129,12 +135,6 @@ Admin/Admin.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
 UI/Map/Map.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.h
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
-QLineEdit
--
-iomanip
--
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer
 qdeadlinetimer.h

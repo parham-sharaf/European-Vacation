@@ -39,15 +39,15 @@ CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/Admin/Admin.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/European-Vacation_autogen/EWIEGA46WW/moc_mainwindow.cpp
- /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/European-Vacation_autogen/EWIEGA46WW/moc_moddedlineedit.cpp
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/European-Vacation_autogen/I4YZB3GBVK/moc_moddedlineedit.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/European-Vacation_autogen/SOFTFQEKRY/moc_login.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/European-Vacation_autogen/mocs_compilation.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.h
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
- /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QEvent
@@ -592,6 +592,141 @@ CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsitem.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgets-config.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.o
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.cpp
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QList
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QObject
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QRect
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSize
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSizeF
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qalgorithms.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanystringview.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydata.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydataops.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydatapointer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_bootstrap.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbasicatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearray.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayalgorithms.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearraylist.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayview.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qchar.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompare.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerfwd.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainertools_impl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontiguouscache.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcoreevent.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdatastream.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdebug.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qflags.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qgenericatomic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobal.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobalstatic.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhash.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhashfunctions.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevice.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevicebase.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterable.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterator.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qline.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlist.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlogging.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmap.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmargins.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmath.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetacontainer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetatype.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmutex.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnamespace.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnumeric.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject_impl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs_impl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpair.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpoint.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpointer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qprocessordetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qproperty.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpropertyprivate.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrect.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrefcount.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qscopedpointer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qset.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata_impl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer_impl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsize.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstring.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringalgorithms.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringbuilder.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringconverter.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringlist.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringliteral.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringmatcher.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringtokenizer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringview.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsysinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsystemdetection.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtaggedpointer.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtcore-config.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtextstream.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtmetamacros.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtypeinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qurl.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qutf8stringview.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariant.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvarlengtharray.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversiontagging.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QTransform
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbitmap.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbrush.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolor.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcursor.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qevent.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qeventpoint.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfont.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontinfo.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontmetrics.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimage.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qinputdevice.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qkeysequence.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevice.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpalette.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpen.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixelformat.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixmap.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpointingdevice.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpolygon.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qregion.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgb.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgba64.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qscreen.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextcursor.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextformat.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextoption.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtgui-config.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtguiglobal.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvector2d.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvectornd.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs_win.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qframe.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgets-config.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h
 CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp
@@ -1144,10 +1279,10 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.h
+ /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/ModdedLineEdit/moddedlineedit.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.cpp
  /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/mainwindow.h
- /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug
  /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QEvent
@@ -1546,138 +1681,3 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h
  European-Vacation_autogen/include/ui_mainwindow.h
-CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o
- /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.cpp
- /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/moddedlineedit.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QList
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QObject
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QRect
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSize
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QSizeF
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qalgorithms.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qanystringview.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydata.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydataops.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qarraydatapointer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_bootstrap.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qatomic_cxx11.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbasicatomic.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearray.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayalgorithms.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearraylist.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qbytearrayview.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qchar.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompare.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcompilerdetection.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qconfig.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerfwd.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainerinfo.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontainertools_impl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcontiguouscache.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qcoreevent.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdatastream.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qdebug.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qflags.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qgenericatomic.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobal.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qglobalstatic.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhash.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qhashfunctions.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevice.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiodevicebase.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterable.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qiterator.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qline.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlist.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qlogging.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmap.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmargins.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmath.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetacontainer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmetatype.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qmutex.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnamespace.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qnumeric.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobject_impl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qobjectdefs_impl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpair.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpoint.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpointer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qprocessordetection.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qproperty.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qpropertyprivate.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrect.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qrefcount.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qscopedpointer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qset.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qshareddata_impl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsharedpointer_impl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsize.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstring.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringalgorithms.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringbuilder.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringconverter.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringlist.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringliteral.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringmatcher.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringtokenizer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qstringview.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsysinfo.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qsystemdetection.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtaggedpointer.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtcore-config.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtextstream.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtmetamacros.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qtypeinfo.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qurl.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qutf8stringview.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvariant.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qvarlengtharray.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtCore/qversiontagging.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/QTransform
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbitmap.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qbrush.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcolor.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qcursor.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qevent.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qeventpoint.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfont.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontinfo.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qfontmetrics.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qimage.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qinputdevice.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qkeysequence.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpaintdevice.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpalette.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpen.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixelformat.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpixmap.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpointingdevice.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qpolygon.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qregion.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgb.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qrgba64.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qscreen.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextcursor.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextformat.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtextoption.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtgui-config.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtguiglobal.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvector2d.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qvectornd.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs_win.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qframe.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgets-config.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
- /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qwidget.h

@@ -286,6 +286,30 @@ UI/Map/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.s
 .PHONY : UI/Map/Map.cpp.s
 
+UI/ModdedLineEdit/moddedlineedit.o: UI/ModdedLineEdit/moddedlineedit.cpp.o
+.PHONY : UI/ModdedLineEdit/moddedlineedit.o
+
+# target to build an object file
+UI/ModdedLineEdit/moddedlineedit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.o
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.o
+
+UI/ModdedLineEdit/moddedlineedit.i: UI/ModdedLineEdit/moddedlineedit.cpp.i
+.PHONY : UI/ModdedLineEdit/moddedlineedit.i
+
+# target to preprocess a source file
+UI/ModdedLineEdit/moddedlineedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.i
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.i
+
+UI/ModdedLineEdit/moddedlineedit.s: UI/ModdedLineEdit/moddedlineedit.cpp.s
+.PHONY : UI/ModdedLineEdit/moddedlineedit.s
+
+# target to generate assembly for a file
+UI/ModdedLineEdit/moddedlineedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.s
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.s
+
 UI/login/login.o: UI/login/login.cpp.o
 .PHONY : UI/login/login.o
 
@@ -358,30 +382,6 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-moddedlineedit.o: moddedlineedit.cpp.o
-.PHONY : moddedlineedit.o
-
-# target to build an object file
-moddedlineedit.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o
-.PHONY : moddedlineedit.cpp.o
-
-moddedlineedit.i: moddedlineedit.cpp.i
-.PHONY : moddedlineedit.i
-
-# target to preprocess a source file
-moddedlineedit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.i
-.PHONY : moddedlineedit.cpp.i
-
-moddedlineedit.s: moddedlineedit.cpp.s
-.PHONY : moddedlineedit.s
-
-# target to generate assembly for a file
-moddedlineedit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.s
-.PHONY : moddedlineedit.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -410,6 +410,9 @@ help:
 	@echo "... UI/Map/Map.o"
 	@echo "... UI/Map/Map.i"
 	@echo "... UI/Map/Map.s"
+	@echo "... UI/ModdedLineEdit/moddedlineedit.o"
+	@echo "... UI/ModdedLineEdit/moddedlineedit.i"
+	@echo "... UI/ModdedLineEdit/moddedlineedit.s"
 	@echo "... UI/login/login.o"
 	@echo "... UI/login/login.i"
 	@echo "... UI/login/login.s"
@@ -419,9 +422,6 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
-	@echo "... moddedlineedit.o"
-	@echo "... moddedlineedit.i"
-	@echo "... moddedlineedit.s"
 .PHONY : help
 
 
