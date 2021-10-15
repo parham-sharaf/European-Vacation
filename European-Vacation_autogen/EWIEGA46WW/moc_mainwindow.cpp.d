@@ -4,7 +4,7 @@
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/DB/Database/Database.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/City/City.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/ManageCity/ManageCities.h \
-  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/Map/map.h \
+  /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/Map/Map.h \
   /home/parham/Personal/School/Saddleback/2021\ Fall/CS\ 1D/European-Vacation/UI/login/login.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDeadlineTimer \
   /home/parham/Qt/6.1.2/gcc_64/include/QtCore/QDebug \

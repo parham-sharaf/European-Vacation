@@ -262,29 +262,29 @@ ManageCity/ManageCities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.s
 .PHONY : ManageCity/ManageCities.cpp.s
 
-UI/Map/map.o: UI/Map/map.cpp.o
-.PHONY : UI/Map/map.o
+UI/Map/Map.o: UI/Map/Map.cpp.o
+.PHONY : UI/Map/Map.o
 
 # target to build an object file
-UI/Map/map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o
-.PHONY : UI/Map/map.cpp.o
+UI/Map/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o
+.PHONY : UI/Map/Map.cpp.o
 
-UI/Map/map.i: UI/Map/map.cpp.i
-.PHONY : UI/Map/map.i
+UI/Map/Map.i: UI/Map/Map.cpp.i
+.PHONY : UI/Map/Map.i
 
 # target to preprocess a source file
-UI/Map/map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i
-.PHONY : UI/Map/map.cpp.i
+UI/Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.i
+.PHONY : UI/Map/Map.cpp.i
 
-UI/Map/map.s: UI/Map/map.cpp.s
-.PHONY : UI/Map/map.s
+UI/Map/Map.s: UI/Map/Map.cpp.s
+.PHONY : UI/Map/Map.s
 
 # target to generate assembly for a file
-UI/Map/map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s
-.PHONY : UI/Map/map.cpp.s
+UI/Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.s
+.PHONY : UI/Map/Map.cpp.s
 
 UI/login/login.o: UI/login/login.cpp.o
 .PHONY : UI/login/login.o
@@ -407,9 +407,9 @@ help:
 	@echo "... ManageCity/ManageCities.o"
 	@echo "... ManageCity/ManageCities.i"
 	@echo "... ManageCity/ManageCities.s"
-	@echo "... UI/Map/map.o"
-	@echo "... UI/Map/map.i"
-	@echo "... UI/Map/map.s"
+	@echo "... UI/Map/Map.o"
+	@echo "... UI/Map/Map.i"
+	@echo "... UI/Map/Map.s"
 	@echo "... UI/login/login.o"
 	@echo "... UI/login/login.i"
 	@echo "... UI/login/login.s"

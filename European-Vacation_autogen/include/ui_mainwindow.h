@@ -48,6 +48,7 @@ public:
     QWidget *traveller;
     QVBoxLayout *verticalLayout;
     QPushButton *submitPlan;
+    QPushButton *clearPlan;
     QTreeWidget *citiesTreeWidget;
     QGridLayout *gridLayout_3;
     QGridLayout *gridLayout_4;
@@ -106,8 +107,19 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         submitPlan = new QPushButton(traveller);
         submitPlan->setObjectName(QString::fromUtf8("submitPlan"));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Waree")});
+        font.setPointSize(12);
+        submitPlan->setFont(font);
+        submitPlan->setAutoFillBackground(false);
+        submitPlan->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
         verticalLayout->addWidget(submitPlan);
+
+        clearPlan = new QPushButton(traveller);
+        clearPlan->setObjectName(QString::fromUtf8("clearPlan"));
+
+        verticalLayout->addWidget(clearPlan);
 
         citiesTreeWidget = new QTreeWidget(traveller);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
@@ -120,6 +132,9 @@ public:
         sizePolicy1.setHeightForWidth(citiesTreeWidget->sizePolicy().hasHeightForWidth());
         citiesTreeWidget->setSizePolicy(sizePolicy1);
         citiesTreeWidget->setMinimumSize(QSize(400, 0));
+        citiesTreeWidget->setAutoFillBackground(true);
+        citiesTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
 
         verticalLayout->addWidget(citiesTreeWidget);
 
@@ -162,6 +177,7 @@ public:
 
         updatepurchases_pushButton = new QPushButton(traveller);
         updatepurchases_pushButton->setObjectName(QString::fromUtf8("updatepurchases_pushButton"));
+        updatepurchases_pushButton->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_3->addWidget(updatepurchases_pushButton, 0, 0, 1, 1);
 
@@ -176,6 +192,8 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
         planTreeWidget->setSizePolicy(sizePolicy3);
+        planTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
 
         verticalLayout->addWidget(planTreeWidget);
 
@@ -204,11 +222,10 @@ public:
 
         menubar->addAction(menuAccount->menuAction());
         menuAccount->addAction(actionLogin);
-        menuAccount->addAction(actionCreate_New_Account);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -228,12 +245,13 @@ public:
         actionLogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
         submitPlan->setText(QCoreApplication::translate("MainWindow", "Submit Plan", nullptr));
+        clearPlan->setText(QCoreApplication::translate("MainWindow", "Reset Plan", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Total Spent (USD)", nullptr));
         totalspent_LineEdit->setText(QString());
         label_3->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
         updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveller", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Admin", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 

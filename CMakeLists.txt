@@ -23,7 +23,7 @@ add_executable(European-Vacation
         ManageCity/City/City.h ManageCity/City/City.cpp
         Admin/Admin.h Admin/Admin.cpp
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
-        UI/Map/map.h UI/Map/map.cpp
+        UI/Map/Map.h UI/Map/Map.cpp
         moddedlineedit.h moddedlineedit.cpp
         )
 

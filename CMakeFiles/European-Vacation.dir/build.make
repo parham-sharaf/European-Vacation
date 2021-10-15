@@ -170,18 +170,18 @@ CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp" -o CMakeFiles/European-Vacation.dir/UI/login/login.cpp.s
 
-CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
-CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o: UI/Map/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.cpp"
+CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
+CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o: UI/Map/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o -c "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.cpp"
 
-CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.cpp" > CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.i
+CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.cpp" > CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.i
 
-CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/map.cpp" -o CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.s
+CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.cpp" -o CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.s
 
 CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o: CMakeFiles/European-Vacation.dir/flags.make
 CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o: moddedlineedit.cpp
@@ -206,7 +206,7 @@ European__Vacation_OBJECTS = \
 "CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o" \
 "CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o" \
 "CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o" \
-"CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o" \
+"CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o" \
 "CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o"
 
 # External object files for target European-Vacation
@@ -220,7 +220,7 @@ European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/ManageCities.cpp.
 European-Vacation: CMakeFiles/European-Vacation.dir/ManageCity/City/City.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/Admin/Admin.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/UI/login/login.cpp.o
-European-Vacation: CMakeFiles/European-Vacation.dir/UI/Map/map.cpp.o
+European-Vacation: CMakeFiles/European-Vacation.dir/UI/Map/Map.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/moddedlineedit.cpp.o
 European-Vacation: CMakeFiles/European-Vacation.dir/build.make
 European-Vacation: /home/parham/Qt/6.1.2/gcc_64/lib/libQt6Widgets.so.6.1.2

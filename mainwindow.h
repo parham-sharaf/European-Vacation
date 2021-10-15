@@ -25,7 +25,8 @@
 #include "ManageCity/City/City.h"
 #include "UI/login/login.h"
 #include "Admin/Admin.h"
-#include "UI/Map/map.h"
+#include "UI/Map/Map.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -39,6 +40,7 @@ Q_OBJECT
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void detectStartingPoint();
     double totalSpentOnTrip = 0;
 
 protected:
@@ -47,7 +49,6 @@ public slots:
     void itemChanged(QTreeWidgetItem*, int);
     void updateSpent();
     void setPlan(QTreeWidgetItem*, int);
-    void on_submitPlan_clicked();
 
 signals:
 
@@ -55,17 +56,17 @@ private slots:
 
     void on_actionLogin_triggered();
     void on_updatepurchases_pushButton_clicked();
+    void on_submitPlan_clicked();
+    void on_clearPlan_clicked();
 
 private:
-    void updateChecks(QTreeWidgetItem* item, int column);
+    void recursiveChecks(QTreeWidgetItem* parent);
     Ui::MainWindow *ui;
     QPixmap pix;
     QGraphicsScene *scene;
-    ManageCities myCities;
-    vector<Map*> euroMap;
-    bool repurchase = false;
-
-    void recursiveChecks(QTreeWidgetItem* parent);
+    QTreeWidgetItem* cities;
     QList<QTreeWidgetItem *> citiesTree;
+    ManageCities myCities;
+    bool repurchase = false;
 };
 #endif // MAINWINDOW_H

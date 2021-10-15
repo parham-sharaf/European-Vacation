@@ -24,8 +24,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[18];
-    char stringdata0[146];
+    const uint offsetsAndSize[20];
+    char stringdata0[167];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -37,15 +37,16 @@ QT_MOC_LITERAL(23, 0), // ""
 QT_MOC_LITERAL(24, 16), // "QTreeWidgetItem*"
 QT_MOC_LITERAL(41, 11), // "updateSpent"
 QT_MOC_LITERAL(53, 7), // "setPlan"
-QT_MOC_LITERAL(61, 21), // "on_submitPlan_clicked"
-QT_MOC_LITERAL(83, 24), // "on_actionLogin_triggered"
-QT_MOC_LITERAL(108, 37) // "on_updatepurchases_pushButton..."
+QT_MOC_LITERAL(61, 24), // "on_actionLogin_triggered"
+QT_MOC_LITERAL(86, 37), // "on_updatepurchases_pushButton..."
+QT_MOC_LITERAL(124, 21), // "on_submitPlan_clicked"
+QT_MOC_LITERAL(146, 20) // "on_clearPlan_clicked"
 
     },
     "MainWindow\0itemChanged\0\0QTreeWidgetItem*\0"
-    "updateSpent\0setPlan\0on_submitPlan_clicked\0"
-    "on_actionLogin_triggered\0"
-    "on_updatepurchases_pushButton_clicked"
+    "updateSpent\0setPlan\0on_actionLogin_triggered\0"
+    "on_updatepurchases_pushButton_clicked\0"
+    "on_submitPlan_clicked\0on_clearPlan_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,7 +56,7 @@ static const uint qt_meta_data_MainWindow[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,17 +64,19 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   50,    2, 0x0a,    0 /* Public */,
-       4,    0,   55,    2, 0x0a,    3 /* Public */,
-       5,    2,   56,    2, 0x0a,    4 /* Public */,
-       6,    0,   61,    2, 0x0a,    7 /* Public */,
-       7,    0,   62,    2, 0x08,    8 /* Private */,
-       8,    0,   63,    2, 0x08,    9 /* Private */,
+       1,    2,   56,    2, 0x0a,    0 /* Public */,
+       4,    0,   61,    2, 0x0a,    3 /* Public */,
+       5,    2,   62,    2, 0x0a,    4 /* Public */,
+       6,    0,   67,    2, 0x08,    7 /* Private */,
+       7,    0,   68,    2, 0x08,    8 /* Private */,
+       8,    0,   69,    2, 0x08,    9 /* Private */,
+       9,    0,   70,    2, 0x08,   10 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    2,    2,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    2,    2,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -90,9 +93,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->itemChanged((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 1: _t->updateSpent(); break;
         case 2: _t->setPlan((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 3: _t->on_submitPlan_clicked(); break;
-        case 4: _t->on_actionLogin_triggered(); break;
-        case 5: _t->on_updatepurchases_pushButton_clicked(); break;
+        case 3: _t->on_actionLogin_triggered(); break;
+        case 4: _t->on_updatepurchases_pushButton_clicked(); break;
+        case 5: _t->on_submitPlan_clicked(); break;
+        case 6: _t->on_clearPlan_clicked(); break;
         default: ;
         }
     }
@@ -106,7 +110,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -133,13 +137,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

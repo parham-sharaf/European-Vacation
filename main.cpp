@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include "ManageCity/ManageCities.h"
 
 int main(int argc, char *argv[])
 {

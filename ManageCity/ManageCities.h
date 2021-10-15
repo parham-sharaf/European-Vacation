@@ -5,6 +5,7 @@
 #include <string>
 #include "sqlite3.h"
 #include <algorithm>
+#include <map>
 #include "City/City.h"
 #include "../DB/Database/Database.h"
 
@@ -13,23 +14,26 @@ class ManageCities
 public:
     ManageCities();
     void ReadData();
-    void AddCity(const string& name, deque<City*>& planner);
-    void EraseCity(const string& name, deque<City*>& planner);
+    void AddCity(const string& name);
+    void EraseCity(const string& name);
     void ShortestPath();
-    deque<City*>& GetTravelPlan();
-    vector<City*>& GetEuroCities();
-    int GetTotalDistance(const deque<City*>& planner) const;
+    deque<City*>& GetShortTravelPlan();
+    map<string,City*> &GetTravelPlan();
+    map<string,City*> GetEuroCities();
+    int GetTotalDistance() const;
     void setStartingCity(const string& initial);
     Records& GetDistancesFromBerlin();
+    void BaseCityPlan(const string& cityName, int numOfCities);
 
 protected:
     Database cityDatabase{"./DB/cities-table.sqlite"};
-    vector<City*> euroCities;
+    map<string, City*> euroCities;
 private:
     Records cityList;
     Records distanceList;
     Records foodList;
     Records distancesFromBerlin;
-    deque<City*> travelPlan;
+    deque<City*> shortTravelPlan;
+    map<string, City*> travelPlan;
     string startingCity;
 };

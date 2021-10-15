@@ -3,6 +3,7 @@
 #include "moddedlineedit.h"
 
 using namespace std;
+std::vector<Map*> Map::euroMap;
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent)
@@ -19,72 +20,59 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->tabWidget->setTabEnabled(1, false);
 
-    Map *AmsterdamLoc = new Map("Amsterdam");
-    AmsterdamLoc->setDotCoord(435, 625);
+    Map *AmsterdamLoc = new Map("Amsterdam", 435, 625);
     scene->addItem(AmsterdamLoc);
-    euroMap.push_back(AmsterdamLoc);
+    Map::euroMap.push_back(AmsterdamLoc);
 
-    Map *BerlinLoc = new Map("Berlin");
-    BerlinLoc->setDotCoord(600, 620);
+    Map *BerlinLoc = new Map("Berlin", 600, 620);
     scene->addItem(BerlinLoc);
-    euroMap.push_back(BerlinLoc);
+    Map::euroMap.push_back(BerlinLoc);
 
-    Map *BrusselsLoc = new Map("Brussels");
-    BrusselsLoc->setDotCoord(420, 660);
+    Map *BrusselsLoc = new Map("Brussels", 420, 660);
     scene->addItem(BrusselsLoc);
-    euroMap.push_back(BrusselsLoc);
+    Map::euroMap.push_back(BrusselsLoc);
 
-    Map *BudapestLoc = new Map("Budapest");
-    BudapestLoc->setDotCoord(720, 780);
+    Map *BudapestLoc = new Map("Budapest", 720, 780);
     scene->addItem(BudapestLoc);
-    euroMap.push_back(BudapestLoc);
+    Map::euroMap.push_back(BudapestLoc);
 
-    Map *HamburgLoc = new Map("Hamburg");
-    HamburgLoc->setDotCoord(535, 590);
+    Map *HamburgLoc = new Map("Hamburg", 535, 590);
     scene->addItem(HamburgLoc);
-    euroMap.push_back(HamburgLoc);
+    Map::euroMap.push_back(HamburgLoc);
 
-    Map *LisbonLoc = new Map("Lisbon");
-    LisbonLoc->setDotCoord(40, 955);
+    Map *LisbonLoc = new Map("Lisbon", 40, 955);
     scene->addItem(LisbonLoc);
-    euroMap.push_back(LisbonLoc);
+    Map::euroMap.push_back(LisbonLoc);
 
-    Map *LondonLoc = new Map("London");
-    LondonLoc->setDotCoord(340, 630);
+    Map *LondonLoc = new Map("London", 340, 630);
     scene->addItem(LondonLoc);
-    euroMap.push_back(LondonLoc);
+    Map::euroMap.push_back(LondonLoc);
 
-    Map *MadridLoc = new Map("Madrid");
-    MadridLoc->setDotCoord(185, 960);
+    Map *MadridLoc = new Map("Madrid", 185, 960);
     scene->addItem(MadridLoc);
-    euroMap.push_back(MadridLoc);
+    Map::euroMap.push_back(MadridLoc);
 
-    Map *ParisLoc = new Map("Paris");
-    ParisLoc->setDotCoord(385, 715);
+    Map *ParisLoc = new Map("Paris", 385, 715);
     scene->addItem(ParisLoc);
-    euroMap.push_back(ParisLoc);
+    Map::euroMap.push_back(ParisLoc);
 
-    Map *PragueLoc = new Map("Prague");
-    PragueLoc->setDotCoord(620, 700);
+    Map *PragueLoc = new Map("Prague", 620, 700);
     scene->addItem(PragueLoc);
-    euroMap.push_back(PragueLoc);
+    Map::euroMap.push_back(PragueLoc);
 
-    Map *RomeLoc = new Map("Rome");
-    RomeLoc->setDotCoord(565, 950);
+    Map *RomeLoc = new Map("Rome", 565, 950);
     scene->addItem(RomeLoc);
-    euroMap.push_back(RomeLoc);
+    Map::euroMap.push_back(RomeLoc);
 
     Admin newAdmin;
     newAdmin.AddNewCity("Vienna");
 
-    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their foods" << "Cost($)");
-    ui->citiesTreeWidget->setColumnCount(2);
+    ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
+    ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
     //ui->citiesTreeWidget->setHeaderHidden(true);
 
     myCities.ReadData();
 
-    // testing buying 5 stroopwaffles from amsterdam
-    myCities.GetEuroCities().at(0)->tradFoodList.at(0).purchase(5);
 
     // INPUTTING ITEMS INTO TREE WIDGET
     ui->updatepurchases_pushButton->setDisabled(true);
@@ -95,13 +83,13 @@ MainWindow::MainWindow(QWidget *parent)
     // setting up tree widget
     for (auto & city : myCities.GetEuroCities())
     {
-        auto* cities = new QTreeWidgetItem;
-        cities->setText(0, QString::fromStdString(city->name));
-        for (auto & dot: euroMap) {
-            if (dot->GetLocation() == city->name)
+        cities = new QTreeWidgetItem;
+        cities->setText(0, QString::fromStdString(city.first));
+        for (auto & dot: Map::euroMap) {
+            if (dot->GetLocation() == city.first)
                 dot->setAvailability(true);
         }
-        for (auto & foodItem: city->tradFoodList)
+        for (auto & foodItem: city.second->tradFoodList)
         {
             auto* food = new QTreeWidgetItem;
             auto* food_costLineEdit = new QLineEdit;
@@ -112,7 +100,7 @@ MainWindow::MainWindow(QWidget *parent)
 
             //check for admin perms here
             food_costLineEdit->setDisabled(true);
-            food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
+            food_costLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black;}");
             food_costLineEdit->setAlignment(Qt::AlignHCenter);
 
             cities->addChild(food);
@@ -124,13 +112,14 @@ MainWindow::MainWindow(QWidget *parent)
         cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
         ui->citiesTreeWidget->insertTopLevelItem(0, cities);
 
-        for (int i = 0; i < myCities.GetDistancesFromBerlin().size(); i++)
+        for (auto & i : myCities.GetDistancesFromBerlin())
         {
-            if (myCities.GetDistancesFromBerlin().at(i).at(0) == cities->text(0).toStdString())
+            if (i.at(0) == cities->text(0).toStdString())
             {
                 QLineEdit* distFromBerlin = new QLineEdit();
-                distFromBerlin->setText(QString::fromStdString(myCities.GetDistancesFromBerlin().at(i).at(1)));
+                distFromBerlin->setText(QString::fromStdString(i.at(1)));
                 distFromBerlin->setAlignment(Qt::AlignHCenter);
+                distFromBerlin->setStyleSheet("border: 1px solid black;");
                 distFromBerlin->setReadOnly(true);
 
                 ui->citiesTreeWidget->setItemWidget(cities, 2, distFromBerlin);
@@ -144,6 +133,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
+    connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
 }
 
 MainWindow::~MainWindow()
@@ -170,37 +160,47 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 {
     if (item->checkState(0) == Qt::Checked) {
         if (myCities.GetTravelPlan().empty())
-            myCities.setStartingCity(item->text(0).toStdString());
-        myCities.AddCity(item->text(0).toStdString(), myCities.GetTravelPlan());
-        for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+            for (auto & dot: Map::euroMap)
+                if (dot->GetLocation() == item->text(0).toStdString()) {
+                    dot->setPressed(true);
+                    myCities.setStartingCity(dot->GetLocation());
+                }
+
+        myCities.AddCity(item->text(0).toStdString());
+        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
         cout << endl;
-        for (auto & dot: euroMap) {
-            if (dot->GetLocation() == item->text(0).toStdString())
-                dot->setIsSelected(true);
+        if (myCities.GetTravelPlan().size() != 1) {
+            for (auto &dot: Map::euroMap) {
+                if (dot->GetLocation() == item->text(0).toStdString())
+                    dot->setIsSelected(true);
+            }
         }
     }
     else if (item->checkState(0) != Qt::Checked) {
-        myCities.EraseCity(item->text(0).toStdString(), myCities.GetTravelPlan());
+        myCities.EraseCity(item->text(0).toStdString());
         cout << "Removed: " << item->text(0).toStdString() << endl;
-        for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
         cout << endl;
-        for (auto & dot: euroMap) {
-            if (dot->GetLocation() == item->text(0).toStdString())
-                dot->setIsSelected(false);
+        for (auto & dot: Map::euroMap) {
+            if (dot->GetLocation() == item->text(0).toStdString()) {
+                dot->setPressed(false);
+            }
         }
     }
+    cout << Map::getStartingCity() << endl;
 }
 
 void MainWindow::on_submitPlan_clicked()
 {
+    myCities.setStartingCity(Map::getStartingCity());
     myCities.ShortestPath();
-    for (auto & city: myCities.GetTravelPlan()) cout << city->name << "[" << city->distance << "]" << " --> ";
+    for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
     cout << endl;
-    cout << "Total Distance travelled: " << myCities.GetTotalDistance(myCities.GetTravelPlan()) << endl;
-    ui->totalDistanceTraveled_LineEdit->setText(QString::number(myCities.GetTotalDistance(myCities.GetTravelPlan())));
+    ui->totalDistanceTraveled_LineEdit->setText(QString::number(myCities.GetTotalDistance()));
 
     // setting up Tree Widget
     ui->planTreeWidget->clear();
+    ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255));");
     ui->totalspent_LineEdit->setText("0.00");
     ui->updatepurchases_pushButton->setDisabled(false);
 
@@ -209,7 +209,7 @@ void MainWindow::on_submitPlan_clicked()
     ui->planTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
 
     int orderInTrip = 1;
-    for (auto & city: myCities.GetTravelPlan())
+    for (auto & city: myCities.GetShortTravelPlan())
     {
         QTreeWidgetItem* newCity = new QTreeWidgetItem();
         newCity->setText(0, QString::number(orderInTrip) + ". " + QString::fromStdString(city->name));
@@ -229,12 +229,14 @@ void MainWindow::on_submitPlan_clicked()
 
             //check for admin perms here
             food_costLineEdit->setDisabled(true);
+            food_costLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
             food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
             food_costLineEdit->setAlignment(Qt::AlignHCenter);
 
             quantity_foodLineEdit->setText(QString::number(0));
             quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
             quantity_foodLineEdit->setAlignment(Qt::AlignHCenter);
+            quantity_foodLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
 
             newCity->addChild(food);
             ui->planTreeWidget->setItemWidget(food, 1, food_costLineEdit);
@@ -293,7 +295,7 @@ void MainWindow::updateSpent()
             spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
             spentAtCity_lineedit->setReadOnly(true);
             spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
-
+            spentAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
             spentAtCity->setText(0, "Amount Spent (USD)");
             it.operator*()->parent()->addChild(spentAtCity);
             ui->planTreeWidget->setItemWidget(spentAtCity, 1, spentAtCity_lineedit);
@@ -307,5 +309,17 @@ void MainWindow::updateSpent()
     repurchase = true;
     ui->totalspent_LineEdit->setText(QString::number(totalSpentOnTrip, 'f', 2));
     ui->totalspent_LineEdit->setAlignment(Qt::AlignHCenter);
+}
+
+void MainWindow::on_clearPlan_clicked() {
+    myCities.GetShortTravelPlan().clear();
+    myCities.GetTravelPlan().clear();
+    for (auto &dot: Map::euroMap) {
+        dot->setAvailability(true);
+        dot->setIsSelected(false);
+    }
+//    for (int i = 0; i < cities->childCount(); i++)
+//        cities->child(i)->setCheckState(0, Qt::Unchecked);
+//    ui->citiesTreeWidget->topLevelItem(0)->parent()->child(5)->setCheckState(0, Qt::Unchecked);
 }
 

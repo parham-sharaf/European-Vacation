@@ -27,7 +27,7 @@
     <item row="4" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="traveller">
        <attribute name="title">
@@ -36,8 +36,27 @@
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QPushButton" name="submitPlan">
+          <property name="font">
+           <font>
+            <family>Waree</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+          </property>
           <property name="text">
            <string>Submit Plan</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearPlan">
+          <property name="text">
+           <string>Reset Plan</string>
           </property>
          </widget>
         </item>
@@ -54,6 +73,13 @@
             <width>400</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </property>
           <column>
            <property name="text">
@@ -116,6 +142,9 @@
           </item>
           <item row="0" column="0">
            <widget class="QPushButton" name="updatepurchases_pushButton">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="text">
              <string>Update Purchases</string>
             </property>
@@ -131,6 +160,10 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+          </property>
           <column>
            <property name="text">
             <string/>
@@ -142,7 +175,7 @@
       </widget>
       <widget class="QWidget" name="admin">
        <attribute name="title">
-        <string>Admin</string>
+        <string>Maintenance</string>
        </attribute>
       </widget>
      </widget>
@@ -167,7 +200,6 @@
      <string>Account</string>
     </property>
     <addaction name="actionLogin"/>
-    <addaction name="actionCreate_New_Account"/>
    </widget>
    <addaction name="menuAccount"/>
   </widget>
