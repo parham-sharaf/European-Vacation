@@ -54,7 +54,7 @@ map<string,City*> &ManageCities::GetTravelPlan(){
     return travelPlan;
 }
 
-map<string,City*> &ManageCities::GetEuroCities() {
+const map<string,City*> &ManageCities::GetEuroCities() const {
     return euroCities;
 }
 
@@ -111,6 +111,7 @@ void ManageCities::setStartingCity(const string& initial) {
 
 void ManageCities::BaseCityPlan(const string& cityName, int numOfCities) {
     travelPlan.clear();
+    shortTravelPlan.clear();
     startingCity = cityName;
     AddCity(startingCity);
     string sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + cityName + "' ORDER BY kilometers LIMIT " + to_string(numOfCities) + ";";

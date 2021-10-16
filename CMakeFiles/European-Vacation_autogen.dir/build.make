@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/164/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/164/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ include CMakeFiles/European-Vacation_autogen.dir/progress.make
 
 CMakeFiles/European-Vacation_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target European-Vacation"
-	/snap/clion/164/bin/cmake/linux/bin/cmake -E cmake_autogen "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeFiles/European-Vacation_autogen.dir/AutogenInfo.json" Debug
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E cmake_autogen "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/CMakeFiles/European-Vacation_autogen.dir/AutogenInfo.json" Debug
 
 European-Vacation_autogen: CMakeFiles/European-Vacation_autogen
 European-Vacation_autogen: CMakeFiles/European-Vacation_autogen.dir/build.make

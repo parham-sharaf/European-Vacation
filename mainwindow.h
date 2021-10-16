@@ -27,7 +27,11 @@
 #include "Admin/Admin.h"
 #include "UI/Map/Map.h"
 
-
+struct purchaseSummary
+{
+    QLineEdit* boughtAtCity_lineedit = new QLineEdit();
+    QLineEdit* spentAtCity_lineedit = new QLineEdit();
+};
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,8 +44,7 @@ Q_OBJECT
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void detectStartingPoint();
-    double totalSpentOnTrip = 0;
+    Ui::MainWindow *ui;
 
 protected:
 
@@ -61,10 +64,10 @@ private slots:
     void on_updatepurchases_pushButton_clicked();
     void on_submitPlan_clicked();
     void on_clearPlan_clicked();
-    void on_citiesFromLondon_LineEdit_textChanged(const QString &arg1);
+    void on_citiesFromLondon_LineEdit_textEdited(const QString &arg1);
+
 
 private:
-    Ui::MainWindow *ui;
     QPixmap pix;
     QGraphicsScene *scene;
     QTreeWidgetItem* cities;
@@ -76,5 +79,7 @@ private:
     string city;
     string food;
     double price;
+    vector<purchaseSummary*> summaries;
+
 };
 #endif // MAINWINDOW_H

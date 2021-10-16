@@ -25,7 +25,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     const uint offsetsAndSize[32];
-    char stringdata0[269];
+    char stringdata0[268];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -45,8 +45,8 @@ QT_MOC_LITERAL(117, 24), // "on_actionLogin_triggered"
 QT_MOC_LITERAL(142, 37), // "on_updatepurchases_pushButton..."
 QT_MOC_LITERAL(180, 21), // "on_submitPlan_clicked"
 QT_MOC_LITERAL(202, 20), // "on_clearPlan_clicked"
-QT_MOC_LITERAL(223, 40), // "on_citiesFromLondon_LineEdit_..."
-QT_MOC_LITERAL(264, 4) // "arg1"
+QT_MOC_LITERAL(223, 39), // "on_citiesFromLondon_LineEdit_..."
+QT_MOC_LITERAL(263, 4) // "arg1"
 
     },
     "MainWindow\0itemChanged\0\0QTreeWidgetItem*\0"
@@ -55,7 +55,7 @@ QT_MOC_LITERAL(264, 4) // "arg1"
     "adminDelFood\0on_actionLogin_triggered\0"
     "on_updatepurchases_pushButton_clicked\0"
     "on_submitPlan_clicked\0on_clearPlan_clicked\0"
-    "on_citiesFromLondon_LineEdit_textChanged\0"
+    "on_citiesFromLondon_LineEdit_textEdited\0"
     "arg1"
 };
 #undef QT_MOC_LITERAL
@@ -121,7 +121,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->on_updatepurchases_pushButton_clicked(); break;
         case 9: _t->on_submitPlan_clicked(); break;
         case 10: _t->on_clearPlan_clicked(); break;
-        case 11: _t->on_citiesFromLondon_LineEdit_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 11: _t->on_citiesFromLondon_LineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }

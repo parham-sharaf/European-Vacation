@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "UI/ModdedLineEdit/moddedlineedit.h"
+#include "UI/TreeWidget/Interface.h"
+
+Interface uiInterface;
 
 using namespace std;
 std::vector<Map*> Map::euroMap;
@@ -87,7 +90,7 @@ MainWindow::MainWindow(QWidget *parent)
     myCities.ReadData();
 
     // Special Line Edit for # Cities from London
-    connect(ui->citiesFromLondon_LineEdit, SIGNAL(textChanged(const QString&)), this, SLOT(on_citiesFromLondon_LineEdit_textChanged(const QString&)));
+    connect(ui->citiesFromLondon_LineEdit, SIGNAL(textChanged(const QString&)), this, SLOT(on_citiesFromLondon_LineEdit_textEdited(const QString&)));
 
     // INPUTTING ITEMS INTO TREE WIDGET
     ui->updatepurchases_pushButton->setDisabled(true);
@@ -95,100 +98,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->totalDistanceTraveled_LineEdit->setAlignment(Qt::AlignHCenter);
     ui->totalspent_LineEdit->setReadOnly(true);
 
-    // setting up tree widget
-    for (auto & city : myCities.GetEuroCities())
-    {
-        for (auto & dot: Map::euroMap)
-            if (dot->GetLocation() == city.first) {
-                dot->setAvailability(true);
-            }
-
-        cities = new QTreeWidgetItem;
-        cities->setText(0, QString::fromStdString(city.first));
-        for (auto & foodItem: city.second->tradFoodList)
-        {
-            auto* food = new QTreeWidgetItem;
-            auto* food_costLineEdit = new QLineEdit;
-
-            food->setText(0, QString::fromStdString(foodItem.foodName));
-            food_costLineEdit->setText(QString::number(foodItem.cost, 'f', 2));
-            food_costLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
-
-            //check for admin perms here
-            food_costLineEdit->setDisabled(true);
-            food_costLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black;}");
-            food_costLineEdit->setAlignment(Qt::AlignHCenter);
-
-            cities->addChild(food);
-
-            ui->citiesTreeWidget->setItemWidget(food, 1, food_costLineEdit);
-
-        }
-        cities->setData(0, Qt::CheckStateRole, Qt::Unchecked);
-        cities->setFlags(cities->flags() | Qt::ItemIsUserCheckable);
-        ui->citiesTreeWidget->insertTopLevelItem(0, cities);
-
-        for (auto & i : myCities.GetDistancesFromBerlin())
-        {
-            if (i.at(0) == cities->text(0).toStdString())
-            {
-                QLineEdit* distFromBerlin = new QLineEdit();
-                distFromBerlin->setText(QString::fromStdString(i.at(1)));
-                distFromBerlin->setAlignment(Qt::AlignHCenter);
-                distFromBerlin->setStyleSheet("border: 1px solid black;");
-                distFromBerlin->setReadOnly(true);
-
-                ui->citiesTreeWidget->setItemWidget(cities, 2, distFromBerlin);
-            }
-        }
-    }
-
-    ui->citiesTreeWidget->setColumnWidth(0, 193);
-    ui->citiesTreeWidget->setColumnWidth(1, 50);
-    ui->citiesTreeWidget->setColumnWidth(2, 100);
+    uiInterface.createTravellerTree(ui, myCities);
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
 
-
-    //ADMIN TAB CONTENTS
-
-    //=====================Add New City=====================
-    //Setting the combo box to the new cities
-    for (auto& group : newAdmin.readNewCities()) {
-        if (myCities.GetEuroCities().find(group) == myCities.GetEuroCities().end())
-            ui->newCityComboBox->addItem(QString::fromStdString(group));
-    }
-
-    //Setting "Add City" button functionality
+    uiInterface.createAdminTree(ui, newAdmin, myCities);
     connect(ui->addCityButton, SIGNAL(clicked()), this, SLOT(adminNewCity()));
-
-    //=====================CHANGE TRADITIONAL FOODS PRICE=====================
-    //Setting the combo box for the available cities
-    for (auto& group : newAdmin.readAvailableCities()) ui->cityComboBox->addItem(QString::fromStdString(group));
-
-    //Setting the combo box for the traditional foods for the specified city
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
-
-    //Setting "Change Traditional Food Price" button functionality
     connect(ui->changeFoodPriceButton, SIGNAL(clicked()), this, SLOT(adminChangePrice()));
-
-    //=====================ADD TRADITIONAL FOODS=====================
-    //Setting the combo box for the available cities
-    for (auto& group : newAdmin.readAvailableCities()) ui->addFoodCityComboBox->addItem(QString::fromStdString(group));
-
-    //Setting "Add Traditional Food" button functionality
     connect(ui->addFoodButton, SIGNAL(clicked()), this, SLOT(adminAddFood()));
-
-    //=====================DELETE TRADITIONAL FOODS=====================
-    //Setting the combo box for the available cities
-    for (auto& group : newAdmin.readAvailableCities()) ui->delFoodCityComboBox->addItem(QString::fromStdString(group));
-
-    //Setting the combo box for the traditional foods for the specified city
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
-
-    //Setting "Delete Traditional Food" button functionality
     connect(ui->delFoodButton, SIGNAL(clicked()), this, SLOT(adminDelFood()));
 }
 
@@ -227,7 +146,8 @@ void MainWindow::adminAddFood() {
         newAdmin.AddNewTradFood(city, food, price);
 
     ui->delTradFoodComboBox->clear();
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString()))
+        ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
 }
 
 void MainWindow::adminDelFood() {
@@ -238,14 +158,9 @@ void MainWindow::adminDelFood() {
     newAdmin.RemoveTradFood(city, food);
 
     ui->delTradFoodComboBox->clear();
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString()))
+        ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
 }
-
-
-
-
-
-
 
 
 MainWindow::~MainWindow()
@@ -256,18 +171,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::itemChanged(QTreeWidgetItem* item, int col)
 {
-    if (item->checkState(0) == Qt::Checked)
-        ++itemsChecked;
-    else
-        --itemsChecked;
+    if (item->checkState(0) == Qt::Checked) ++itemsChecked;
+    else --itemsChecked;
     if (itemsChecked > 0)
-    {
         ui->citiesFromLondon_LineEdit->setDisabled(true);
-    }
     else
-    {
         ui->citiesFromLondon_LineEdit->setDisabled(false);
-    }
 }
 
 void MainWindow::setPlan(QTreeWidgetItem* item, int col)
@@ -311,74 +220,7 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 
 void MainWindow::on_submitPlan_clicked()
 {
-    if (ui->citiesFromLondon_LineEdit->isEnabled())
-    {
-        myCities.BaseCityPlan("London", ui->citiesFromLondon_LineEdit->text().toInt());
-        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
-        cout << endl;
-    }
-    else
-    {
-        myCities.setStartingCity(Map::getStartingCity());
-        myCities.ShortestPath();
-        for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
-        cout << endl;
-    }
-    ui->totalDistanceTraveled_LineEdit->setText(QString::number(myCities.GetTotalDistance()));
-
-    // setting up Tree Widget
-    ui->planTreeWidget->clear();
-    ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255));");
-    ui->totalspent_LineEdit->setText("0.00");
-    ui->updatepurchases_pushButton->setDisabled(false);
-
-    ui->planTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Quantity to Buy");
-    ui->planTreeWidget->setColumnCount(3);
-    ui->planTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
-
-    int orderInTrip = 1;
-    for (auto & city: myCities.GetShortTravelPlan())
-    {
-        QTreeWidgetItem* newCity = new QTreeWidgetItem();
-        newCity->setText(0, QString::number(orderInTrip) + ". " + QString::fromStdString(city->name));
-        ++orderInTrip;
-        ui->planTreeWidget->addTopLevelItem(newCity);
-
-        for (auto & foodItem: city->tradFoodList)
-        {
-            auto* food = new QTreeWidgetItem;
-            auto* food_costLineEdit = new moddedLineEdit;
-            auto* quantity_foodLineEdit = new moddedLineEdit;
-
-            connect(food_costLineEdit, SIGNAL(textChanged(const QString &)), food_costLineEdit, SLOT(updateAccessibleName()));
-            food->setText(0, QString::fromStdString(foodItem.foodName));
-            food_costLineEdit->setText(QString::number(foodItem.cost, 'f', 2));
-            food_costLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
-
-            //check for admin perms here
-            food_costLineEdit->setDisabled(true);
-            food_costLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
-            food_costLineEdit->setStyleSheet("QLineEdit {color : black; }");
-            food_costLineEdit->setAlignment(Qt::AlignHCenter);
-
-            quantity_foodLineEdit->setText(QString::number(0));
-            quantity_foodLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
-            quantity_foodLineEdit->setAlignment(Qt::AlignHCenter);
-            quantity_foodLineEdit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
-
-            newCity->addChild(food);
-            ui->planTreeWidget->setItemWidget(food, 1, food_costLineEdit);
-            ui->planTreeWidget->setItemWidget(food, 2, quantity_foodLineEdit);
-
-            // testing set accessible name
-            ui->planTreeWidget->itemWidget(food, 2)->setAccessibleName("0");
-            connect(quantity_foodLineEdit, SIGNAL(textChanged(const QString &)), quantity_foodLineEdit, SLOT(updateAccessibleName()));
-        }
-    }
-    ui->planTreeWidget->setColumnWidth(0, 193);
-    ui->planTreeWidget->setColumnWidth(1, 50);
-    ui->planTreeWidget->setColumnWidth(2, 100);
-
+    uiInterface.submitPlanTree(ui, myCities);
     connect(ui->updatepurchases_pushButton, SIGNAL(clicked()), this, SLOT(updateSpent()));
 }
 
@@ -404,31 +246,57 @@ void MainWindow::updateSpent()
     QTreeWidgetItemIterator it(ui->planTreeWidget, QTreeWidgetItemIterator::NoChildren);
     double totalSpentOnTrip = 0;
     double totalSpentAtCity = 0;
-    int test = 0;
+    int totalBoughtAtCity = 0;
+    int summariesIndex = 0;
+    int index = 0;
     while (*it) {
         if (ui->planTreeWidget->itemWidget(*it, 2))
         {
             totalSpentOnTrip += ui->planTreeWidget->itemWidget(*it, 1)->accessibleName().toDouble() * ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toDouble();
             totalSpentAtCity += ui->planTreeWidget->itemWidget(*it, 1)->accessibleName().toDouble() * ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toDouble();
-            test++;
+            totalBoughtAtCity += ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toInt();
+            index++;
+            if (repurchase && !(ui->planTreeWidget->itemWidget(ui->planTreeWidget->itemBelow(*it), 2)))
+            {
+                if (summariesIndex < summaries.size())
+                {
+                    summaries.at(summariesIndex)->boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
+                    summaries.at(summariesIndex)->spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
+                    summariesIndex++;
+
+                    totalBoughtAtCity = 0;
+                    totalSpentAtCity = 0;
+                    index = 0;
+                }
+            }
         }
-        if (repurchase && test == it.operator*()->parent()->childCount() - 1)
+        if (index == (*it)->parent()->childCount() && (*it)->parent()->childCount() > 0 && repurchase == false)
         {
-            it.operator*()->parent()->takeChild(it.operator*()->parent()->childCount() - 1);
-        }
-        if (test == it.operator*()->parent()->childCount() && it.operator*()->parent()->childCount() > 0)
-        {
+            purchaseSummary* newSummary = new purchaseSummary;
+
+            QTreeWidgetItem* boughtAtCity = new QTreeWidgetItem();
+            newSummary->boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
+            newSummary->boughtAtCity_lineedit->setReadOnly(true);
+            newSummary->boughtAtCity_lineedit->setAlignment(Qt::AlignHCenter);
+            newSummary->boughtAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
+            boughtAtCity->setText(0, "# of Foods Bought:");
+            (*it)->parent()->addChild(boughtAtCity);
+            ui->planTreeWidget->setItemWidget(boughtAtCity, 1, newSummary->boughtAtCity_lineedit);
+
             QTreeWidgetItem* spentAtCity = new QTreeWidgetItem();
-            QLineEdit* spentAtCity_lineedit = new QLineEdit();
-            spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
-            spentAtCity_lineedit->setReadOnly(true);
-            spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
-            spentAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
+            newSummary->spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
+            newSummary->spentAtCity_lineedit->setReadOnly(true);
+            newSummary->spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
+            newSummary->spentAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
             spentAtCity->setText(0, "Amount Spent (USD)");
-            it.operator*()->parent()->addChild(spentAtCity);
-            ui->planTreeWidget->setItemWidget(spentAtCity, 1, spentAtCity_lineedit);
+            (*it)->parent()->addChild(spentAtCity);
+            ui->planTreeWidget->setItemWidget(spentAtCity, 1, newSummary->spentAtCity_lineedit);
+
+            summaries.push_back(newSummary);
+
+            totalBoughtAtCity = 0;
             totalSpentAtCity = 0;
-            test = 0;
+            index = 0;
             ++it;
         }
         ++it;
@@ -454,10 +322,12 @@ void MainWindow::on_clearPlan_clicked() {
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
 
+    repurchase = false;
+    summaries.clear();
     ui->citiesFromLondon_LineEdit->setDisabled(false);
     ui->totalDistanceTraveled_LineEdit->setText("");
     ui->totalspent_LineEdit->setText("");
-    ui->citiesFromLondon_LineEdit->setText("0");
+    ui->citiesFromLondon_LineEdit->setText("");
     ui->planTreeWidget->clear();
     ui->updatepurchases_pushButton->setDisabled(true);
     ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(215, 215, 215, 255), stop:1 rgba(215, 215, 215, 255));");
@@ -466,18 +336,41 @@ void MainWindow::on_clearPlan_clicked() {
 //    ui->citiesTreeWidget->topLevelItem(0)->parent()->child(5)->setCheckState(0, Qt::Unchecked);
 }
 
-void MainWindow::on_citiesFromLondon_LineEdit_textChanged(const QString &arg1)
+void MainWindow::on_citiesFromLondon_LineEdit_textEdited(const QString &arg1)
 {
     ui->citiesTreeWidget->blockSignals(true);
+    myCities.GetShortTravelPlan().clear();
+    for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+    {
+        ui->citiesTreeWidget->topLevelItem(i)->setCheckState(0, Qt::Unchecked);
+    }
+
     if (arg1.toStdString() != "0" && !arg1.toStdString().empty())
     {
         for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
             ui->citiesTreeWidget->topLevelItem(i)->setDisabled(true);
+        ui->citiesTreeWidget->blockSignals(false);
+
+        myCities.BaseCityPlan("London", ui->citiesFromLondon_LineEdit->text().toInt());
+        disconnect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+        for (auto & cityInPlan: myCities.GetShortTravelPlan())
+        {
+            for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+            {
+                if (ui->citiesTreeWidget->topLevelItem(i)->text(0).toStdString() == cityInPlan->name)
+                    ui->citiesTreeWidget->topLevelItem(i)->setCheckState(0, Qt::Checked);
+            }
+        }
+        connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     }
     else
     {
-        for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
-            ui->citiesTreeWidget->topLevelItem(i)->setDisabled(false);
+        on_clearPlan_clicked();
+        if(arg1.toStdString().empty())
+        {
+            for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+                ui->citiesTreeWidget->topLevelItem(i)->setDisabled(false);
+        }
     }
     ui->citiesTreeWidget->blockSignals(false);
 }

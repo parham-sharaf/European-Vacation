@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/164/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/164/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/Euro
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/164/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/169/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/164/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -310,6 +310,30 @@ UI/ModdedLineEdit/moddedlineedit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/ModdedLineEdit/moddedlineedit.cpp.s
 .PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.s
 
+UI/TreeWidget/Interface.o: UI/TreeWidget/Interface.cpp.o
+.PHONY : UI/TreeWidget/Interface.o
+
+# target to build an object file
+UI/TreeWidget/Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/TreeWidget/Interface.cpp.o
+.PHONY : UI/TreeWidget/Interface.cpp.o
+
+UI/TreeWidget/Interface.i: UI/TreeWidget/Interface.cpp.i
+.PHONY : UI/TreeWidget/Interface.i
+
+# target to preprocess a source file
+UI/TreeWidget/Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/TreeWidget/Interface.cpp.i
+.PHONY : UI/TreeWidget/Interface.cpp.i
+
+UI/TreeWidget/Interface.s: UI/TreeWidget/Interface.cpp.s
+.PHONY : UI/TreeWidget/Interface.s
+
+# target to generate assembly for a file
+UI/TreeWidget/Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/European-Vacation.dir/build.make CMakeFiles/European-Vacation.dir/UI/TreeWidget/Interface.cpp.s
+.PHONY : UI/TreeWidget/Interface.cpp.s
+
 UI/login/login.o: UI/login/login.cpp.o
 .PHONY : UI/login/login.o
 
@@ -413,6 +437,9 @@ help:
 	@echo "... UI/ModdedLineEdit/moddedlineedit.o"
 	@echo "... UI/ModdedLineEdit/moddedlineedit.i"
 	@echo "... UI/ModdedLineEdit/moddedlineedit.s"
+	@echo "... UI/TreeWidget/Interface.o"
+	@echo "... UI/TreeWidget/Interface.i"
+	@echo "... UI/TreeWidget/Interface.s"
 	@echo "... UI/login/login.o"
 	@echo "... UI/login/login.i"
 	@echo "... UI/login/login.s"

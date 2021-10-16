@@ -19,7 +19,7 @@ public:
     void ShortestPath();
     deque<City*>& GetShortTravelPlan();
     map<string,City*> &GetTravelPlan();
-    map<string,City*> &GetEuroCities();
+    [[nodiscard]] const map<string,City*> &GetEuroCities() const;
     int GetTotalDistance() const;
     void setStartingCity(const string& initial);
     Records& GetDistancesFromBerlin();
