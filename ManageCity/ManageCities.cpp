@@ -2,11 +2,14 @@
 #include "City/City.h"
 #include <iterator>
 
+map<string, City*> ManageCities::euroCities;
+
 ManageCities::ManageCities() {
 //    sqlite3_close(db);
 }
 
 void ManageCities::ReadData() {
+    euroCities.clear();
     cityList = cityDatabase.select_stmt("SELECT *\n"
                                         "FROM city;");
 
@@ -51,7 +54,7 @@ map<string,City*> &ManageCities::GetTravelPlan(){
     return travelPlan;
 }
 
-map<string,City*> ManageCities::GetEuroCities() {
+map<string,City*> &ManageCities::GetEuroCities() {
     return euroCities;
 }
 

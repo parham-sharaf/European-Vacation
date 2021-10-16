@@ -20,11 +20,11 @@ void Admin::AddNewCity(const string& cityName) {
     }
 
     sql = "SELECT starting_city,kilometers FROM new_distance WHERE ending_city IS '" + cityName + "';";
+    newDistanceList = adminDatabase.select_stmt(sql.c_str());
     for (auto & group: newDistanceList) {
         sql = "INSERT or IGNORE INTO distance VALUES ('" + group.at(0) + "', '" + cityName + "', " + group.at(1) + ");";
         cityDatabase.select_stmt(sql.c_str());
     }
-    ReadData();
 }
 
 void Admin::RemoveCity(const string& cityName) {
@@ -37,39 +37,70 @@ void Admin::RemoveCity(const string& cityName) {
     cityDatabase.select_stmt(sql.c_str());
 }
 
-//void Admin::ChangePrice(const string& cityName, const string& cityFood,
-//                        double cost) {
-//    for (auto & city: euroCities) {
-//        if (city->name == cityName) {
-//            for (auto & food: city->tradFoodList) {
-//                if (food.foodName == cityFood) {
-//                    food.cost = cost;
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
-//                           double cost) {
-//    for (auto & city: euroCities) {
-//        if (city->name == cityName) {
-//            TradFood thisTradFood;
-//            thisTradFood.foodName = cityFood;
-//            thisTradFood.cost = cost;
-//            city->tradFoodList.push_back(thisTradFood);
-//        }
-//    }
-//}
-//
-//void Admin::RemoveTradFood(const string &cityName, const string &cityFood) {
-//    for (auto & city: euroCities) {
-//        if (city->name == cityName) {
-//            for(auto food = city->tradFoodList.begin(); food != city->tradFoodList.end(); food++) {
-//                if (food->foodName == cityFood) {
-//                    city->tradFoodList.erase(food);
-//                }
-//            }
-//        }
-//    }
-//}
+void Admin::ChangePrice(const string& cityName, const string& cityFood,
+                        double cost) {
+    for (auto food: euroCities.find(cityName)->second->tradFoodList)
+        if (food.foodName == cityFood)
+            food.cost = cost;
+    string sql = "UPDATE food SET cost = " + to_string(cost) +
+            " WHERE city_name IS '" + cityName + "' AND food_name IS '" + cityFood + "';";
+    cityDatabase.select_stmt(sql.c_str());
+}
+
+void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
+                           double cost) {
+    TradFood newTradFood;
+    newTradFood.foodName = cityFood;
+    newTradFood.cost = cost;
+    euroCities.find(cityName)->second->tradFoodList.push_back(newTradFood);
+    //cout << euroCities.find(cityName)->second->tradFoodList.size() << endl;
+    string sql = "INSERT INTO food VALUES('" + cityFood + "', " +
+            to_string(cost) + ", '" + cityName + "');";
+    cityDatabase.select_stmt(sql.c_str());
+}
+
+void Admin::RemoveTradFood(const string &cityName, const string &cityFood) {
+    for (int i = 0; i < euroCities.find(cityName)->second->tradFoodList.size(); i++)
+        if (euroCities.find(cityName)->second->tradFoodList.at(i).foodName == cityFood)
+            euroCities.find(cityName)->second->tradFoodList.erase(
+                    euroCities.find(cityName)->second->tradFoodList.begin() + i);
+    string sql = "DELETE FROM food WHERE city_name IS '" + cityName + "' AND food_name IS '" + cityFood +  "';";
+    cityDatabase.select_stmt(sql.c_str());
+}
+
+
+
+
+
+vector<string> Admin::readNewCities() {
+    string sql = "SELECT city_name FROM new_city;";
+    vector<string> newCities;
+
+    list = adminDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) newCities.push_back(group.at(0));
+
+    return newCities;
+}
+
+vector<string> Admin::readAvailableCities() {
+    string sql = "SELECT city_name FROM city;";
+    vector<string> cities;
+
+    list = cityDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) cities.push_back(group.at(0));
+
+    return cities;
+}
+
+vector<string> Admin::readFoodFromCity(string cityName) {
+    string sql = "SELECT food_name FROM food WHERE city_name IS '" + cityName + "';";
+    vector<string> foods;
+
+    list = cityDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) foods.push_back(group.at(0));
+
+    return foods;
+}
