@@ -1624,11 +1624,14 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs_win.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QApplication
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QComboBox
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDialog
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDoubleSpinBox
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsItem
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsScene
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsView
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGridLayout
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGroupBox
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHBoxLayout
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHeaderView
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLabel
@@ -1651,12 +1654,14 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractspinbox.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qapplication.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qboxlayout.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qcombobox.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qframe.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsitem.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsscene.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgroupbox.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlabel.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlayout.h
@@ -1670,6 +1675,7 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qslider.h
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qspinbox.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstatusbar.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstyle.h
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstyleoption.h

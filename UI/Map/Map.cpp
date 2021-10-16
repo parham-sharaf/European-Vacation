@@ -73,4 +73,3 @@ void Map::mousePressEvent(QGraphicsSceneMouseEvent *event) {
 std::string Map::getStartingCity() {
     return startingPoint;
 }
-

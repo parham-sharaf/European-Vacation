@@ -12,8 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -64,6 +67,42 @@ public:
     QPushButton *updatepurchases_pushButton;
     QTreeWidget *planTreeWidget;
     QWidget *admin;
+    QGroupBox *groupBox_4;
+    QWidget *layoutWidget;
+    QGridLayout *gridLayout_9;
+    QGridLayout *gridLayout_8;
+    QLabel *label_9;
+    QLabel *label_10;
+    QComboBox *delFoodCityComboBox;
+    QComboBox *delTradFoodComboBox;
+    QPushButton *delFoodButton;
+    QGroupBox *groupBox;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout_2;
+    QComboBox *newCityComboBox;
+    QPushButton *addCityButton;
+    QGroupBox *groupBox_3;
+    QWidget *layoutWidget2;
+    QGridLayout *gridLayout_7;
+    QGridLayout *gridLayout_2;
+    QLabel *label_6;
+    QLabel *label_7;
+    QLabel *label_8;
+    QComboBox *addFoodCityComboBox;
+    QLineEdit *newFoodLineEdit;
+    QDoubleSpinBox *addFoodPriceDoubleSpinBox;
+    QPushButton *addFoodButton;
+    QGroupBox *groupBox_2;
+    QWidget *layoutWidget3;
+    QGridLayout *gridLayout_6;
+    QGridLayout *gridLayout_5;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_11;
+    QComboBox *cityComboBox;
+    QComboBox *tradFoodComboBox;
+    QDoubleSpinBox *priceDoubleSpinBox;
+    QPushButton *changeFoodPriceButton;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -230,6 +269,197 @@ public:
         tabWidget->addTab(traveller, QString());
         admin = new QWidget();
         admin->setObjectName(QString::fromUtf8("admin"));
+        groupBox_4 = new QGroupBox(admin);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 390, 401, 131));
+        layoutWidget = new QWidget(groupBox_4);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 30, 381, 91));
+        gridLayout_9 = new QGridLayout(layoutWidget);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        gridLayout_9->setContentsMargins(0, 0, 0, 0);
+        gridLayout_8 = new QGridLayout();
+        gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
+        label_9 = new QLabel(layoutWidget);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
+        label_9->setSizePolicy(sizePolicy4);
+        label_9->setAlignment(Qt::AlignCenter);
+
+        gridLayout_8->addWidget(label_9, 0, 0, 1, 1);
+
+        label_10 = new QLabel(layoutWidget);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        sizePolicy4.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
+        label_10->setSizePolicy(sizePolicy4);
+        label_10->setAlignment(Qt::AlignCenter);
+
+        gridLayout_8->addWidget(label_10, 0, 1, 1, 1);
+
+        delFoodCityComboBox = new QComboBox(layoutWidget);
+        delFoodCityComboBox->setObjectName(QString::fromUtf8("delFoodCityComboBox"));
+
+        gridLayout_8->addWidget(delFoodCityComboBox, 1, 0, 1, 1);
+
+        delTradFoodComboBox = new QComboBox(layoutWidget);
+        delTradFoodComboBox->setObjectName(QString::fromUtf8("delTradFoodComboBox"));
+
+        gridLayout_8->addWidget(delTradFoodComboBox, 1, 1, 1, 1);
+
+
+        gridLayout_9->addLayout(gridLayout_8, 0, 0, 1, 1);
+
+        delFoodButton = new QPushButton(layoutWidget);
+        delFoodButton->setObjectName(QString::fromUtf8("delFoodButton"));
+
+        gridLayout_9->addWidget(delFoodButton, 1, 0, 1, 1);
+
+        groupBox = new QGroupBox(admin);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(11, 11, 399, 61));
+        layoutWidget1 = new QWidget(groupBox);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(80, 26, 241, 31));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        newCityComboBox = new QComboBox(layoutWidget1);
+        newCityComboBox->setObjectName(QString::fromUtf8("newCityComboBox"));
+        QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(newCityComboBox->sizePolicy().hasHeightForWidth());
+        newCityComboBox->setSizePolicy(sizePolicy5);
+        newCityComboBox->setLayoutDirection(Qt::LeftToRight);
+
+        horizontalLayout_2->addWidget(newCityComboBox);
+
+        addCityButton = new QPushButton(layoutWidget1);
+        addCityButton->setObjectName(QString::fromUtf8("addCityButton"));
+
+        horizontalLayout_2->addWidget(addCityButton);
+
+        groupBox_3 = new QGroupBox(admin);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(10, 240, 401, 141));
+        layoutWidget2 = new QWidget(groupBox_3);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(11, 32, 381, 101));
+        gridLayout_7 = new QGridLayout(layoutWidget2);
+        gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
+        gridLayout_7->setContentsMargins(0, 0, 0, 0);
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        label_6 = new QLabel(layoutWidget2);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        sizePolicy4.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
+        label_6->setSizePolicy(sizePolicy4);
+        label_6->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label_6, 0, 0, 1, 1);
+
+        label_7 = new QLabel(layoutWidget2);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        sizePolicy4.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
+        label_7->setSizePolicy(sizePolicy4);
+        label_7->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label_7, 0, 1, 1, 1);
+
+        label_8 = new QLabel(layoutWidget2);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        sizePolicy4.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
+        label_8->setSizePolicy(sizePolicy4);
+        label_8->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label_8, 0, 2, 1, 1);
+
+        addFoodCityComboBox = new QComboBox(layoutWidget2);
+        addFoodCityComboBox->setObjectName(QString::fromUtf8("addFoodCityComboBox"));
+
+        gridLayout_2->addWidget(addFoodCityComboBox, 1, 0, 1, 1);
+
+        newFoodLineEdit = new QLineEdit(layoutWidget2);
+        newFoodLineEdit->setObjectName(QString::fromUtf8("newFoodLineEdit"));
+        sizePolicy5.setHeightForWidth(newFoodLineEdit->sizePolicy().hasHeightForWidth());
+        newFoodLineEdit->setSizePolicy(sizePolicy5);
+
+        gridLayout_2->addWidget(newFoodLineEdit, 1, 1, 1, 1);
+
+        addFoodPriceDoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
+        addFoodPriceDoubleSpinBox->setObjectName(QString::fromUtf8("addFoodPriceDoubleSpinBox"));
+
+        gridLayout_2->addWidget(addFoodPriceDoubleSpinBox, 1, 2, 1, 1);
+
+
+        gridLayout_7->addLayout(gridLayout_2, 0, 0, 1, 1);
+
+        addFoodButton = new QPushButton(layoutWidget2);
+        addFoodButton->setObjectName(QString::fromUtf8("addFoodButton"));
+
+        gridLayout_7->addWidget(addFoodButton, 1, 0, 1, 1);
+
+        groupBox_2 = new QGroupBox(admin);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setGeometry(QRect(10, 80, 399, 151));
+        layoutWidget3 = new QWidget(groupBox_2);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(10, 30, 381, 111));
+        gridLayout_6 = new QGridLayout(layoutWidget3);
+        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
+        gridLayout_5 = new QGridLayout();
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        label_4 = new QLabel(layoutWidget3);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        sizePolicy4.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
+        label_4->setSizePolicy(sizePolicy4);
+        label_4->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_4, 0, 0, 1, 1);
+
+        label_5 = new QLabel(layoutWidget3);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        sizePolicy4.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
+        label_5->setSizePolicy(sizePolicy4);
+        label_5->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_5, 0, 1, 1, 1);
+
+        label_11 = new QLabel(layoutWidget3);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        sizePolicy4.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
+        label_11->setSizePolicy(sizePolicy4);
+        label_11->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_11, 0, 2, 1, 1);
+
+        cityComboBox = new QComboBox(layoutWidget3);
+        cityComboBox->setObjectName(QString::fromUtf8("cityComboBox"));
+
+        gridLayout_5->addWidget(cityComboBox, 1, 0, 1, 1);
+
+        tradFoodComboBox = new QComboBox(layoutWidget3);
+        tradFoodComboBox->setObjectName(QString::fromUtf8("tradFoodComboBox"));
+
+        gridLayout_5->addWidget(tradFoodComboBox, 1, 1, 1, 1);
+
+        priceDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
+        priceDoubleSpinBox->setObjectName(QString::fromUtf8("priceDoubleSpinBox"));
+
+        gridLayout_5->addWidget(priceDoubleSpinBox, 1, 2, 1, 1);
+
+
+        gridLayout_6->addLayout(gridLayout_5, 0, 0, 1, 1);
+
+        changeFoodPriceButton = new QPushButton(layoutWidget3);
+        changeFoodPriceButton->setObjectName(QString::fromUtf8("changeFoodPriceButton"));
+
+        gridLayout_6->addWidget(changeFoodPriceButton, 1, 0, 1, 1);
+
         tabWidget->addTab(admin, QString());
 
         gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
@@ -240,7 +470,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 26));
+        menubar->setGeometry(QRect(0, 0, 930, 25));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -250,7 +480,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -278,6 +508,22 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
         updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveller", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Delete Traditional Foods", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
+        delFoodButton->setText(QCoreApplication::translate("MainWindow", "Delete Traditional Food", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Add New City", nullptr));
+        addCityButton->setText(QCoreApplication::translate("MainWindow", "Add City", nullptr));
+        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Add Traditional Foods", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
+        addFoodButton->setText(QCoreApplication::translate("MainWindow", "Add Traditional Food", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Change Traditional Food Prices", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
+        changeFoodPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Food Price", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi

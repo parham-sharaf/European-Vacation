@@ -84,7 +84,7 @@ vector
 string
 -
 sqlite3.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/sqlite3.h
+-
 algorithm
 -
 map
@@ -93,10 +93,6 @@ City/City.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/City/City.h
 ../DB/Database/Database.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/Database/Database.h
-
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.cpp
-Map.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/Map/Map.h
 QPainter
@@ -114,6 +110,14 @@ vector
 QLineEdit
 -
 iomanip
+-
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.cpp
+login.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
+ui_login.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/ui_login.h
+QMessageBox
 -
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
@@ -3866,9 +3870,17 @@ QtGui/qtguiglobal.h
 qapplication.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qapplication.h
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QComboBox
+qcombobox.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qcombobox.h
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDialog
 qdialog.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDoubleSpinBox
+qspinbox.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qspinbox.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsItem
 qgraphicsitem.h
@@ -3885,6 +3897,10 @@ qgraphicsview.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGridLayout
 qgridlayout.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgridlayout.h
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGroupBox
+qgroupbox.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgroupbox.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QHBoxLayout
 qboxlayout.h
@@ -3913,6 +3929,10 @@ qmenu.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenuBar
 qmenubar.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox
+qmessagebox.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QPushButton
 qpushbutton.h
@@ -4018,6 +4038,20 @@ QtWidgets/qwidget.h
 limits.h
 -
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qcombobox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+QtWidgets/qabstractitemdelegate.h
+-
+QtCore/qabstractitemmodel.h
+-
+QtCore/qvariant.h
+-
+QtGui/qvalidator.h
+-
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -4084,6 +4118,12 @@ QtWidgets/qlayout.h
 QtWidgets/qwidget.h
 -
 limits.h
+-
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgroupbox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qheaderview.h
@@ -4170,6 +4210,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qmenu.h
 -
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
+-
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -4200,6 +4246,12 @@ QtCore/qalgorithms.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractslider.h
+-
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qspinbox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractspinbox.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qstatusbar.h
@@ -4332,6 +4384,24 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
+European-Vacation_autogen/include/ui_login.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QDialog
+-
+QtWidgets/QGridLayout
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+QtWidgets/QPushButton
+-
+QtWidgets/QWidget
+-
+
 European-Vacation_autogen/include/ui_mainwindow.h
 QtCore/QVariant
 -
@@ -4339,9 +4409,15 @@ QtGui/QAction
 -
 QtWidgets/QApplication
 -
+QtWidgets/QComboBox
+-
+QtWidgets/QDoubleSpinBox
+-
 QtWidgets/QGraphicsView
 -
 QtWidgets/QGridLayout
+-
+QtWidgets/QGroupBox
 -
 QtWidgets/QHBoxLayout
 -

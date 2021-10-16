@@ -54,7 +54,7 @@ map<string,City*> &ManageCities::GetTravelPlan(){
     return travelPlan;
 }
 
-map<string,City*> ManageCities::GetEuroCities() {
+map<string,City*> &ManageCities::GetEuroCities() {
     return euroCities;
 }
 

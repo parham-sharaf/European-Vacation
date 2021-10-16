@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("European Vacation Application");
-    pix.load("./UI/Europe_countries_map_en_2.png");
+    pix.load("UI/Europe_countries_map_en_2.png");
 
 
     scene = new QGraphicsScene(this);
@@ -74,8 +74,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     myCities.ReadData();
 
-    Admin newAdmin;
     newAdmin.RemoveCity("Vienna");
+    newAdmin.RemoveCity("Stockholm");
 //    newAdmin.AddNewTradFood("London", "Parhamburger", 6.96);
 //    newAdmin.RemoveTradFood("London", "Parhamburger");
 //    newAdmin.AddNewCity("Vienna");
@@ -150,7 +150,103 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
+
+
+    //ADMIN TAB CONTENTS
+
+    //=====================Add New City=====================
+    //Setting the combo box to the new cities
+    for (auto& group : newAdmin.readNewCities()) {
+        if (myCities.GetEuroCities().find(group) == myCities.GetEuroCities().end())
+            ui->newCityComboBox->addItem(QString::fromStdString(group));
+    }
+
+    //Setting "Add City" button functionality
+    connect(ui->addCityButton, SIGNAL(clicked()), this, SLOT(adminNewCity()));
+
+    //=====================CHANGE TRADITIONAL FOODS PRICE=====================
+    //Setting the combo box for the available cities
+    for (auto& group : newAdmin.readAvailableCities()) ui->cityComboBox->addItem(QString::fromStdString(group));
+
+    //Setting the combo box for the traditional foods for the specified city
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
+
+    //Setting "Change Traditional Food Price" button functionality
+    connect(ui->changeFoodPriceButton, SIGNAL(clicked()), this, SLOT(adminChangePrice()));
+
+    //=====================ADD TRADITIONAL FOODS=====================
+    //Setting the combo box for the available cities
+    for (auto& group : newAdmin.readAvailableCities()) ui->addFoodCityComboBox->addItem(QString::fromStdString(group));
+
+    //Setting "Add Traditional Food" button functionality
+    connect(ui->addFoodButton, SIGNAL(clicked()), this, SLOT(adminAddFood()));
+
+    //=====================DELETE TRADITIONAL FOODS=====================
+    //Setting the combo box for the available cities
+    for (auto& group : newAdmin.readAvailableCities()) ui->delFoodCityComboBox->addItem(QString::fromStdString(group));
+
+    //Setting the combo box for the traditional foods for the specified city
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+
+    //Setting "Delete Traditional Food" button functionality
+    connect(ui->delFoodButton, SIGNAL(clicked()), this, SLOT(adminDelFood()));
 }
+
+void MainWindow::adminNewCity() {
+    cout << ui->newCityComboBox->currentText().toStdString() << " is being added to the cities list\n";
+    newAdmin.AddNewCity(ui->newCityComboBox->currentText().toStdString());
+
+    myCities.ReadData();
+    cout << "City Count: " << myCities.GetEuroCities().size() << endl;
+    for (auto& group : newAdmin.readAvailableCities()) cout << group << endl;
+
+    ui->newCityComboBox->clear();
+
+    for (auto& group : newAdmin.readNewCities()) {
+        if (myCities.GetEuroCities().find(group) == myCities.GetEuroCities().end())
+            ui->newCityComboBox->addItem(QString::fromStdString(group));
+    }
+}
+
+void MainWindow::adminChangePrice() {
+    city = ui->cityComboBox->currentText().toStdString();
+    food = ui->tradFoodComboBox->currentText().toStdString();
+    price = ui->priceDoubleSpinBox->value();
+    cout << "City: " << city << "\nAdded Food: " << food << "\nPrice: " << price << endl;
+
+    newAdmin.ChangePrice(city, food, price);
+}
+
+void MainWindow::adminAddFood() {
+    city = ui->addFoodCityComboBox->currentText().toStdString();
+    food = ui->newFoodLineEdit->displayText().toStdString();
+    price = ui->addFoodPriceDoubleSpinBox->value();
+    cout << "City: " << city << "\nAdding Food: " << food << "\nPrice: " << price << endl;
+
+    if (city != "" && food != "" && price != 0)
+        newAdmin.AddNewTradFood(city, food, price);
+
+    ui->delTradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+}
+
+void MainWindow::adminDelFood() {
+    city = ui->delFoodCityComboBox->currentText().toStdString();
+    food = ui->delTradFoodComboBox->currentText().toStdString();
+    cout << "City: " << city << "\nDeleting Food: " << food << endl;
+
+    newAdmin.RemoveTradFood(city, food);
+
+    ui->delTradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+}
+
+
+
+
+
+
+
 
 MainWindow::~MainWindow()
 {

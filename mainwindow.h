@@ -49,11 +49,14 @@ public slots:
     void itemChanged(QTreeWidgetItem*, int);
     void updateSpent();
     void setPlan(QTreeWidgetItem*, int);
+    void adminNewCity();
+    void adminChangePrice();
+    void adminAddFood();
+    void adminDelFood();
 
 signals:
 
 private slots:
-
     void on_actionLogin_triggered();
     void on_updatepurchases_pushButton_clicked();
     void on_submitPlan_clicked();
@@ -69,5 +72,9 @@ private:
     ManageCities myCities;
     bool repurchase = false;
     int itemsChecked = 0;
+    Admin newAdmin;
+    string city;
+    string food;
+    double price;
 };
 #endif // MAINWINDOW_H

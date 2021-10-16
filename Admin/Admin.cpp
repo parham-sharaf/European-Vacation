@@ -53,7 +53,6 @@ void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
     newTradFood.foodName = cityFood;
     newTradFood.cost = cost;
     euroCities.find(cityName)->second->tradFoodList.push_back(newTradFood);
-    cout << euroCities.find(cityName)->second->tradFoodList.size() << endl;
     string sql = "INSERT INTO food VALUES('" + cityFood + "', " +
             to_string(cost) + ", '" + cityName + "');";
     cityDatabase.select_stmt(sql.c_str());
@@ -66,4 +65,41 @@ void Admin::RemoveTradFood(const string &cityName, const string &cityFood) {
                     euroCities.find(cityName)->second->tradFoodList.begin() + i);
     string sql = "DELETE FROM food WHERE city_name IS '" + cityName + "' AND food_name IS '" + cityFood +  "';";
     cityDatabase.select_stmt(sql.c_str());
+}
+
+
+
+
+
+vector<string> Admin::readNewCities() {
+    string sql = "SELECT city_name FROM new_city;";
+    vector<string> newCities;
+
+    list = adminDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) newCities.push_back(group.at(0));
+
+    return newCities;
+}
+
+vector<string> Admin::readAvailableCities() {
+    string sql = "SELECT city_name FROM city;";
+    vector<string> cities;
+
+    list = cityDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) cities.push_back(group.at(0));
+
+    return cities;
+}
+
+vector<string> Admin::readFoodFromCity(string cityName) {
+    string sql = "SELECT food_name FROM food WHERE city_name IS '" + cityName + "';";
+    vector<string> foods;
+
+    list = cityDatabase.select_stmt(sql.c_str());
+
+    for (auto& group: list) foods.push_back(group.at(0));
+
+    return foods;
 }

@@ -3,7 +3,7 @@
 #include <deque>
 #include <vector>
 #include <string>
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include <algorithm>
 #include <map>
 #include "City/City.h"
@@ -19,7 +19,7 @@ public:
     void ShortestPath();
     deque<City*>& GetShortTravelPlan();
     map<string,City*> &GetTravelPlan();
-    map<string,City*> GetEuroCities();
+    map<string,City*> &GetEuroCities();
     int GetTotalDistance() const;
     void setStartingCity(const string& initial);
     Records& GetDistancesFromBerlin();
