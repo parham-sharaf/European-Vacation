@@ -61,7 +61,6 @@ private slots:
     void on_citiesFromLondon_LineEdit_textChanged(const QString &arg1);
 
 private:
-    void recursiveChecks(QTreeWidgetItem* parent);
     Ui::MainWindow *ui;
     QPixmap pix;
     QGraphicsScene *scene;

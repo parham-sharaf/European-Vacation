@@ -16,8 +16,6 @@ public:
     void setPressed(bool isPressed);
     void setAvailability(bool available);
     void setIsSelected(bool isDotSelected);
-    void setStartingCity(const std::string& name);
-    bool getPressed();
     static std::string getStartingCity();
     static std::vector<Map*> euroMap;
 

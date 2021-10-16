@@ -75,7 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
     myCities.ReadData();
 
     Admin newAdmin;
-//    newAdmin.RemoveCity("Vienna");
+    newAdmin.RemoveCity("Vienna");
 //    newAdmin.AddNewTradFood("London", "Parhamburger", 6.96);
 //    newAdmin.RemoveTradFood("London", "Parhamburger");
 //    newAdmin.AddNewCity("Vienna");
@@ -157,15 +157,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::recursiveChecks(QTreeWidgetItem* parent)
-{
-    Qt::CheckState checkState = parent->checkState(0);
-    for(int i = 0; i < parent->childCount(); ++i)
-    {
-        parent->child(i)->setCheckState(0, checkState);
-        recursiveChecks(parent->child(i));
-    }
-}
 
 void MainWindow::itemChanged(QTreeWidgetItem* item, int col)
 {
@@ -215,6 +206,7 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
         for (auto & dot: Map::euroMap) {
             if (dot->GetLocation() == item->text(0).toStdString()) {
                 dot->setPressed(false);
+                dot->setIsSelected(false);
             }
         }
     }

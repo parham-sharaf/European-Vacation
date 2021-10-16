@@ -20,7 +20,7 @@ QRectF Map::boundingRect() const { return QRectF(x, y, 10, 10); }
 
 void Map::setPressed(bool isPressed) {
     pressed = isPressed;
-    if (pressed) isSelected = true;
+    isSelected = true;
     QGraphicsItem::update();
 }
 
@@ -70,15 +70,7 @@ void Map::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     QGraphicsItem::update();
 }
 
-bool Map::getPressed() {
-    return pressed;
-}
-
 std::string Map::getStartingCity() {
     return startingPoint;
-}
-
-void Map::setStartingCity(const std::string& name) {
-    startingPoint = name;
 }
 
