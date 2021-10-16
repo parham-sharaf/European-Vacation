@@ -302,7 +302,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <property name="title">
          <string>Add New City</string>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>80</x>
@@ -347,7 +347,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <property name="title">
          <string>Add Traditional Foods</string>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -400,7 +400,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
                </sizepolicy>
               </property>
               <property name="text">
-               <string>Price:</string>
+               <string>Price (USD):</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -447,7 +447,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <property name="title">
          <string>Change Traditional Food Prices</string>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -500,7 +500,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
                </sizepolicy>
               </property>
               <property name="text">
-               <string>Price:</string>
+               <string>Price (USD):</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
