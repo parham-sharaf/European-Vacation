@@ -67,6 +67,8 @@ private slots:
     void on_citiesFromLondon_LineEdit_textEdited(const QString &arg1);
 
 
+    void on_adminSubmit_clicked();
+
 private:
     QPixmap pix;
     QGraphicsScene *scene;

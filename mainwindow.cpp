@@ -98,7 +98,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->totalDistanceTraveled_LineEdit->setAlignment(Qt::AlignHCenter);
     ui->totalspent_LineEdit->setReadOnly(true);
 
-    uiInterface.createTravellerTree(ui, myCities);
+    uiInterface.createTravelerTree(ui, myCities);
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
     connect(ui->submitPlan, SIGNAL(clicked()), this, SLOT(on_submitPlan_clicked()), Qt::UniqueConnection);
@@ -310,10 +310,11 @@ void MainWindow::updateSpent()
 void MainWindow::on_clearPlan_clicked() {
     myCities.GetShortTravelPlan().clear();
     myCities.GetTravelPlan().clear();
-    for (auto &dot: Map::euroMap) {
-        dot->setAvailability(true);
-        dot->setIsSelected(false);
-    }
+    for (auto & dot: Map::euroMap)
+        if (myCities.GetEuroCities().find(dot->GetLocation()) != myCities.GetEuroCities().end()) {
+            dot->setAvailability(true);
+            dot->setIsSelected(false);
+        }
 
     disconnect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
     disconnect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
@@ -374,3 +375,20 @@ void MainWindow::on_citiesFromLondon_LineEdit_textEdited(const QString &arg1)
     }
     ui->citiesTreeWidget->blockSignals(false);
 }
+
+void MainWindow::on_adminSubmit_clicked()
+{
+    myCities.ReadData();
+    ui->citiesTreeWidget->clear();
+    uiInterface.createTravelerTree(ui, myCities);
+    ui->tabWidget->setTabEnabled(0, true);
+    ui->tabWidget->setTabEnabled(1, false);
+    ui->tabWidget->setCurrentIndex(false);
+
+    for (auto & dot: Map::euroMap)
+        if (myCities.GetEuroCities().find(dot->GetLocation()) != myCities.GetEuroCities().end()) {
+            dot->setAvailability(true);
+            dot->setIsSelected(false);
+        }
+}
+

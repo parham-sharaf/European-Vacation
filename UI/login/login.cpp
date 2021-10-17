@@ -22,7 +22,6 @@ login::~login()
 
 void login::on_loginButton_clicked()
 {
-    bool isLoginCorrect = false;
     QString username = ui->username->text();
     QString password = ui->password->text();
 
@@ -32,14 +31,13 @@ void login::on_loginButton_clicked()
     for (auto& group: usernameList) {
         if ( QString::fromStdString(group.at(0)) == username &&
              QString::fromStdString(group.at(1)) == password) {
-            isLoginCorrect = true;
+            isAdmin = true;
             break;
         }
     }
 
-    if (isLoginCorrect) {
+    if (isAdmin) {
         QAbstractButton *close = msgBox.addButton(tr("OK"), QMessageBox::AcceptRole);
-        isAdmin = true;
         msgBox.setText("<center>Account Connected</center>");
         msgBox.setInformativeText("<center>Click OK to continue</center>");
         msgBox.setIcon(QMessageBox::Information);
@@ -52,7 +50,6 @@ void login::on_loginButton_clicked()
         }
     }
     else {
-        isAdmin = false;
         msgBox.setText("<center>Account Not Found</center>");
         msgBox.setInformativeText("<center>Please try again</center>");
         msgBox.setIcon(QMessageBox::Critical);
@@ -64,3 +61,7 @@ void login::on_loginButton_clicked()
 bool login::GetCred() {
     return isAdmin;
 }
+
+//void login::setCred(bool cred) {
+//    isAdmin = cred;
+//}

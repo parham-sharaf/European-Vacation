@@ -103,6 +103,7 @@ public:
     QComboBox *tradFoodComboBox;
     QDoubleSpinBox *priceDoubleSpinBox;
     QPushButton *changeFoodPriceButton;
+    QPushButton *adminSubmit;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -460,6 +461,9 @@ public:
 
         gridLayout_6->addWidget(changeFoodPriceButton, 1, 0, 1, 1);
 
+        adminSubmit = new QPushButton(admin);
+        adminSubmit->setObjectName(QString::fromUtf8("adminSubmit"));
+        adminSubmit->setGeometry(QRect(170, 520, 89, 25));
         tabWidget->addTab(admin, QString());
 
         gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
@@ -470,7 +474,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 25));
+        menubar->setGeometry(QRect(0, 0, 930, 22));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -524,6 +528,7 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
         changeFoodPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Food Price", nullptr));
+        adminSubmit->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi

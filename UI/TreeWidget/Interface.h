@@ -12,7 +12,7 @@
 class Interface {
 public:
     explicit Interface(QObject *parent = 0);
-    void createTravellerTree(Ui::MainWindow *ui, ManageCities &myCities) const;
+    void createTravelerTree(Ui::MainWindow *ui, ManageCities &myCities) const;
     void createAdminTree(Ui::MainWindow *ui, Admin newAdmin, const ManageCities &myCities);
     void submitPlanTree(Ui::MainWindow *ui, ManageCities &myCities);
 

@@ -1,6 +1,6 @@
 #include "Interface.h"
 
-void Interface::createTravellerTree(Ui::MainWindow *ui, ManageCities &myCities) const {
+void Interface::createTravelerTree(Ui::MainWindow *ui, ManageCities &myCities) const {
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
     ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
 
