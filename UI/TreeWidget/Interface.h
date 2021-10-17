@@ -1,13 +1,40 @@
 #pragma once
-#include <QWidget>
+
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
+#include <QMainWindow>
+#include <QtGui>
+#include <QtCore>
+#include <QDebug>
+#include <QFileInfo>
+#include <QLineEdit>
+#include <QList>
+#include <QString>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
-#include <QLineEdit>
+#include <QPainter>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QPixmap>
+
+//#include "ManageCity/ManageCities.h"
+//#include "ManageCity/City/City.h"
+#include "../login/login.h"
+#include "../../Admin/Admin.h"
+#include "../Map/Map.h"
+
+//#include <QWidget>
+//#include <QTreeWidget>
+//#include <QTreeWidgetItem>
+//#include <QLineEdit>
 #include "../../ManageCity/ManageCities.h"
 #include "../../mainwindow.h"
 #include "../ModdedLineEdit/moddedlineedit.h"
 #include "../../ui_mainwindow.h"
 
+using namespace std;
 
 class Interface {
 public:

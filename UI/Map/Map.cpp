@@ -1,6 +1,5 @@
 #include "Map.h"
 
-
 std::string Map::startingPoint;
 std::vector<Map*> euroMap;
 
@@ -38,7 +37,6 @@ void Map::setAvailability(bool available) {
 void Map::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                   QWidget *widget) {
     rec = boundingRect();
-    std::cout << "here" << std::endl;
 
     if (isAvailable) {
         painter->setPen(Qt::black);

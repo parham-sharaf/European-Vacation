@@ -3,7 +3,6 @@
 #include <QPainter>
 #include <QGraphicsItem>
 #include <string>
-#include <iostream>
 #include <vector>
 
 class Map: public QGraphicsItem

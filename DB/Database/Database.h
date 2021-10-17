@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <sqlite3.h>
+#include "SQLite/sqlite3/sqlite3.h"
 #include <vector>
 #include <string>
 

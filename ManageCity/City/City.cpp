@@ -1,5 +1,4 @@
 #include "City.h"
-#include <iostream>
 
 void City::addFood(TradFood newFood)
 {
