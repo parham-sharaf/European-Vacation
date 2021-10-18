@@ -54,7 +54,8 @@ void Admin::AddNewTradFood(const string &cityName, const string &cityFood,
     newTradFood.cost = cost;
     euroCities.find(cityName)->second->tradFoodList.push_back(newTradFood);
     string sql = "INSERT INTO food VALUES('" + cityFood + "', " +
-            to_string(cost) + ", '" + cityName + "');";
+            to_string(cost).erase(to_string(cost).
+            find_last_not_of('0') + 1, string::npos) + ", '" + cityName + "');";
     cityDatabase.select_stmt(sql.c_str());
 }
 
@@ -66,10 +67,6 @@ void Admin::RemoveTradFood(const string &cityName, const string &cityFood) {
     string sql = "DELETE FROM food WHERE city_name IS '" + cityName + "' AND food_name IS '" + cityFood +  "';";
     cityDatabase.select_stmt(sql.c_str());
 }
-
-
-
-
 
 vector<string> Admin::readNewCities() {
     string sql = "SELECT city_name FROM new_city;";

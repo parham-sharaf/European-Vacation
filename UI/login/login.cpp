@@ -1,6 +1,5 @@
 #include "login.h"
 #include "ui_login.h"
-#include <QMessageBox>
 
 sqlite3 *usersDB;
 

@@ -24,8 +24,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[34];
-    char stringdata0[291];
+    const uint offsetsAndSize[38];
+    char stringdata0[345];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -41,19 +41,22 @@ QT_MOC_LITERAL(61, 12), // "adminNewCity"
 QT_MOC_LITERAL(74, 16), // "adminChangePrice"
 QT_MOC_LITERAL(91, 12), // "adminAddFood"
 QT_MOC_LITERAL(104, 12), // "adminDelFood"
-QT_MOC_LITERAL(117, 24), // "on_actionLogin_triggered"
-QT_MOC_LITERAL(142, 37), // "on_updatepurchases_pushButton..."
-QT_MOC_LITERAL(180, 21), // "on_submitPlan_clicked"
-QT_MOC_LITERAL(202, 20), // "on_clearPlan_clicked"
-QT_MOC_LITERAL(223, 39), // "on_citiesFromLondon_LineEdit_..."
-QT_MOC_LITERAL(263, 4), // "arg1"
-QT_MOC_LITERAL(268, 22) // "on_adminSubmit_clicked"
+QT_MOC_LITERAL(117, 30), // "updateChangePriceFoodsComboBox"
+QT_MOC_LITERAL(148, 22), // "updateDelFoodsComboBox"
+QT_MOC_LITERAL(171, 24), // "on_actionLogin_triggered"
+QT_MOC_LITERAL(196, 37), // "on_updatepurchases_pushButton..."
+QT_MOC_LITERAL(234, 21), // "on_submitPlan_clicked"
+QT_MOC_LITERAL(256, 20), // "on_clearPlan_clicked"
+QT_MOC_LITERAL(277, 39), // "on_citiesFromLondon_LineEdit_..."
+QT_MOC_LITERAL(317, 4), // "arg1"
+QT_MOC_LITERAL(322, 22) // "on_adminSubmit_clicked"
 
     },
     "MainWindow\0itemChanged\0\0QTreeWidgetItem*\0"
     "updateSpent\0setPlan\0adminNewCity\0"
     "adminChangePrice\0adminAddFood\0"
-    "adminDelFood\0on_actionLogin_triggered\0"
+    "adminDelFood\0updateChangePriceFoodsComboBox\0"
+    "updateDelFoodsComboBox\0on_actionLogin_triggered\0"
     "on_updatepurchases_pushButton_clicked\0"
     "on_submitPlan_clicked\0on_clearPlan_clicked\0"
     "on_citiesFromLondon_LineEdit_textEdited\0"
@@ -67,7 +70,7 @@ static const uint qt_meta_data_MainWindow[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,19 +78,21 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   92,    2, 0x0a,    0 /* Public */,
-       4,    0,   97,    2, 0x0a,    3 /* Public */,
-       5,    2,   98,    2, 0x0a,    4 /* Public */,
-       6,    0,  103,    2, 0x0a,    7 /* Public */,
-       7,    0,  104,    2, 0x0a,    8 /* Public */,
-       8,    0,  105,    2, 0x0a,    9 /* Public */,
-       9,    0,  106,    2, 0x0a,   10 /* Public */,
-      10,    0,  107,    2, 0x08,   11 /* Private */,
-      11,    0,  108,    2, 0x08,   12 /* Private */,
-      12,    0,  109,    2, 0x08,   13 /* Private */,
-      13,    0,  110,    2, 0x08,   14 /* Private */,
-      14,    1,  111,    2, 0x08,   15 /* Private */,
-      16,    0,  114,    2, 0x08,   17 /* Private */,
+       1,    2,  104,    2, 0x0a,    0 /* Public */,
+       4,    0,  109,    2, 0x0a,    3 /* Public */,
+       5,    2,  110,    2, 0x0a,    4 /* Public */,
+       6,    0,  115,    2, 0x0a,    7 /* Public */,
+       7,    0,  116,    2, 0x0a,    8 /* Public */,
+       8,    0,  117,    2, 0x0a,    9 /* Public */,
+       9,    0,  118,    2, 0x0a,   10 /* Public */,
+      10,    0,  119,    2, 0x0a,   11 /* Public */,
+      11,    0,  120,    2, 0x0a,   12 /* Public */,
+      12,    0,  121,    2, 0x08,   13 /* Private */,
+      13,    0,  122,    2, 0x08,   14 /* Private */,
+      14,    0,  123,    2, 0x08,   15 /* Private */,
+      15,    0,  124,    2, 0x08,   16 /* Private */,
+      16,    1,  125,    2, 0x08,   17 /* Private */,
+      18,    0,  128,    2, 0x08,   19 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    2,    2,
@@ -101,7 +106,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   15,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   17,
     QMetaType::Void,
 
        0        // eod
@@ -120,12 +127,14 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->adminChangePrice(); break;
         case 5: _t->adminAddFood(); break;
         case 6: _t->adminDelFood(); break;
-        case 7: _t->on_actionLogin_triggered(); break;
-        case 8: _t->on_updatepurchases_pushButton_clicked(); break;
-        case 9: _t->on_submitPlan_clicked(); break;
-        case 10: _t->on_clearPlan_clicked(); break;
-        case 11: _t->on_citiesFromLondon_LineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 12: _t->on_adminSubmit_clicked(); break;
+        case 7: _t->updateChangePriceFoodsComboBox(); break;
+        case 8: _t->updateDelFoodsComboBox(); break;
+        case 9: _t->on_actionLogin_triggered(); break;
+        case 10: _t->on_updatepurchases_pushButton_clicked(); break;
+        case 11: _t->on_submitPlan_clicked(); break;
+        case 12: _t->on_clearPlan_clicked(); break;
+        case 13: _t->on_citiesFromLondon_LineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 14: _t->on_adminSubmit_clicked(); break;
         default: ;
         }
     }
@@ -139,7 +148,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -166,13 +175,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 15)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 15;
     }
     return _id;
 }

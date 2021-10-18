@@ -345,6 +345,7 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsView \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -359,6 +360,7 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \

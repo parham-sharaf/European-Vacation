@@ -33,8 +33,6 @@ QPoint
 -
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
-iostream
--
 deque
 -
 vector
@@ -59,8 +57,6 @@ QGraphicsItem
 -
 string
 -
-iostream
--
 vector
 -
 
@@ -69,6 +65,10 @@ QLineEdit
 -
 iomanip
 -
+
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/TreeWidget/Interface.cpp
+Interface.h
+/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/TreeWidget/Interface.h
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/TreeWidget/Interface.h
 QWidget
@@ -90,6 +90,8 @@ QLineEdit
 
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/login.h
 QDialog
+-
+QMessageBox
 -
 sqlite3.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/UI/login/sqlite3.h
@@ -143,8 +145,6 @@ QGraphicsView
 -
 QPixmap
 -
-ManageCity/ManageCities.h
-/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
 ManageCity/ManageCities.h
 /home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/ManageCity/ManageCities.h
 ManageCity/City/City.h
@@ -3932,6 +3932,10 @@ qmenu.h
 qmenubar.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h
 
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox
+qmessagebox.h
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h
+
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QPushButton
 qpushbutton.h
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h
@@ -4206,6 +4210,12 @@ QtGui/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qmenu.h
+-
+
+/home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h

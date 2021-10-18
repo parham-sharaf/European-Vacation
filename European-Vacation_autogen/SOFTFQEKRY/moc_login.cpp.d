@@ -92,7 +92,9 @@
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qtransform.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtGui/qwindowdefs.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QDialog \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qdialog.h \
+  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \

@@ -64,9 +64,6 @@ Records& ManageCities::GetDistancesFromBerlin() {
 
 void ManageCities::ShortestPath() {
     bool found;
-    for (const auto& group: travelPlan) {
-        cout << group.first << endl;
-    }
 
     travelPlan[startingCity]->distance = 0;
     shortTravelPlan.push_back(travelPlan[startingCity]);

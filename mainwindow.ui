@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
-    <height>636</height>
+    <width>970</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,11 +30,11 @@
     <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="traveller">
        <attribute name="title">
-        <string>Traveller</string>
+        <string>Traveler</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
@@ -53,6 +53,9 @@
           </property>
           <property name="text">
            <string>Submit Plan</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -282,6 +285,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="delFoodButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
             <property name="text">
              <string>Delete Traditional Food</string>
             </property>
@@ -305,14 +311,14 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>80</x>
+           <x>70</x>
            <y>26</y>
-           <width>241</width>
+           <width>261</width>
            <height>31</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="0" column="0">
            <widget class="QComboBox" name="newCityComboBox">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -325,8 +331,11 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item row="0" column="1">
            <widget class="QPushButton" name="addCityButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
             <property name="text">
              <string>Add City</string>
             </property>
@@ -427,6 +436,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="addFoodButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
             <property name="text">
              <string>Add Traditional Food</string>
             </property>
@@ -520,6 +532,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="changeFoodPriceButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
             <property name="text">
              <string>Change Traditional Food Price</string>
             </property>
@@ -528,17 +543,20 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
          </layout>
         </widget>
        </widget>
-       <widget class="QPushButton" name="adminSubmit">
+       <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>520</y>
-          <width>89</width>
-          <height>25</height>
+          <x>20</x>
+          <y>540</y>
+          <width>381</width>
+          <height>41</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)</string>
+        </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Implement Changes</string>
         </property>
        </widget>
       </widget>
@@ -552,7 +570,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
+     <width>970</width>
      <height>22</height>
     </rect>
    </property>

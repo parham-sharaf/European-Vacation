@@ -8,7 +8,6 @@
 #include "../ModdedLineEdit/moddedlineedit.h"
 #include "../../ui_mainwindow.h"
 
-
 class Interface {
 public:
     explicit Interface(QObject *parent = 0);

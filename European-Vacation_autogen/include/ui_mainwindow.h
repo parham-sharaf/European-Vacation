@@ -78,7 +78,7 @@ public:
     QPushButton *delFoodButton;
     QGroupBox *groupBox;
     QWidget *layoutWidget1;
-    QHBoxLayout *horizontalLayout_2;
+    QGridLayout *gridLayout_10;
     QComboBox *newCityComboBox;
     QPushButton *addCityButton;
     QGroupBox *groupBox_3;
@@ -103,7 +103,7 @@ public:
     QComboBox *tradFoodComboBox;
     QDoubleSpinBox *priceDoubleSpinBox;
     QPushButton *changeFoodPriceButton;
-    QPushButton *adminSubmit;
+    QPushButton *pushButton;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -112,7 +112,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(930, 636);
+        MainWindow->resize(970, 690);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -162,6 +162,7 @@ public:
         submitPlan->setFont(font);
         submitPlan->setAutoFillBackground(false);
         submitPlan->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+        submitPlan->setCheckable(false);
 
         verticalLayout->addWidget(submitPlan);
 
@@ -315,6 +316,7 @@ public:
 
         delFoodButton = new QPushButton(layoutWidget);
         delFoodButton->setObjectName(QString::fromUtf8("delFoodButton"));
+        delFoodButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
         gridLayout_9->addWidget(delFoodButton, 1, 0, 1, 1);
 
@@ -323,10 +325,10 @@ public:
         groupBox->setGeometry(QRect(11, 11, 399, 61));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(80, 26, 241, 31));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        layoutWidget1->setGeometry(QRect(70, 26, 261, 31));
+        gridLayout_10 = new QGridLayout(layoutWidget1);
+        gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
+        gridLayout_10->setContentsMargins(0, 0, 0, 0);
         newCityComboBox = new QComboBox(layoutWidget1);
         newCityComboBox->setObjectName(QString::fromUtf8("newCityComboBox"));
         QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -336,12 +338,13 @@ public:
         newCityComboBox->setSizePolicy(sizePolicy5);
         newCityComboBox->setLayoutDirection(Qt::LeftToRight);
 
-        horizontalLayout_2->addWidget(newCityComboBox);
+        gridLayout_10->addWidget(newCityComboBox, 0, 0, 1, 1);
 
         addCityButton = new QPushButton(layoutWidget1);
         addCityButton->setObjectName(QString::fromUtf8("addCityButton"));
+        addCityButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
-        horizontalLayout_2->addWidget(addCityButton);
+        gridLayout_10->addWidget(addCityButton, 0, 1, 1, 1);
 
         groupBox_3 = new QGroupBox(admin);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
@@ -400,6 +403,7 @@ public:
 
         addFoodButton = new QPushButton(layoutWidget2);
         addFoodButton->setObjectName(QString::fromUtf8("addFoodButton"));
+        addFoodButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
         gridLayout_7->addWidget(addFoodButton, 1, 0, 1, 1);
 
@@ -458,12 +462,14 @@ public:
 
         changeFoodPriceButton = new QPushButton(layoutWidget3);
         changeFoodPriceButton->setObjectName(QString::fromUtf8("changeFoodPriceButton"));
+        changeFoodPriceButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
         gridLayout_6->addWidget(changeFoodPriceButton, 1, 0, 1, 1);
 
-        adminSubmit = new QPushButton(admin);
-        adminSubmit->setObjectName(QString::fromUtf8("adminSubmit"));
-        adminSubmit->setGeometry(QRect(170, 520, 89, 25));
+        pushButton = new QPushButton(admin);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(20, 540, 381, 41));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
         tabWidget->addTab(admin, QString());
 
         gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
@@ -474,7 +480,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 22));
+        menubar->setGeometry(QRect(0, 0, 970, 22));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -484,7 +490,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -511,7 +517,7 @@ public:
         totalspent_LineEdit->setText(QString());
         label_3->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
         updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveller", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveler", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Delete Traditional Foods", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
@@ -528,7 +534,7 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
         changeFoodPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Food Price", nullptr));
-        adminSubmit->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi

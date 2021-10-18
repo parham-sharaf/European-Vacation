@@ -393,6 +393,7 @@ CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsView \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -407,6 +408,7 @@ CMakeFiles/European-Vacation.dir/European-Vacation_autogen/mocs_compilation.cpp.
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \
@@ -1095,6 +1097,7 @@ CMakeFiles/European-Vacation.dir/UI/TreeWidget/Interface.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenu \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenuBar \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QPushButton \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QStatusBar \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTabWidget \
@@ -1126,6 +1129,7 @@ CMakeFiles/European-Vacation.dir/UI/TreeWidget/Interface.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenu.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \
@@ -1660,6 +1664,7 @@ CMakeFiles/European-Vacation.dir/main.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QGraphicsView \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QLineEdit \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidget \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTreeWidgetItem \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1675,6 +1680,7 @@ CMakeFiles/European-Vacation.dir/main.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qgraphicsview.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qlineedit.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qsizepolicy.h \
@@ -2057,6 +2063,7 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMainWindow \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenu \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMenuBar \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QMessageBox \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QPushButton \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QStatusBar \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/QTabWidget \
@@ -2088,6 +2095,7 @@ CMakeFiles/European-Vacation.dir/mainwindow.cpp.o: \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenu.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmenubar.h \
+ /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qpushbutton.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qrubberband.h \
  /home/parham/Qt/6.1.2/gcc_64/include/QtWidgets/qscrollarea.h \

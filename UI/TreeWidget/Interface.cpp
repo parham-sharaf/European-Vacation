@@ -140,13 +140,9 @@ void Interface::createAdminTree(Ui::MainWindow *ui, Admin newAdmin, const Manage
     //Setting the combo box for the traditional foods for the specified city
     for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
 
-    //Setting "Change Traditional Food Price" button functionality
-
     //=====================ADD TRADITIONAL FOODS=====================
     //Setting the combo box for the available cities
     for (auto& group : newAdmin.readAvailableCities()) ui->addFoodCityComboBox->addItem(QString::fromStdString(group));
-
-    //Setting "Add Traditional Food" button functionality
 
     //=====================DELETE TRADITIONAL FOODS=====================
     //Setting the combo box for the available cities
@@ -154,6 +150,7 @@ void Interface::createAdminTree(Ui::MainWindow *ui, Admin newAdmin, const Manage
 
     //Setting the combo box for the traditional foods for the specified city
     for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+
 }
 
 Interface::Interface(QObject *parent) {

@@ -21,11 +21,12 @@
 #include <QPixmap>
 
 #include "ManageCity/ManageCities.h"
-#include "ManageCity/ManageCities.h"
 #include "ManageCity/City/City.h"
 #include "UI/login/login.h"
 #include "Admin/Admin.h"
 #include "UI/Map/Map.h"
+
+using namespace std;
 
 struct purchaseSummary
 {
@@ -56,6 +57,8 @@ public slots:
     void adminChangePrice();
     void adminAddFood();
     void adminDelFood();
+    void updateChangePriceFoodsComboBox();
+    void updateDelFoodsComboBox();
 
 signals:
 

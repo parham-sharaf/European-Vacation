@@ -5,7 +5,6 @@
 
 Interface uiInterface;
 
-using namespace std;
 std::vector<Map*> Map::euroMap;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -106,8 +105,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     uiInterface.createAdminTree(ui, newAdmin, myCities);
     connect(ui->addCityButton, SIGNAL(clicked()), this, SLOT(adminNewCity()));
+    connect(ui->cityComboBox, SIGNAL(currentTextChanged(const QString)), this, SLOT(updateChangePriceFoodsComboBox()));
     connect(ui->changeFoodPriceButton, SIGNAL(clicked()), this, SLOT(adminChangePrice()));
     connect(ui->addFoodButton, SIGNAL(clicked()), this, SLOT(adminAddFood()));
+    connect(ui->delFoodCityComboBox, SIGNAL(currentTextChanged(const QString)), this, SLOT(updateDelFoodsComboBox()));
     connect(ui->delFoodButton, SIGNAL(clicked()), this, SLOT(adminDelFood()));
 }
 
@@ -125,13 +126,22 @@ void MainWindow::adminNewCity() {
         if (myCities.GetEuroCities().find(group) == myCities.GetEuroCities().end())
             ui->newCityComboBox->addItem(QString::fromStdString(group));
     }
+
+    ui->cityComboBox->clear();
+    ui->addFoodCityComboBox->clear();
+    ui->delFoodCityComboBox->clear();
+    for (auto& group : newAdmin.readAvailableCities()) {
+        ui->cityComboBox->addItem(QString::fromStdString(group));
+        ui->addFoodCityComboBox->addItem(QString::fromStdString(group));
+        ui->delFoodCityComboBox->addItem(QString::fromStdString(group));
+    }
 }
 
 void MainWindow::adminChangePrice() {
     city = ui->cityComboBox->currentText().toStdString();
     food = ui->tradFoodComboBox->currentText().toStdString();
     price = ui->priceDoubleSpinBox->value();
-    cout << "City: " << city << "\nAdded Food: " << food << "\nPrice: " << price << endl;
+    cout << "City: " << city << "\nFood: " << food << "\nChanged Price: $" << price << endl;
 
     newAdmin.ChangePrice(city, food, price);
 }
@@ -140,14 +150,16 @@ void MainWindow::adminAddFood() {
     city = ui->addFoodCityComboBox->currentText().toStdString();
     food = ui->newFoodLineEdit->displayText().toStdString();
     price = ui->addFoodPriceDoubleSpinBox->value();
-    cout << "City: " << city << "\nAdding Food: " << food << "\nPrice: " << price << endl;
+    cout << "City: " << city << "\nAdding Food: " << food << "\nPrice: $" << price << endl;
 
-    if (city != "" && food != "" && price != 0)
+    if (food != "" && price != 0)
         newAdmin.AddNewTradFood(city, food, price);
 
     ui->delTradFoodComboBox->clear();
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString()))
-        ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+    for (auto& group : newAdmin.readFoodFromCity(ui->delFoodCityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+
+    ui->tradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
 }
 
 void MainWindow::adminDelFood() {
@@ -158,8 +170,20 @@ void MainWindow::adminDelFood() {
     newAdmin.RemoveTradFood(city, food);
 
     ui->delTradFoodComboBox->clear();
-    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString()))
-        ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+    for (auto& group : newAdmin.readFoodFromCity(ui->delFoodCityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
+
+    ui->tradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
+}
+
+void MainWindow::updateChangePriceFoodsComboBox() {
+    ui->tradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->cityComboBox->currentText().toStdString())) ui->tradFoodComboBox->addItem(QString::fromStdString(group));
+}
+
+void MainWindow::updateDelFoodsComboBox() {
+    ui->delTradFoodComboBox->clear();
+    for (auto& group : newAdmin.readFoodFromCity(ui->delFoodCityComboBox->currentText().toStdString())) ui->delTradFoodComboBox->addItem(QString::fromStdString(group));
 }
 
 

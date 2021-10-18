@@ -2,6 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
+#include <QMessageBox>
 #include "sqlite3.h"
 #include <vector>
 #include "../../DB/Database/Database.h"

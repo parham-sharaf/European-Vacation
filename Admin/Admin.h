@@ -1,8 +1,8 @@
 #include <string>
 #include "../DB/Database/Database.h"
 #include "../ManageCity/ManageCities.h"
-
 using namespace std;
+
 class Admin: public ManageCities
 {
 public:
