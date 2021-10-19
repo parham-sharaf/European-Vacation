@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "UI/ModdedLineEdit/moddedlineedit.h"
 #include "UI/TreeWidget/Interface.h"
+#include "UI/Map/Europe_png.h"
 
 Interface uiInterface;
 
@@ -13,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("European Vacation Application");
-    pix.load("UI/Europe_countries_map_en_2.png");
+    pix.loadFromData(Europe_png, Europe_png_len);
 
 
     scene = new QGraphicsScene(this);
