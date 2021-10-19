@@ -103,7 +103,7 @@ public:
     QComboBox *tradFoodComboBox;
     QDoubleSpinBox *priceDoubleSpinBox;
     QPushButton *changeFoodPriceButton;
-    QPushButton *pushButton;
+    QPushButton *adminSubmit;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -273,10 +273,10 @@ public:
         admin->setObjectName(QString::fromUtf8("admin"));
         groupBox_4 = new QGroupBox(admin);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
-        groupBox_4->setGeometry(QRect(10, 390, 401, 131));
+        groupBox_4->setGeometry(QRect(10, 390, 441, 131));
         layoutWidget = new QWidget(groupBox_4);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 30, 381, 91));
+        layoutWidget->setGeometry(QRect(10, 30, 421, 91));
         gridLayout_9 = new QGridLayout(layoutWidget);
         gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
         gridLayout_9->setContentsMargins(0, 0, 0, 0);
@@ -322,10 +322,10 @@ public:
 
         groupBox = new QGroupBox(admin);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(11, 11, 399, 61));
+        groupBox->setGeometry(QRect(11, 11, 441, 61));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(70, 26, 261, 31));
+        layoutWidget1->setGeometry(QRect(70, 26, 301, 31));
         gridLayout_10 = new QGridLayout(layoutWidget1);
         gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
         gridLayout_10->setContentsMargins(0, 0, 0, 0);
@@ -348,10 +348,10 @@ public:
 
         groupBox_3 = new QGroupBox(admin);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(10, 240, 401, 141));
+        groupBox_3->setGeometry(QRect(10, 240, 441, 141));
         layoutWidget2 = new QWidget(groupBox_3);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(11, 32, 381, 101));
+        layoutWidget2->setGeometry(QRect(11, 32, 421, 101));
         gridLayout_7 = new QGridLayout(layoutWidget2);
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -409,10 +409,10 @@ public:
 
         groupBox_2 = new QGroupBox(admin);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(10, 80, 399, 151));
+        groupBox_2->setGeometry(QRect(10, 80, 441, 151));
         layoutWidget3 = new QWidget(groupBox_2);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(10, 30, 381, 111));
+        layoutWidget3->setGeometry(QRect(10, 30, 421, 111));
         gridLayout_6 = new QGridLayout(layoutWidget3);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -466,10 +466,10 @@ public:
 
         gridLayout_6->addWidget(changeFoodPriceButton, 1, 0, 1, 1);
 
-        pushButton = new QPushButton(admin);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(20, 540, 381, 41));
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
+        adminSubmit = new QPushButton(admin);
+        adminSubmit->setObjectName(QString::fromUtf8("adminSubmit"));
+        adminSubmit->setGeometry(QRect(10, 540, 441, 31));
+        adminSubmit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
         tabWidget->addTab(admin, QString());
 
         gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
@@ -480,7 +480,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 970, 22));
+        menubar->setGeometry(QRect(0, 0, 970, 25));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -490,7 +490,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -534,7 +534,7 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
         changeFoodPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Food Price", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
+        adminSubmit->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi

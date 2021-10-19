@@ -76,8 +76,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     myCities.ReadData();
 
-    newAdmin.RemoveCity("Vienna");
-    newAdmin.RemoveCity("Stockholm");
 //    newAdmin.AddNewTradFood("London", "Parhamburger", 6.96);
 //    newAdmin.RemoveTradFood("London", "Parhamburger");
 //    newAdmin.AddNewCity("Vienna");
@@ -113,13 +111,9 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::adminNewCity() {
-    cout << ui->newCityComboBox->currentText().toStdString() << " is being added to the cities list\n";
     newAdmin.AddNewCity(ui->newCityComboBox->currentText().toStdString());
 
     myCities.ReadData();
-    cout << "City Count: " << myCities.GetEuroCities().size() << endl;
-    for (auto& group : newAdmin.readAvailableCities()) cout << group << endl;
-
     ui->newCityComboBox->clear();
 
     for (auto& group : newAdmin.readNewCities()) {
@@ -141,7 +135,6 @@ void MainWindow::adminChangePrice() {
     city = ui->cityComboBox->currentText().toStdString();
     food = ui->tradFoodComboBox->currentText().toStdString();
     price = ui->priceDoubleSpinBox->value();
-    cout << "City: " << city << "\nFood: " << food << "\nChanged Price: $" << price << endl;
 
     newAdmin.ChangePrice(city, food, price);
 }
@@ -150,7 +143,6 @@ void MainWindow::adminAddFood() {
     city = ui->addFoodCityComboBox->currentText().toStdString();
     food = ui->newFoodLineEdit->displayText().toStdString();
     price = ui->addFoodPriceDoubleSpinBox->value();
-    cout << "City: " << city << "\nAdding Food: " << food << "\nPrice: $" << price << endl;
 
     if (food != "" && price != 0)
         newAdmin.AddNewTradFood(city, food, price);
@@ -165,7 +157,6 @@ void MainWindow::adminAddFood() {
 void MainWindow::adminDelFood() {
     city = ui->delFoodCityComboBox->currentText().toStdString();
     food = ui->delTradFoodComboBox->currentText().toStdString();
-    cout << "City: " << city << "\nDeleting Food: " << food << endl;
 
     newAdmin.RemoveTradFood(city, food);
 
@@ -210,8 +201,6 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
             for (auto & dot: Map::euroMap) {
                 if (dot->GetLocation() == item->text(0).toStdString()) {
                     dot->setPressed(true);
-                    cout << Map::getStartingCity() << endl;
-                    cout << dot->GetLocation() << endl;
                     dot->QGraphicsItem::update();
                     myCities.setStartingCity(dot->GetLocation());
                 }
@@ -229,7 +218,6 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
     }
     else if (item->checkState(0) != Qt::Checked) {
         myCities.EraseCity(item->text(0).toStdString());
-        cout << "Removed: " << item->text(0).toStdString() << endl;
         for (auto & city: myCities.GetTravelPlan()) cout << city.first << "[" << city.second->distance << "]" << " --> ";
         cout << endl;
         for (auto & dot: Map::euroMap) {
@@ -239,7 +227,6 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
             }
         }
     }
-    cout << Map::getStartingCity() << endl;
 }
 
 void MainWindow::on_submitPlan_clicked()
