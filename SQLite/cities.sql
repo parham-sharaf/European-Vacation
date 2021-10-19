@@ -168,9 +168,9 @@ INSERT INTO food VALUES('Smoked meat', 12.99, 'Budapest');
 INSERT INTO food VALUES('Dobos torta', 2.79, 'Budapest');
 -- Hamburg
 INSERT INTO food VALUES('Hamburger Hummersuppe', 6.46, 'Hamburg');
-INSERT INTO food VALUES('Knackwurst', 2.79, 'Hamburg');
-INSERT INTO food VALUES('Krabbentoast ', 2.79, 'Hamburg');
-INSERT INTO food VALUES('Franzbrötchen', 2.79, 'Hamburg');
+INSERT INTO food VALUES('Knackwurst', 9.99, 'Hamburg');
+INSERT INTO food VALUES('Krabbentoast ', 6.92, 'Hamburg');
+INSERT INTO food VALUES('Franzbrötchen', 12.74, 'Hamburg');
 -- Lisbon
 INSERT INTO food VALUES('Bacalhau', 5.49, 'Lisbon');
 INSERT INTO food VALUES('Caldeirada', 7.63, 'Lisbon');

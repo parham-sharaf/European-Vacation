@@ -391,4 +391,3 @@ void MainWindow::on_adminSubmit_clicked()
             dot->setIsSelected(false);
         }
 }
-

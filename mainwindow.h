@@ -62,8 +62,6 @@ private slots:
     void on_submitPlan_clicked();
     void on_clearPlan_clicked();
     void on_citiesFromLondon_LineEdit_textEdited(const QString &arg1);
-
-
     void on_adminSubmit_clicked();
 
 private:
@@ -72,12 +70,12 @@ private:
     QTreeWidgetItem* cities;
     QList<QTreeWidgetItem *> citiesTree;
     ManageCities myCities;
+    Admin newAdmin;
     bool repurchase = false;
     int itemsChecked = 0;
-    Admin newAdmin;
+    double price;
     string city;
     string food;
-    double price;
 
 };
 #endif // MAINWINDOW_H
