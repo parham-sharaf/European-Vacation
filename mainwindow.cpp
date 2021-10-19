@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("European Vacation Application");
-    pix.load("UI/Europe_countries_map_en_2.png");
+    pix.load("C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/UI/Europe_countries_map_en_2.png");
 
 
     scene = new QGraphicsScene(this);

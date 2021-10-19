@@ -1,19 +1,29 @@
-cmake_minimum_required(VERSION 3.16)
-project(European-Vacation)
+cmake_minimum_required (VERSION VERSION 2.8.12.2)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_PREFIX_PATH "~/Qt/6.1.2/gcc_64/lib/cmake")
+project(EuropeanVacation)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
 
-set(QT_VERSION 6)
-set(REQUIRED_LIBS Core Gui Widgets)
-set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(TS_FILES European-Vacation_en_US.ts)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql Required)
 
-add_executable(European-Vacation
+find_package (SQLite3)
+if (SQLITE3_FOUND)
+    include_directories(${SQLITE3_INCLUDE_DIRS})
+    target_link_libraries (European_Vacation ${SQLITE3_LIBRARIES})
+endif (SQLITE3_FOUND)
+
+set(PROJECT_SOURCES
+        SQLite/sqlite3/sqlite3.h
+        SQLite/sqlite3/sqlite3.c
         main.cpp
         mainwindow.cpp
         mainwindow.h
@@ -26,16 +36,39 @@ add_executable(European-Vacation
         UI/Map/Map.h UI/Map/Map.cpp
         UI/ModdedLineEdit/moddedlineedit.h UI/ModdedLineEdit/moddedlineedit.cpp
         UI/TreeWidget/Interface.h UI/TreeWidget/Interface.cpp
-        )
+)
 
-include_directories(/usr/include)
-link_directories(/usr/lib)
-target_link_libraries(${PROJECT_NAME} sqlite3)
+if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    qt_add_executable(EuropeanVacation
+            MANUAL_FINALIZATION
+            ${PROJECT_SOURCES}
+            )
+    # Define target properties for Android with Qt 6 as:
+    #    set_property(TARGET EuropeanVacation APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+    #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
+    # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
+else()
+    if(ANDROID)
+        add_library(EuropeanVacation SHARED
+                ${PROJECT_SOURCES}
+                )
+        # Define properties for Android with Qt 5 after find_package() calls as:
+        #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+    else()
+        add_executable(EuropeanVacation
+                ${PROJECT_SOURCES}
+                )
+    endif()
+endif()
 
-if (NOT CMAKE_PREFIX_PATH)
-    message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it "
-            "(-DCMAKE_PREFIX_PATH=\"path/to/Qt/lib/cmake\" or -DCMAKE_PREFIX_PATH=/usr/include/{host}/qt{version}/ on Ubuntu)")
-endif ()
+target_link_libraries(EuropeanVacation PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
 
-find_package(Qt${QT_VERSION} COMPONENTS ${REQUIRED_LIBS} REQUIRED)
-target_link_libraries(${PROJECT_NAME} ${REQUIRED_LIBS_QUALIFIED})
+#set_target_properties(EuropeanVacation PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+#    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+#    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+#)
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(EuropeanVacation)
+endif()
