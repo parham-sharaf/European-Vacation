@@ -22,6 +22,9 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)</string>
+   </property>
    <property name="text">
     <string>Login</string>
    </property>
