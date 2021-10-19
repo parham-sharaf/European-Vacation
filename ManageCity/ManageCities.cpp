@@ -107,15 +107,30 @@ void ManageCities::setStartingCity(const string& initial) {
 }
 
 void ManageCities::BaseCityPlan(const string& cityName, int numOfCities) {
+    if (numOfCities > euroCities.size()) numOfCities = euroCities.size();
     travelPlan.clear();
     shortTravelPlan.clear();
     startingCity = cityName;
-    AddCity(startingCity);
-    string sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + cityName + "' ORDER BY kilometers LIMIT " + to_string(numOfCities) + ";";
-    distanceList = cityDatabase.select_stmt(sql.c_str());
-    for (auto & group: distanceList) {
-        AddCity(group.at(0));
+    int i = 0;
+    string relativePoint = cityName;
+    string sql;
+    AddCity(relativePoint);
+
+    while (i < numOfCities) {
+        sql = "SELECT ending_city,kilometers from distance WHERE starting_city IS '" + relativePoint + "' ORDER BY kilometers LIMIT " + to_string(i + 1) + ";";
+        distanceList = cityDatabase.select_stmt(sql.c_str());
+        for (int j = 0; j < i; j++) {
+            if (travelPlan.find(distanceList.at(j).at(0)) == travelPlan.end()) {
+                relativePoint = distanceList.at(j).at(0);
+                j = i;
+            }
+        }
+        cout << relativePoint << endl;
+        AddCity(relativePoint);
+        i++;
     }
+    cout << endl;
+
     ShortestPath();
 }
 

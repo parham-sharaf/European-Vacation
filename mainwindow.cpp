@@ -76,9 +76,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     myCities.ReadData();
 
-//    newAdmin.AddNewTradFood("London", "Parhamburger", 6.96);
-//    newAdmin.RemoveTradFood("London", "Parhamburger");
-//    newAdmin.AddNewCity("Vienna");
 
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
     ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
@@ -258,7 +255,6 @@ void MainWindow::updateSpent()
     double totalSpentOnTrip = 0;
     double totalSpentAtCity = 0;
     int totalBoughtAtCity = 0;
-    int summariesIndex = 0;
     int index = 0;
     while (*it) {
         if (ui->planTreeWidget->itemWidget(*it, 2))
@@ -267,43 +263,33 @@ void MainWindow::updateSpent()
             totalSpentAtCity += ui->planTreeWidget->itemWidget(*it, 1)->accessibleName().toDouble() * ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toDouble();
             totalBoughtAtCity += ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toInt();
             index++;
-            if (repurchase && !(ui->planTreeWidget->itemWidget(ui->planTreeWidget->itemBelow(*it), 2)))
-            {
-                if (summariesIndex < summaries.size())
-                {
-                    summaries.at(summariesIndex)->boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
-                    summaries.at(summariesIndex)->spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
-                    summariesIndex++;
-
-                    totalBoughtAtCity = 0;
-                    totalSpentAtCity = 0;
-                    index = 0;
-                }
-            }
         }
-        if (index == (*it)->parent()->childCount() && (*it)->parent()->childCount() > 0 && repurchase == false)
+        if (repurchase && index == (*it)->parent()->childCount() - 2)
         {
-            purchaseSummary* newSummary = new purchaseSummary;
-
+            (*it)->parent()->takeChild((*it)->parent()->childCount() - 1);
+            (*it)->parent()->takeChild((*it)->parent()->childCount() - 1);
+        }
+        if (index == (*it)->parent()->childCount() && (*it)->parent()->childCount() > 0 /*&& repurchase == false*/)
+        {
             QTreeWidgetItem* boughtAtCity = new QTreeWidgetItem();
-            newSummary->boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
-            newSummary->boughtAtCity_lineedit->setReadOnly(true);
-            newSummary->boughtAtCity_lineedit->setAlignment(Qt::AlignHCenter);
-            newSummary->boughtAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
+            QLineEdit* boughtAtCity_lineedit = new QLineEdit();
+            boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
+            boughtAtCity_lineedit->setReadOnly(true);
+            boughtAtCity_lineedit->setAlignment(Qt::AlignHCenter);
+            boughtAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
             boughtAtCity->setText(0, "# of Foods Bought:");
             (*it)->parent()->addChild(boughtAtCity);
-            ui->planTreeWidget->setItemWidget(boughtAtCity, 1, newSummary->boughtAtCity_lineedit);
+            ui->planTreeWidget->setItemWidget(boughtAtCity, 1, boughtAtCity_lineedit);
 
             QTreeWidgetItem* spentAtCity = new QTreeWidgetItem();
-            newSummary->spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
-            newSummary->spentAtCity_lineedit->setReadOnly(true);
-            newSummary->spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
-            newSummary->spentAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
+            QLineEdit* spentAtCity_lineedit = new QLineEdit();
+            spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
+            spentAtCity_lineedit->setReadOnly(true);
+            spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
+            spentAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
             spentAtCity->setText(0, "Amount Spent (USD)");
             (*it)->parent()->addChild(spentAtCity);
-            ui->planTreeWidget->setItemWidget(spentAtCity, 1, newSummary->spentAtCity_lineedit);
-
-            summaries.push_back(newSummary);
+            ui->planTreeWidget->setItemWidget(spentAtCity, 1, spentAtCity_lineedit);
 
             totalBoughtAtCity = 0;
             totalSpentAtCity = 0;
@@ -335,7 +321,6 @@ void MainWindow::on_clearPlan_clicked() {
     connect(ui->citiesTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(setPlan(QTreeWidgetItem*, int)));
 
     repurchase = false;
-    summaries.clear();
     ui->citiesFromLondon_LineEdit->setDisabled(false);
     ui->totalDistanceTraveled_LineEdit->setText("");
     ui->totalspent_LineEdit->setText("");
@@ -351,6 +336,10 @@ void MainWindow::on_clearPlan_clicked() {
 void MainWindow::on_citiesFromLondon_LineEdit_textEdited(const QString &arg1)
 {
     ui->citiesTreeWidget->blockSignals(true);
+//    if (arg1.toInt() > ui->planTreeWidget->topLevelItemCount())
+//    {
+//        ui->citiesFromLondon_LineEdit->setText(QString::number(ui->planTreeWidget->topLevelItemCount()));
+//    }
     myCities.GetShortTravelPlan().clear();
     for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
     {
@@ -359,7 +348,7 @@ void MainWindow::on_citiesFromLondon_LineEdit_textEdited(const QString &arg1)
 
     if (arg1.toStdString() != "0" && !arg1.toStdString().empty())
     {
-        for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
+        for (int i = 0; i < ui->citiesTreeWidget->topLevelItemCount(); i++)
             ui->citiesTreeWidget->topLevelItem(i)->setDisabled(true);
         ui->citiesTreeWidget->blockSignals(false);
 

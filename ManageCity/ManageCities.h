@@ -2,7 +2,6 @@
 #include <deque>
 #include <vector>
 #include <string>
-#include <sqlite3.h>
 #include <algorithm>
 #include <map>
 #include "City/City.h"
@@ -25,6 +24,7 @@ public:
     void BaseCityPlan(const string& cityName, int numOfCities);
 
 protected:
+//    Database cityDatabase{"C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/cities-table.sqlite"};
     Database cityDatabase{"./DB/cities-table.sqlite"};
     static map<string, City*> euroCities;
 private:

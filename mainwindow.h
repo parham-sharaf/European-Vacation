@@ -28,12 +28,6 @@
 
 using namespace std;
 
-struct purchaseSummary
-{
-    QLineEdit* boughtAtCity_lineedit = new QLineEdit();
-    QLineEdit* spentAtCity_lineedit = new QLineEdit();
-};
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -84,7 +78,6 @@ private:
     string city;
     string food;
     double price;
-    vector<purchaseSummary*> summaries;
 
 };
 #endif // MAINWINDOW_H

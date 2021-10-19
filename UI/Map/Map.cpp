@@ -1,6 +1,5 @@
 #include "Map.h"
 
-
 std::string Map::startingPoint;
 std::vector<Map*> euroMap;
 

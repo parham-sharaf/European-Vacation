@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-#include <sqlite3.h>
 #include <vector>
 #include <string>
+#include <sqlite3.h>
 
 //using namespace std;
 
