@@ -54,3 +54,6 @@ build
 *.cbp
 .kdev4
 *.kdev4
+
+#doxygen
+doxygen
