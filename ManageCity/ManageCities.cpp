@@ -4,10 +4,6 @@
 
 map<string, City*> ManageCities::euroCities;
 
-ManageCities::ManageCities() {
-//    sqlite3_close(db);
-}
-
 void ManageCities::ReadData() {
     euroCities.clear();
     cityList = cityDatabase.select_stmt("SELECT *\n"

@@ -9,8 +9,8 @@ set(CMAKE_AUTOUIC ON)
 add_executable(European-Vacation
         Admin/Admin.cpp
         Admin/Admin.h
-        DB/Database/Database.cpp
-        DB/Database/Database.h
+        Database/Database.cpp
+        Database/Database.h
         ManageCity/City/City.cpp
         ManageCity/City/City.h
         ManageCity/ManageCities.cpp

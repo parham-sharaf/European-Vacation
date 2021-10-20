@@ -60,7 +60,3 @@ void login::on_loginButton_clicked()
 bool login::GetCred() {
     return isAdmin;
 }
-
-//void login::setCred(bool cred) {
-//    isAdmin = cred;
-//}

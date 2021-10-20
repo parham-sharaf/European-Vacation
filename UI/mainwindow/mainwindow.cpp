@@ -80,7 +80,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->citiesTreeWidget->setHeaderLabels(QStringList() << "Cities & their Foods" << "Cost($)" << "Distance to Berlin (km)");
     ui->citiesTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
-    //ui->citiesTreeWidget->setHeaderHidden(true);
 
     myCities.ReadData();
 
@@ -329,18 +328,11 @@ void MainWindow::on_clearPlan_clicked() {
     ui->planTreeWidget->clear();
     ui->updatepurchases_pushButton->setDisabled(true);
     ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(215, 215, 215, 255), stop:1 rgba(215, 215, 215, 255));");
-//    for (int i = 0; i < cities->childCount(); i++)
-//        cities->child(i)->setCheckState(0, Qt::Unchecked);
-//    ui->citiesTreeWidget->topLevelItem(0)->parent()->child(5)->setCheckState(0, Qt::Unchecked);
 }
 
 void MainWindow::on_citiesFromLondon_LineEdit_textEdited(const QString &arg1)
 {
     ui->citiesTreeWidget->blockSignals(true);
-//    if (arg1.toInt() > ui->planTreeWidget->topLevelItemCount())
-//    {
-//        ui->citiesFromLondon_LineEdit->setText(QString::number(ui->planTreeWidget->topLevelItemCount()));
-//    }
     myCities.GetShortTravelPlan().clear();
     for (int i = 0; ui->citiesTreeWidget->topLevelItem(i); i++)
     {

@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "../DB/Database/Database.h"
+#include "../Database/Database.h"
 #include "../ManageCity/ManageCities.h"
 using namespace std;
 
@@ -17,7 +17,6 @@ public:
     vector<string> readFoodFromCity(string cityName);
 
 private:
-//    Database adminDatabase{"C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/new-cities-table.sqlite"};
     Database adminDatabase{"./DB/new-cities-table.sqlite"};
     Records newDistanceList;
     Records newFoodList;

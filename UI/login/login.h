@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <vector>
-#include "../../DB/Database/Database.h"
+#include "../../Database/Database.h"
 
 namespace Ui {
 

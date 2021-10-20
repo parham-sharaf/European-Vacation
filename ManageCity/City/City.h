@@ -22,7 +22,6 @@ struct TradFood {
 class City
 {
 public:
-//    City();
     void addFood(TradFood newFood);
     void deleteFood(int indexToDelete);
     void setCoordinate(int x, int y);

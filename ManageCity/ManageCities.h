@@ -5,12 +5,11 @@
 #include <algorithm>
 #include <map>
 #include "City/City.h"
-#include "../DB/Database/Database.h"
+#include "../Database/Database.h"
 
 class ManageCities
 {
 public:
-    ManageCities();
     void ReadData();
     void AddCity(const string& name);
     void EraseCity(const string& name);
@@ -24,7 +23,6 @@ public:
     void BaseCityPlan(const string& cityName, int numOfCities);
 
 protected:
-//    Database cityDatabase{"C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/cities-table.sqlite"};
     Database cityDatabase{"./DB/cities-table.sqlite"};
     static map<string, City*> euroCities;
 private:

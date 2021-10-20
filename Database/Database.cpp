@@ -4,7 +4,7 @@
 Database::Database(const char* path)
 {
     if (sqlite3_open(path, &db) != SQLITE_OK) {
-        std::cerr << "Could not open database.\n";
+        std::cerr << "Could not open database at path " << path << std::endl;
         return;
     }
 }

@@ -4,8 +4,6 @@
 #include <string>
 #include <sqlite3.h>
 
-//using namespace std;
-
 using Record = std::vector<std::string>;
 using Records = std::vector<Record>;
 
