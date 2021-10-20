@@ -13,7 +13,7 @@ using Records = std::vector<Record>;
 class Database {
 public:
     explicit Database(const char* path);
-    Records select_stmt(const char* stmt) ;
+    Records select_stmt(const char* stmt);
 
 private:
     Database();

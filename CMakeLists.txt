@@ -7,18 +7,27 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 add_executable(European-Vacation
+        Admin/Admin.cpp
+        Admin/Admin.h
+        DB/Database/Database.cpp
+        DB/Database/Database.h
+        ManageCity/City/City.cpp
+        ManageCity/City/City.h
+        ManageCity/ManageCities.cpp
+        ManageCity/ManageCities.h
+        UI/Map/Map.cpp
+        UI/Map/Map.h
+        UI/ModdedLineEdit/moddedlineedit.cpp
+        UI/ModdedLineEdit/moddedlineedit.h
+        UI/TreeWidget/Interface.cpp
+        UI/TreeWidget/Interface.h
+        UI/login/login.cpp
+        UI/login/login.h
+        UI/login/login.ui
+        UI/mainwindow/mainwindow.cpp
+        UI/mainwindow/mainwindow.h
+        UI/mainwindow/mainwindow.ui
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        DB/Database/Database.h DB/Database/Database.cpp
-        ManageCity/ManageCities.h ManageCity/ManageCities.cpp
-        ManageCity/City/City.h ManageCity/City/City.cpp
-        Admin/Admin.h Admin/Admin.cpp
-        UI/login/login.h UI/login/login.cpp UI/login/login.ui
-        UI/Map/Map.h UI/Map/Map.cpp
-        UI/ModdedLineEdit/moddedlineedit.h UI/ModdedLineEdit/moddedlineedit.cpp
-        UI/TreeWidget/Interface.h UI/TreeWidget/Interface.cpp
         )
 
 target_link_libraries(${PROJECT_NAME} sqlite3)

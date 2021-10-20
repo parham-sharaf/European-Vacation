@@ -4,9 +4,9 @@
 #include <QTreeWidgetItem>
 #include <QLineEdit>
 #include "../../ManageCity/ManageCities.h"
-#include "../../mainwindow.h"
+#include "../mainwindow/mainwindow.h"
 #include "../ModdedLineEdit/moddedlineedit.h"
-#include "../../ui_mainwindow.h"
+#include "../mainwindow/ui_mainwindow.h"
 
 class Interface {
 public:

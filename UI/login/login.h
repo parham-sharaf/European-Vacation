@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <QMessageBox>
-#include "sqlite3.h"
 #include <vector>
 #include "../../DB/Database/Database.h"
 
@@ -26,8 +25,6 @@ private slots:
     void on_loginButton_clicked();
 
 private:
-
-//    Database usersDatabase{"C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 1/European Vacation Project/European-Vacation/DB/user-info.sqlite"};
     Database usersDatabase{"./DB/user-info.sqlite"};
     Records usernameList;
     Ui::login *ui;
