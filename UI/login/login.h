@@ -25,7 +25,7 @@ private slots:
     void on_loginButton_clicked();
 
 private:
-    Database usersDatabase{"./DB/user-info.sqlite"};
+    Database usersDatabase{"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/user-info.sqlite"};
     Records usernameList;
     Ui::login *ui;
     bool isAdmin;

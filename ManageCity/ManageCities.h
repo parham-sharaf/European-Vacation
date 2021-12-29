@@ -23,7 +23,7 @@ public:
     void BaseCityPlan(const string& cityName, int numOfCities);
 
 protected:
-    Database cityDatabase{"./DB/cities-table.sqlite"};
+    Database cityDatabase{"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/cities-table.sqlite"};
     static map<string, City*> euroCities;
 private:
     Records cityList;

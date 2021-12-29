@@ -17,7 +17,7 @@ public:
     vector<string> readFoodFromCity(string cityName);
 
 private:
-    Database adminDatabase{"./DB/new-cities-table.sqlite"};
+    Database adminDatabase{"/home/parham/Personal/School/Saddleback/2021 Fall/CS 1D/European-Vacation/DB/new-cities-table.sqlite"};
     Records newDistanceList;
     Records newFoodList;
     Records list;
