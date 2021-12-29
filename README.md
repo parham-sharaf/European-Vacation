@@ -5,9 +5,8 @@ CS 1D Project 1 European Vacation
 
 These are a series of modules/tools required for the project to properly run. 
 
-- C++ 17
+- C++ 20
 - CMake
-- SQL 
 - SQLite
 - Qt 6
 
@@ -31,4 +30,4 @@ git checkout main
 ```
 ## Usage
 
-This program reads data and stores it in a data structure of choice. The program must has the ability to hold the names of at least 30 European cities (the initial data contains 11 cities) and their corresponding traditional food items (up to six per city). Also, program will be used to allow prospective European travelers to plan their summer vacation. It provides the ability to modify information related to the traditional food items (such as adding new food items, changing a price of a food item, or deleting a food item).    
+This program reads data and stores it in a data structure of choice. The program must has the ability to hold the names of at least 30 European cities (the initial data contains 11 cities) and their corresponding traditional foodList items (up to six per city). Also, program will be used to allow prospective European travelers to plan their summer vacation. It provides the ability to modify information related to the traditional foodList items (such as adding new foodList items, changing a price of a foodList item, or deleting a foodList item).
