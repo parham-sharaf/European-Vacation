@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("European Vacation Application");
+    this->showMaximized();
     pix.loadFromData(Europe_png, Europe_png_len);
 
 
